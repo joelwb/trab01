@@ -23,6 +23,18 @@ O cliente terá a opção de receber a nota fiscal eletrônica  que seria gerada
 Sugestão: https://balsamiq.com/products/mockups/<br>
 
 ![Alt text](https://github.com/rfidmarket/trab01/blob/master/Screenshot_1.png)
+![Alt text](https://github.com/rfidmarket/trab01/blob/master/Screenshot_2.png)
+![Alt text](https://github.com/rfidmarket/trab01/blob/master/Screenshot_3.png)
+![Alt text](https://github.com/rfidmarket/trab01/blob/master/Screenshot_4.png)
+![Alt text](https://github.com/rfidmarket/trab01/blob/master/Screenshot_5.png)
+![Alt text](https://github.com/rfidmarket/trab01/blob/master/Screenshot_6.png)
+![Alt text](https://github.com/rfidmarket/trab01/blob/master/Screenshot_7.png)
+![Alt text](https://github.com/rfidmarket/trab01/blob/master/Screenshot_8.png)
+![Alt text](https://github.com/rfidmarket/trab01/blob/master/Screenshot_9.png)
+![Alt text](https://github.com/rfidmarket/trab01/blob/master/Screenshot_10.png)
+![Alt text](https://github.com/rfidmarket/trab01/blob/master/Screenshot_11.png)
+![Alt text](https://github.com/rfidmarket/trab01/blob/master/Screenshot_12.png)
+![Alt text](https://github.com/rfidmarket/trab01/blob/master/Screenshot_13.png)
 
 #### 4.1 TABELA DE DADOS DO SISTEMA:
     a) Esta tabela deve conter todos os atributos do sistema e um mínimo de 10 linhas.
