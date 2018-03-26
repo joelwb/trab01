@@ -47,11 +47,15 @@ Para administradores do sistema:
 
 ![Alt text](https://github.com/rfidmarket/trab01/blob/master/Screenshot_13.png)
 
-Para usuário:
+Para usuários:
 
 ![Alt text](https://github.com/rfidmarket/trab01/blob/master/TelaInicial.png)
 
+![Alt text](https://github.com/rfidmarket/trab01/blob/master/LoginSenha.png)
+
 ![Alt text](https://github.com/rfidmarket/trab01/blob/master/AdicionarCartao.png)
+
+![Alt text](https://github.com/rfidmarket/trab01/blob/master/MeusCartoes.png)
 
 ![Alt text](https://github.com/rfidmarket/trab01/blob/master/Cadastro.png)
 
@@ -61,9 +65,7 @@ Para usuário:
 
 ![Alt text](https://github.com/rfidmarket/trab01/blob/master/HistoricoDetalhado.png)
 
-![Alt text](https://github.com/rfidmarket/trab01/blob/master/LoginSenha.png)
-
-![Alt text](https://github.com/rfidmarket/trab01/blob/master/MeusCartoes.png)
+![Alt text](https://github.com/rfidmarket/trab01/blob/master/QRCode.png)
 
 ![Alt text](https://github.com/rfidmarket/trab01/blob/master/Perfil.png)
 
