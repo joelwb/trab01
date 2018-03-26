@@ -20,20 +20,30 @@ Outra  opção de nosso sistema se dará onde o cliente portando um aparelho de 
 O cliente terá a opção de receber a nota fiscal eletrônica  que seria gerada no ato da compra. Também seria possível escolher forma de pagamento, onde o cliente poderá optar por pagar no cartão de débito ou crédito com cobrança automática pelo aplicativo. Além disso, com as etiquetas RFID  em todos os produtos, é possível fazer o controle do estoque de mercadorias de forma eficiente e precisa gerando relatórios para o   funcionário responsável pelo abastecimento das prateleiras , evitando erros e dispensando balanços mensais manuais e demorados. Também contará com cadastro de clientes , funcionários e de produtos. <br>
 
 
-Sugestão: https://balsamiq.com/products/mockups/<br>
-
 ![Alt text](https://github.com/rfidmarket/trab01/blob/master/Screenshot_1.png)
+
 ![Alt text](https://github.com/rfidmarket/trab01/blob/master/Screenshot_2.png)
+
 ![Alt text](https://github.com/rfidmarket/trab01/blob/master/Screenshot_3.png)
+
 ![Alt text](https://github.com/rfidmarket/trab01/blob/master/Screenshot_4.png)
+
 ![Alt text](https://github.com/rfidmarket/trab01/blob/master/Screenshot_5.png)
+
 ![Alt text](https://github.com/rfidmarket/trab01/blob/master/Screenshot_6.png)
+
 ![Alt text](https://github.com/rfidmarket/trab01/blob/master/Screenshot_7.png)
+
 ![Alt text](https://github.com/rfidmarket/trab01/blob/master/Screenshot_8.png)
+
 ![Alt text](https://github.com/rfidmarket/trab01/blob/master/Screenshot_9.png)
+
 ![Alt text](https://github.com/rfidmarket/trab01/blob/master/Screenshot_10.png)
+
 ![Alt text](https://github.com/rfidmarket/trab01/blob/master/Screenshot_11.png)
+
 ![Alt text](https://github.com/rfidmarket/trab01/blob/master/Screenshot_12.png)
+
 ![Alt text](https://github.com/rfidmarket/trab01/blob/master/Screenshot_13.png)
 
 #### 4.1 TABELA DE DADOS DO SISTEMA:
