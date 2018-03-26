@@ -19,55 +19,9 @@ Rebeca Borlini Encarnação: rebecaborlini@gmail.com<br>
 Primeiramente, para entrar no sistema EasyMarket para supermercados é solicitado um login e senha. É permitido o acesso de gerentes, almoxarifado, funcionários que fazem a reposição de mercadorias, entre outros setores, e as permissões de acesso  dependem de cada setor. O sistema permite o cadastro de produtos com todas as informações necessárias (tipo, validade, preço de compra, código, descrição, quantidade na prateleira, quantidade total, data de compra, fornecedor, situação (à 
 venda, em estoque)) e conta com uma opção para remover produtos vendidos. O sistema também permite o cadastro de usuários (nome, cargo, setor, CPF, login, senha), a geração de relatórios, o controle de estoque e pesquisa de produtos. Para facilitar o pagamento para o cliente proporcionando maior comodidade e auxiliar em maior controle por parte dos supermercados, foi criado o EasyMarket Mobile. O cliente, portando um aparelho celular ou tablet, realiza seu cadastro no aplicativo ondevai selecionar a forma de pagamento (débito ou crédito), podendo inserir um ou mais cartões e selecionar o desejado para o ato da compra. Com isso, poderá validar seu cadastro na entrada da loja através de um QRCode, liberando sua entrada para efetuar as compras. A partir daí, ele poderá visualizar todo o histórico de compras (local, data, horário, valor, detalhes da compra) pelo aplicativo, tendo a opção de gerar uma nota fiscal eletrônica. Com isso, o mercado poderá ter o controle de pagamentos já que, quando cadastrados, ao efetuar uma compra é realizado débito automático na conta do cliente. As etiquetas RFID vão automatizar o processo de pagamento, reduzindo em grande parte as filas com o intuito de tornar o processo de compra mais agradável e menos moroso para o cliente. Além disso, é possível fazer o controle do estoque de mercadorias de forma eficiente e precisa, evitando erros e dispensando balanços mensais manuais e demorados. </p>
 
-Para administradores do sistema:
+### 3.1 MOCKUPS<br>
 
-![Alt text](https://github.com/rfidmarket/trab01/blob/master/Screenshot_1.png)
-
-![Alt text](https://github.com/rfidmarket/trab01/blob/master/Screenshot_2.png)
-
-![Alt text](https://github.com/rfidmarket/trab01/blob/master/Screenshot_3.png)
-
-![Alt text](https://github.com/rfidmarket/trab01/blob/master/Screenshot_4.png)
-
-![Alt text](https://github.com/rfidmarket/trab01/blob/master/Screenshot_5.png)
-
-![Alt text](https://github.com/rfidmarket/trab01/blob/master/Screenshot_6.png)
-
-![Alt text](https://github.com/rfidmarket/trab01/blob/master/Screenshot_7.png)
-
-![Alt text](https://github.com/rfidmarket/trab01/blob/master/Screenshot_8.png)
-
-![Alt text](https://github.com/rfidmarket/trab01/blob/master/Screenshot_9.png)
-
-![Alt text](https://github.com/rfidmarket/trab01/blob/master/Screenshot_10.png)
-
-![Alt text](https://github.com/rfidmarket/trab01/blob/master/Screenshot_11.png)
-
-![Alt text](https://github.com/rfidmarket/trab01/blob/master/Screenshot_12.png)
-
-![Alt text](https://github.com/rfidmarket/trab01/blob/master/Screenshot_13.png)
-
-Para usuários:
-
-![Alt text](https://github.com/rfidmarket/trab01/blob/master/TelaInicial.png)
-
-![Alt text](https://github.com/rfidmarket/trab01/blob/master/LoginSenha.png)
-
-![Alt text](https://github.com/rfidmarket/trab01/blob/master/AdicionarCartao.png)
-
-![Alt text](https://github.com/rfidmarket/trab01/blob/master/MeusCartoes.png)
-
-![Alt text](https://github.com/rfidmarket/trab01/blob/master/Cadastro.png)
-
-![Alt text](https://github.com/rfidmarket/trab01/blob/master/Endereco.png)
-
-![Alt text](https://github.com/rfidmarket/trab01/blob/master/Historico.png)
-
-![Alt text](https://github.com/rfidmarket/trab01/blob/master/HistoricoDetalhado.png)
-
-![Alt text](https://github.com/rfidmarket/trab01/blob/master/QRCode.png)
-
-![Alt text](https://github.com/rfidmarket/trab01/blob/master/Perfil.png)
+(https://github.com/rfidmarket/trab01/blob/master/EasyMarket.pdf)
 
 
 #### 4.1 TABELA DE DADOS DO SISTEMA:
