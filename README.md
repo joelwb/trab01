@@ -22,6 +22,7 @@ venda, em estoque)) e conta com uma opção para remover produtos vendidos. O si
 ### 4. MOCKUPS<br>
 
 (https://github.com/rfidmarket/trab01/blob/master/EasyMarket.pdf)
+(https://github.com/rfidmarket/trab01/blob/master/EasyMarketMobile.pdf)
 
 
 #### 4.1 TABELA DE DADOS DO SISTEMA:
