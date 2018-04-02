@@ -28,7 +28,7 @@ RN05: Cada cliente deve ter somente uma conta. Para evitar duplicidade, o númer
 
 ### 4. MOCKUPS<br>
 
-<p> (https://github.com/rfidmarket/trab01/blob/master/easyMarket.pdf) </p> 
+<p> (https://github.com/rfidmarket/trab01/blob/master/EasyMarket.pdf) </p> 
 <p> (https://github.com/rfidmarket/trab01/blob/master/EasyMarketMobile.pdf) </p>
 
 
