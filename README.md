@@ -38,8 +38,39 @@ RN05: Cada cliente deve ter somente uma conta. Para evitar duplicidade, o númer
     
 #### 4.2 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?
     a) O sistema proposto poderá fornecer quais tipos de relatórios e informaçes? 
-    b) Crie uma lista com os 10 principais relatórios que poderão ser obtidos por meio do sistema proposto!
+    b) Crie uma lista com os 10 principais relatórios que poderão ser obtidos por meio do sistema proposto!
     
+É de grande relevância para o estabelecimento ter os seguintes relatórios acessíveis:
+* Quais são os produtos com a data mais próxima do vencimento?<br>
+-Inclui informações como: Nome do produto e data de validade.<br>
+
+* Quais são os produtos mais vendidos?<br>
+-Inclui informações como: Nome do produto, Número de vendas e Data de intervalo  (produtos mais vendidos nos últimos 15 dias, por exemplo).<br>
+
+* Quais são os clientes que mais consumiram?<br>
+-Inclui informações como: Nome do cliente, Número indicando valor gasto e Data de intervalo.<br>
+
+* Qual é a média de consumo por cliente?<br>
+-Inclui informações como: Número indicando valor gasto e Data de intervalo.<br>
+
+* Qual é o dia da semana mais lucrativo?<br>
+-Inclui informações como: Dia da semana, Data de intervalo e Soma de ganhos nesse dia da semana.<br>
+-Exemplo: Nos últimos 30 dias foram vendidos R$65000 nas quartas-feiras (dia mais lucrativo).<br>
+
+* Qual é o tipo de produto mais comprado (maior número de unidades vendidas) em cada dia da semana?<br>
+-Exemplo: Nos últimos 30 dias, nas quartas-feiras foram vendidos 10000 unidades de verduras; nas quintas-feiras, 20000 produtos de limpeza, ...<br>
+
+* Quais são as datas do ano mais lucrativas?<br>
+-Inclui informações como: Data, Dia da semana, Data de intervalo e Ganho nessa data.<br>
+-Exemplo: Em 12/10 (Dia das crianças), sexta-feira, em 2018, foi vendido R$200 mil.<br>
+
+* Qual o meio de pagamento mais utilizado?<br>
+-Inclui informações como: Meio, Número de usuários e Data de intervalo.<br>
+-Exemplo: Nos últimos 6 meses, PayPal foi mais usado, com 800 usuários.<br>
+
+* Qual o meio de pagamento mais lucrativo?<br>
+-Inclui informações como: Meio, Ganhos e Data de intervalo.<br>
+
 >## Marco de Entrega 01 em: (02/04/2018)<br>
 
 ### 5.MODELO CONCEITUAL<br>
