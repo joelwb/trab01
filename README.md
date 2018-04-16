@@ -7,7 +7,13 @@ Trabalho desenvolvido durante a disciplina de BD1
 Juliana Duarte Arcebi: juliana.acerbi@hotmail.com<br>
 Nilzilane Ramos Ricardo Garcia Tosta: naniramosricardo@hotmail.com<br>
 Rafaela Amorim Pessin: rafaelapessin@outlook.com<br>
-Rebeca Borlini Encarnação: rebecaborlini@gmail.com<br>
+Rebeca Borlini Encarnação: rebecaborlini@gmail.com<br><br>
+
+Grupo de Análise:<br>
+Antônio Carlos Durães da Silva: garotoseis@gmail.com<br>
+Jennifer de Castro Gonçalves: jenny_cg23@hotmail.com<br>
+Joel Will Belmiro: joel-willb@hotmail.com<br>
+Larissa Santos da Motta: larissasantosdamotta@gmail.com<br>
 
 ### 2.INTRODUÇÃO E MOTIVAÇAO<br>
 
