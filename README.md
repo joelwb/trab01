@@ -38,7 +38,8 @@ Larissa Santos da Motta: larissasantosdamotta@gmail.com<br>
 
 <p> EasyMarket Desktop - https://github.com/rfidmarket/trab01/raw/master/Easy%20Market.pdf </p> 
 <p> EasyMarket Mobile - https://github.com/rfidmarket/trab01/blob/master/EasyMarketMobile.pdf </p>
-
+<a href="https://github.com/rfidmarket/trab01/raw/master/Easy%20Market.pdf">EasyMarket Desktop</a><br>
+<a href="https://github.com/rfidmarket/trab01/blob/master/EasyMarketMobile.pdf">EasyMarket Mobile</a><br>
 
 #### 4.1 TABELA DE DADOS DO SISTEMA:
 <a href="https://github.com/rfidmarket/trab01/blob/master/arquivos/Tabela%20de%20dados%20-%20BD.xlsx">Tabela</a><br>
