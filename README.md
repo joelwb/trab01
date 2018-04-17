@@ -26,13 +26,13 @@ Larissa Santos da Motta: larissasantosdamotta@gmail.com<br>
 <p align = "justify"> Para facilitar o pagamento para o cliente proporcionando maior comodidade e auxiliar em maior controle por parte dos supermercados, foi criado o EasyMarket Mobile. O cliente, portando um aparelho celular ou tablet, realiza seu cadastro no aplicativo ondevai selecionar a forma de pagamento (débito ou crédito), podendo inserir um ou mais cartões e selecionar o desejado para o ato da compra. Com isso, poderá validar seu cadastro na entrada da loja através de um QRCode, liberando sua entrada para efetuar as compras. A partir daí, ele poderá visualizar todo o histórico de compras (local, data, horário, valor, detalhes da compra) pelo aplicativo, tendo a opção de gerar uma nota fiscal eletrônica. Com isso, o mercado poderá ter o controle de pagamentos já que, quando cadastrados, ao efetuar uma compra é realizado débito automático na conta do cliente. </p>
 <p align = "justify">As etiquetas RFID vão automatizar o processo de pagamento, reduzindo em grande parte as filas com o intuito de tornar o processo de compra mais agradável e menos moroso para o cliente. Além disso, é possível fazer o controle do estoque de mercadorias de forma eficiente e precisa, evitando erros e dispensando balanços mensais manuais e demorados. </p>
 
-REGRAS DE NEGÓCIO
+<b> REGRAS DE NEGÓCIO </b>
 
-<p align = "justify">RN01: O preço de um produto é o resultado da expressão: valor da compra + impostos + porcentagem sobre o custo do negócio + valor da etiqueta RFID + porcentagem de lucro.</p>
-<p align = "justify">RN02: Um produto não deve ser colocado à venda caso esteja vencido.</p>
-<p align = "justify">RN03: Cobrança de taxa de entrega.</p>
-<p align = "justify">RN04: Entregas somente em endereços situados a um raio de 4km do estabelecimento.</p>
-<p align = "justify">RN05: Cada cliente deve ter somente uma conta. Para evitar duplicidade, o número de CPF deve ser obrigatório no cadastro. </p>
+<p align = "justify"> RN01: O preço de um produto é o resultado da expressão: valor da compra + impostos + porcentagem sobre o custo do negócio + valor da etiqueta RFID + porcentagem de lucro. </p>
+<p align = "justify"> RN02: Um produto não deve ser colocado à venda caso esteja vencido. </p>
+<p align = "justify"> RN03: Cobrança de taxa de entrega. </p>
+<p align = "justify"> RN04: Entregas somente em endereços situados a um raio de 4km do estabelecimento. </p>
+<p align = "justify"> RN05: Cada cliente deve ter somente uma conta. Para evitar duplicidade, o número de CPF deve ser obrigatório no cadastro. </p>
 
 ### 4. MOCKUPS<br>
 
