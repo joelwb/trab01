@@ -86,7 +86,7 @@ Larissa Santos da Motta: larissasantosdamotta@gmail.com<br>
         * O protótipo deve possui no mínimo duas relações N para N
         * o mínimo de entidades do modelo conceitual será igual a 5
         
-![Alt text](https://github.com/rfidmarket/trab01/blob/master/arquivos/Modelo%20Conceitual.png "Modelo Conceitual")
+![Alt text](https://github.com/rfidmarket/trab01/blob/master/arquivos/modeloConceitual.png "Modelo Conceitual")
     
     B) NOTACAO UML (Caso esteja fazendo a disciplina de analise)
     C) QUALIDADE 
