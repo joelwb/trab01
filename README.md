@@ -110,12 +110,12 @@ Larissa Santos da Motta: larissasantosdamotta@gmail.com<br>
     
  TABELA: CARTÃO
 
-Campo numero: o campo numero é a chave primária, por isso, é um atributo determinante por não haver dados repitidos.
-Campo tipo: o campo tipo é um atributo simples, portanto não possui uma característica especial e recebe um valor único.
-Campo bandeira: o campo bandeira é um atributo simples, portanto não possui uma característica especial e recebe um valor único.
-Campo autenticacao: o campo autenticacao é um atributo simples, portanto não possui uma característica especial e recebe um valor único.
-Campo nome_titular: o campo nome_titular é um atributo simples, portanto não possui uma característica especial e recebe um valor único.
-Campo validade: o campo validade é um atributo simples, portanto não possui uma característica especial e recebe um valor único.
+<p align = "justify"> Campo numero: o campo numero é a chave primária, por isso, é um atributo determinante por não haver dados repitidos.</p>
+<p align = "justify"> Campo tipo: o campo tipo é um atributo simples, portanto não possui uma característica especial e recebe um valor único.</p>
+<p align = "justify"> Campo bandeira: o campo bandeira é um atributo simples, portanto não possui uma característica especial e recebe um valor único.</p>
+<p align = "justify"> Campo autenticacao: o campo autenticacao é um atributo simples, portanto não possui uma característica especial e recebe um valor único.</p>
+<p align = "justify"> Campo nome_titular: o campo nome_titular é um atributo simples, portanto não possui uma característica especial e recebe um valor único.</p>
+<p align = "justify"> Campo validade: o campo validade é um atributo simples, portanto não possui uma característica especial e recebe um valor único.</p>
 
 TABELA: PESSOA
 Campo cpf: o campo cpf é a chave primária por isso, é um atributo determinante por não haver dados repitidos.
