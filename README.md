@@ -118,20 +118,20 @@ Larissa Santos da Motta: larissasantosdamotta@gmail.com<br>
 <p align = "justify"> Campo validade: o campo validade é um atributo simples, portanto não possui uma característica especial e recebe um valor único.</p>
 
 TABELA: PESSOA
-Campo cpf: o campo cpf é a chave primária por isso, é um atributo determinante por não haver dados repitidos.
-Campo data_nasc: o campo data_nasc é um atributo simples, portanto não possui uma característica especial e recebe um valor único
-Campo login: é um atributo determinante,pois não haverá logins repetidos. //REVER
-Campo senha: o campo senha é um atributo simples, portanto não possui uma característica especial e recebe um valor único.
-Campo nome: o campo nome é um atributo simples, portanto não possui uma característica especial e recebe um valor único.
+<p align = "justify">Campo cpf: o campo cpf é a chave primária por isso, é um atributo determinante por não haver dados repitidos.</p>
+<p align = "justify">Campo data_nasc: o campo data_nasc é um atributo simples, portanto não possui uma característica especial e recebe um valor único</p>
+<p align = "justify">Campo login: é um atributo determinante,pois não haverá logins repetidos. //REVER</p>
+<p align = "justify">Campo senha: o campo senha é um atributo simples, portanto não possui uma característica especial e recebe um valor único.</p>
+<p align = "justify">Campo nome: o campo nome é um atributo simples, portanto não possui uma característica especial e recebe um valor único.</p>
 
 TABELA: ENDEREÇO
-Campo id: o campo id é a chave primária por isso e será usado como um identificador, é um atributo determinante por não haver dados repitidos.
-Campo estado: o campo estado é um atributo simples, portanto não possui uma característica especial e recebe um valor único.
-Campo cidade: o campo cidade é um atributo simples, portanto não possui uma característica especial e recebe um valor único.
-Campo bairro: o campo bairro é um atributo simples, portanto não possui uma característica especial e recebe um valor único.
-Campo rua: o campo rua é um atributo simples, portanto não possui uma característica especial e recebe um valor único.
-Campo numero: o campo numero é um atributo simples, portanto não possui uma característica especial e recebe um valor único.
-Campo cep: o campo cep é um atributo simples, portanto não possui uma característica especial e recebe um valor único.
+<p align = "justify">Campo id: o campo id é a chave primária por isso e será usado como um identificador, é um atributo determinante por não haver dados repitidos.</p>
+<p align = "justify">Campo estado: o campo estado é um atributo simples, portanto não possui uma característica especial e recebe um valor único.</p>
+<p align = "justify">Campo cidade: o campo cidade é um atributo simples, portanto não possui uma característica especial e recebe um valor único.</p>
+<p align = "justify">Campo bairro: o campo bairro é um atributo simples, portanto não possui uma característica especial e recebe um valor único.</p>
+<p align = "justify">Campo rua: o campo rua é um atributo simples, portanto não possui uma característica especial e recebe um valor único.</p>
+<p align = "justify">Campo numero: o campo numero é um atributo simples, portanto não possui uma característica especial e recebe um valor único.</p>
+<p align = "justify">Campo cep: o campo cep é um atributo simples, portanto não possui uma característica especial e recebe um valor único.</p>
 
 TABELA: FORNECEDOR
 Campo id: o campo id é a chave primária por isso e será usado como um identificador, é um atributo determinante por não haver dados repitidos.
