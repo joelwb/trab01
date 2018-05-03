@@ -110,19 +110,19 @@ Larissa Santos da Motta: larissasantosdamotta@gmail.com<br>
     
  TABELA: CARTÃO
 
-Campo numero: o campo numero é a chave primária por isso, é um atributo determinante por não haver dados repitidos.
+Campo numero: o campo numero é a chave primária, por isso, é um atributo determinante por não haver dados repitidos.
 Campo tipo: o campo tipo é um atributo simples, portanto não possui uma característica especial e recebe um valor único.
-Campo bandeira: o campo tipo é um atributo simples, portanto não possui uma característica especial e recebe um valor único.
-Campo autenticacao: o campo tipo é um atributo simples, portanto não possui uma característica especial e recebe um valor único.
-Campo nome_titular: o campo tipo é um atributo simples, portanto não possui uma característica especial e recebe um valor único.
-Campo validade: o campo tipo é um atributo simples, portanto não possui uma característica especial e recebe um valor único.
+Campo bandeira: o campo bandeira é um atributo simples, portanto não possui uma característica especial e recebe um valor único.
+Campo autenticacao: o campo autenticacao é um atributo simples, portanto não possui uma característica especial e recebe um valor único.
+Campo nome_titular: o campo nome_titular é um atributo simples, portanto não possui uma característica especial e recebe um valor único.
+Campo validade: o campo validade é um atributo simples, portanto não possui uma característica especial e recebe um valor único.
 
 TABELA: PESSOA
 Campo cpf: o campo cpf é a chave primária por isso, é um atributo determinante por não haver dados repitidos.
-Campo data_nasc: o campo tipo é um atributo simples, portanto não possui uma característica especial e recebe um valor único
+Campo data_nasc: o campo data_nasc é um atributo simples, portanto não possui uma característica especial e recebe um valor único
 Campo login: é um atributo determinante,pois não haverá logins repetidos. //REVER
-Campo senha: o campo tipo é um atributo simples, portanto não possui uma característica especial e recebe um valor único.
-Campo nome: o campo tipo é um atributo simples, portanto não possui uma característica especial e recebe um valor único.
+Campo senha: o campo senha é um atributo simples, portanto não possui uma característica especial e recebe um valor único.
+Campo nome: o campo nome é um atributo simples, portanto não possui uma característica especial e recebe um valor único.
 
 TABELA: ENDEREÇO
 Campo id: o campo id é a chave primária por isso e será usado como um identificador, é um atributo determinante por não haver dados repitidos.
