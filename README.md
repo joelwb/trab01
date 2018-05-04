@@ -103,63 +103,63 @@ Larissa Santos da Motta: larissasantosdamotta@gmail.com<br>
 #### 5.2 DECISÕES DE PROJETO
     
  TABELA: CARTÃO
-<p align = "justify"> Campo numero: o campo numero é a chave primária, por isso, é um atributo determinante por não haver dados repitidos.</p>
-<p align = "justify"> Campo tipo: o campo tipo é um atributo simples, portanto não possui uma característica especial e recebe um valor único.</p>
-<p align = "justify"> Campo bandeira: o campo bandeira é um atributo simples, portanto não possui uma característica especial e recebe um valor único.</p>
-<p align = "justify"> Campo autenticacao: o campo autenticacao é um atributo simples, portanto não possui uma característica especial e recebe um valor único.</p>
-<p align = "justify"> Campo nome_titular: o campo nome_titular é um atributo simples, portanto não possui uma característica especial e recebe um valor único.</p>
-<p align = "justify"> Campo validade: o campo validade é um atributo simples, portanto não possui uma característica especial e recebe um valor único.</p>
+<p align = "justify"> Campo numero: é um atributo determinante por não haver dados repitidos, sendo um identificador único para o cartão.</p>
+<p align = "justify"> Campo tipo:  é um atributo simples e tem o objetivo de ser um especificador do cartão.</p>
+<p align = "justify"> Campo bandeira:  é um atributo simples e serve como mais um identificador do cartão.</p>
+<p align = "justify"> Campo autenticacao: é um atributo simples e também possui a funcionalidade de autenticar o cartão.</p>
+<p align = "justify"> Campo nome_titular:  é um atributo simples e como o prórprio nome sugere, armazena o nome do titular do cartão.</p>
+<p align = "justify"> Campo validade:  é um atributo simples e determina a validade do cartão</p>
 
 TABELA: PESSOA
-<p align = "justify">Campo cpf: o campo cpf é a chave primária por isso, é um atributo determinante por não haver dados repitidos.</p>
-<p align = "justify">Campo data_nasc: o campo data_nasc é um atributo simples, portanto não possui uma característica especial e recebe um valor único</p>
-<p align = "justify">Campo login: é um atributo determinante,pois não haverá logins repetidos. //REVER</p>
-<p align = "justify">Campo senha: o campo senha é um atributo simples, portanto não possui uma característica especial e recebe um valor único.</p>
-<p align = "justify">Campo nome: o campo nome é um atributo simples, portanto não possui uma característica especial e recebe um valor único.</p>
+<p align = "justify">Campo cpf: é um atributo determinante por não haver dados repitidos, já que um cpf está relacionado somente a uma pessoa.</p>
+<p align = "justify">Campo data_nasc: é um atributo simples e armazena a data de nascimento da pessoa.</p>
+<p align = "justify">Campo login: é um atributo determinante, e tem como objetivo identificar o usuário na hora de entrar no sistema. </p>
+<p align = "justify">Campo senha: é um atributo simples, e serve como um parâmetro de segurança para o usuário poder obter acesso ao sistema.</p>
+<p align = "justify">Campo nome: é um atributo simples, o qual identifica o nome do indivíduo.</p>
 
 TABELA: ENDEREÇO
-<p align = "justify">Campo id: o campo id é a chave primária por isso e será usado como um identificador, é um atributo determinante por não haver dados repitidos.</p>
-<p align = "justify">Campo estado: o campo estado é um atributo simples, portanto não possui uma característica especial e recebe um valor único.</p>
-<p align = "justify">Campo cidade: o campo cidade é um atributo simples, portanto não possui uma característica especial e recebe um valor único.</p>
-<p align = "justify">Campo bairro: o campo bairro é um atributo simples, portanto não possui uma característica especial e recebe um valor único.</p>
-<p align = "justify">Campo rua: o campo rua é um atributo simples, portanto não possui uma característica especial e recebe um valor único.</p>
-<p align = "justify">Campo numero: o campo numero é um atributo simples, portanto não possui uma característica especial e recebe um valor único.</p>
-<p align = "justify">Campo cep: o campo cep é um atributo simples, portanto não possui uma característica especial e recebe um valor único.</p>
+<p align = "justify">Campo id: é um atributo determinante por não haver dados repitidos, ou seja, um endereço possui um único ID.</p>
+<p align = "justify">Campo estado: é um atributo simples o qual identifica o estado.</p>
+<p align = "justify">Campo cidade: é um atributo simples o qual possui o objetivo de identificar uma cidade.</p>
+<p align = "justify">Campo bairro:é um atributo simples o qual indentifica um bairro.</p>
+<p align = "justify">Campo rua: é um atributo simples e indentifica uma rua.</p>
+<p align = "justify">Campo numero: é um atributo simples e armazena um número da residência.</p>
+<p align = "justify">Campo cep: é um atributo simples e mais específico para a identificação do endereço.</p>
 
 TABELA: FORNECEDOR
-<p align = "justify"> Campo id: o campo id é a chave primária por isso e será usado como um identificador, é um atributo determinante por não haver dados repitidos.</p>
-<p align = "justify"> Campo cnpj: o campo cnpj é um atributo simples, portanto não possui uma característica especial e recebe um valor único.</p>
-<p align = "justify"> Campo nome: o campo nome é um atributo simples, portanto não possui uma característica especial e recebe um valor único.</p>
+<p align = "justify"> Campo id: é um atributo determinante por não haver dados repitidos e tem como objetivo ser um identificador único do fornecedor.</p>
+<p align = "justify"> Campo cnpj: é um atributo determinante, e identifica o fornecedor, haja visto que o cnpj é um identificador único .</p>
+<p align = "justify"> Campo nome: é um atributo simples e possui como função identificar o nome do fornecedor.</p>
 
-TABELA: CONTATO
-<p align = "justify"> Campo id: o campo id é a chave primária por isso e será usado como um identificador, é um atributo determinante por não haver dados repitidos.</p>
-<p align = "justify"> campo e-mail: o campo e-mail é um atributo multivalorado, poi é possível a pessoa possuir mais de um e-mail.</p>
-<p align = "justify"> campo celular: o campo celular é um atributo multivalorado, poi é possível a pessoa possuir mais de um número de celular.</p>
-<p align = "justify"> campo telefone: o campo telefone é um atributo multivalorado, poi é possível a pessoa possuir mais de um telefone.</p>
+TABELA: CONTATO // AGUARDANDO ALTERAÇÕES DO MODELO CONCEITUAL
+<p align = "justify"> Campo id:possui a função de ser um identificador único do contato.</p>
+<p align = "justify"> campo e-mail: é um atributo multivalorado, poi é possível a pessoa possuir mais de um e-mail.</p>
+<p align = "justify"> campo celular: é um atributo multivalorado, poi é possível a pessoa possuir mais de um número de celular.</p>
+<p align = "justify"> campo telefone: é um atributo multivalorado, poi é possível a pessoa possuir mais de um telefone.</p>
 
 TABELA: FUNCIONÁRIO
-Campo cpf: o campo cpf é a chave primária por isso, é um atributo determinante por não haver dados repitidos.</p>
-Campo cargo: o campo cargo é um atributo simples, portanto não possui uma característica especial e recebe um valor único.</p>
-Campo setor: o campo setor é um atributo simples, portanto não possui uma característica especial e recebe um valor único.</p>
+Campo cpf: possui como objetivo ser um identificador único de funcionário, é um atributo determinante.</p>
+Campo cargo: é um atributo simples e indica qual o cargo deste funcionário na organização.</p>
+Campo setor: é um atributo simples identifica o setor de atuação de um determiando funcionário.</p>
 
 TABELA: SUPERMERCADO
-<p align = "justify"> Campo id: o campo id é a chave primária por isso e será usado como um identificador, é um atributo determinante por não haver dados repitidos.</p>
-<p align = "justify"> Campo nome: o campo nome é um atributo simples, portanto não possui uma característica especial e recebe um valor único.</p>
-<p align = "justify"> Campo unidade: o campo unidade é um atributo simples, portanto não possui uma característica especial e recebe um valor único.</p>
-<p align = "justify"> Campo latitude: o campo latitude é um atributo simples, portanto não possui uma característica especial e recebe um valor único. Representa a localização mais exata do supermercado dentro do mapa (plano cartesiano).</p>
-<p align = "justify"> Campo longitude: o campo longitude é um atributo simples, portanto não possui uma característica especial e recebe um valor único.
-Representa a localização mais exata do supermercado dentro do mapa (plano cartesiano).</p>
+<p align = "justify"> Campo id: é um atributo determinante e possui a função de ser um identificador único de um determinado supermercado .</p>
+<p align = "justify"> Campo nome: o campo nome é um atributo simples e identifica o nome de um supermercado. </p>
+<p align = "justify"> Campo unidade: é um atributo simples e identifica a unidade que este supermercado pertence , ex: CARONE - CENTRO DE VILA VELHA.</p>
+<p align = "justify"> Campo latitude: o campo latitude é um atributo simples e representa a localização mais exata do supermercado dentro do mapa (plano cartesiano).</p>
+<p align = "justify"> Campo longitude: o campo longitude é um atributo simples e representa a localização mais exata do supermercado dentro do mapa (plano cartesiano).</p>
+
 TABELA: COMPRA
-<p align = "justify"> Campo id: o campo id é a chave primária por isso e será usado como um identificador, é um atributo determinante por não haver dados repitidos.</p>
-<p align = "justify"> Campo preco_compra: o campo preco_compra é um atributo simples, portanto não possui uma característica especial e recebe um valor único.    É o preço do produto no momento da compra, haja visto que o preço de um produto varia com o tempo.</p>
-<p align = "justify"> Campo quant: o campo quant é um atributo simples, portanto não possui uma característica especial e recebe um valor único.</p>
+<p align = "justify"> Campo id: é um atributo determinante e possui o objetivo de ser um identificador único da tabela compra.</p>
+<p align = "justify"> Campo preco_compra: o campo preco_compra é um atributo simples e representa o preço do produto no momento da compra, haja visto que o preço de um produto varia com o tempo.</p>
+<p align = "justify"> Campo quant: o campo quant é um atributo simples e indica a quantidade de produtos comprados // CONFIRMAR.</p>
 
 TABELA: HIST_COMPRA
-<p align = "justify"> Campo id: o campo id é a chave primária por isso e será usado como um identificador, é um atributo determinante por não haver dados repitidos.</p>
-<p align = "justify"> Campo timestamp: o campo timestamp é um atributo simples, portanto não possui uma característica especial e recebe um valor único.</p>
-<p align = "justify"> Campo valor: o campo valor é um atributo simples, portanto não possui uma característica especial e recebe um valor único que será obtido através de um cálculo.</p>
+<p align = "justify"> Campo id:é um atributo determinante e possui o objetivo de ser um identificador único da tabela compra.</p>
+<p align = "justify"> Campo timestamp: o campo timestamp é um atributo simples e identifica a data em que a compra foi efetuada, para eventuais consultas.</p>
+<p align = "justify"> Campo valor: o campo valor é um atributo simples e possui a função de identificar o valor total da compra efetuada.</p>
 
-TABELA: PRODUTO
+TABELA: PRODUTO // FALTA JUSTIFICAR
 <p align = "justify"> Campo id: o campo id é a chave primária por isso e será usado como um identificador, é um atributo determinante por não haver dados repitidos.</p>
 <p align = "justify"> Campo quant_dispon: o campo quant_dipon é um atributo simples, portanto não possui uma característica especial e recebe um valor único que será obtido através de um cálculo.</p>
 <p align = "justify"> Campo descricao: o campo descricao é um atributo simples, portanto não possui uma característica especial e recebe um valor único.</p>
@@ -173,7 +173,7 @@ TABELA: PRODUTO
 <p align = "justify"> Campo quant_prateleira: o campo quant_prateleira é um atributo simples, portanto não possui uma característica especial e recebe um valor único.</p>
 
 
-TABELA: LOTE
+TABELA: LOTE // FALTA JUSTIFICAR
 <p align = "justify"> Campo id: o campo id é a chave primária por isso e será usado como um identificador, é um atributo determinante por não haver dados repitidos.</p>
 <p align = "justify"> Campo data_compra: o campo data_compra é um atributo simples, portanto não possui uma característica especial e recebe um valor único.</p>
 <p align = "justify"> Campo numero: o campo numero é um atributo simples, portanto não possui uma característica especial e recebe um valor único.</p>
