@@ -101,15 +101,8 @@ Larissa Santos da Motta: larissasantosdamotta@gmail.com<br>
     [Grupo02]: [Nomes dos que participaram na avaliação]
 
 #### 5.2 DECISÕES DE PROJETO
-    [atributo]: [descrição da decisão]
-    
-    EXEMPLO:
-    a) Campo endereço: em nosso projeto optamos por um campo multivalorado e composto, pois a empresa 
-    pode possuir para cada departamento mais de uma localização... 
-    b) justifique!
     
  TABELA: CARTÃO
-
 <p align = "justify"> Campo numero: o campo numero é a chave primária, por isso, é um atributo determinante por não haver dados repitidos.</p>
 <p align = "justify"> Campo tipo: o campo tipo é um atributo simples, portanto não possui uma característica especial e recebe um valor único.</p>
 <p align = "justify"> Campo bandeira: o campo bandeira é um atributo simples, portanto não possui uma característica especial e recebe um valor único.</p>
@@ -139,7 +132,7 @@ Campo cnpj: o campo cnpj é um atributo simples, portanto não possui uma caract
 Campo nome: o campo nome é um atributo simples, portanto não possui uma característica especial e recebe um valor único.
 
 TABELA: CONTATO
-Campo id: o campo id é a chave primária por isso e será usado como um identificador, é um atributo determinante por não haver dados .repitidos.
+Campo id: o campo id é a chave primária por isso e será usado como um identificador, é um atributo determinante por não haver dados repitidos.
 campo e-mail: o campo e-mail é um atributo multivalorado, poi é possível a pessoa possuir mais de um e-mail.
 campo celular: o campo celular é um atributo multivalorado, poi é possível a pessoa possuir mais de um número de celular.
 campo telefone: o campo telefone é um atributo multivalorado, poi é possível a pessoa possuir mais de um telefone.
@@ -153,12 +146,12 @@ TABELA: SUPERMERCADO
 Campo id: o campo id é a chave primária por isso e será usado como um identificador, é um atributo determinante por não haver dados repitidos.
 Campo nome: o campo nome é um atributo simples, portanto não possui uma característica especial e recebe um valor único.
 Campo unidade: o campo unidade é um atributo simples, portanto não possui uma característica especial e recebe um valor único.
-Campo latitude: o campo latitude é um atributo simples, portanto não possui uma característica especial e recebe um valor único.
+Campo latitude: o campo latitude é um atributo simples, portanto não possui uma característica especial e recebe um valor único. Representa a localização mais exata do supermercado dentro do mapa (plano cartesiano).
 Campo longitude: o campo longitude é um atributo simples, portanto não possui uma característica especial e recebe um valor único.
-
+Representa a localização mais exata do supermercado dentro do mapa (plano cartesiano).
 TABELA: COMPRA
 Campo id: o campo id é a chave primária por isso e será usado como um identificador, é um atributo determinante por não haver dados repitidos.
-Campo preco_compra: o campo preco_compra é um atributo simples, portanto não possui uma característica especial e recebe um valor único.
+Campo preco_compra: o campo preco_compra é um atributo simples, portanto não possui uma característica especial e recebe um valor único.    É o preço do produto no momento da compra, haja visto que o preço de um produto varia com o tempo.
 Campo quant: o campo quant é um atributo simples, portanto não possui uma característica especial e recebe um valor único.
 
 TABELA: HIST_COMPRA
