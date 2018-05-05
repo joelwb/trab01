@@ -89,6 +89,9 @@ Larissa Santos da Motta: larissasantosdamotta@gmail.com<br>
 ![Alt text](https://github.com/rfidmarket/trab01/blob/master/arquivos/modeloConceitual.png "Modelo Conceitual")
     
     B) NOTACAO UML (Caso esteja fazendo a disciplina de analise)
+ 
+![Alt text](https://github.com/rfidmarket/trab01/blob/master/images/diag_classe.png "Diagrama de Classes")
+
     C) QUALIDADE 
         Garantir que a semântica dos atributos seja clara no esquema
         Criar o esquema de forma a garantir a redução de informação redundante, possibilidade de valores null, 
