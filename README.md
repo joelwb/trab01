@@ -114,10 +114,7 @@ Campo nome_titular:  é um atributo simples e como o prórprio nome sugere, arma
 Campo validade:  é um atributo simples e determina a validade do cartão.<br>
 
 TABELA: PESSOA<br>
-Campo cpf: é um atributo determinante por não haver dados repitidos, já que um cpf está relacionado somente a uma pessoa.<br>
-Campo data_nasc: é um atributo simples e armazena a data de nascimento da pessoa.<br>
-Campo login: é um atributo determinante, e tem como objetivo identificar o usuário na hora de entrar no sistema. <br>
-Campo senha: é um atributo simples, e serve como um parâmetro de segurança para o usuário poder obter acesso ao sistema.<br>
+Campo id: é um atributo determinante , uma pessoa possui apenas um id para identificação da pessoa.<br>
 Campo nome: é um atributo simples, o qual identifica o nome do indivíduo.<br>
 
 TABELA: ENDEREÇO<br>
@@ -136,9 +133,9 @@ TABELA: FORNECEDOR<br>
 
 TABELA: CONTATO // AGUARDANDO ALTERAÇÕES DO MODELO CONCEITUAL<br>
  Campo id:possui a função de ser um identificador único do contato.<br>
- campo e-mail: é um atributo multivalorado, poi é possível a pessoa possuir mais de um e-mail.<br>
- campo celular: é um atributo multivalorado, poi é possível a pessoa possuir mais de um número de celular.<br>
- campo telefone: é um atributo multivalorado, poi é possível a pessoa possuir mais de um telefone.<br>
+ campo tipo: Tem como função descrever o tipo de contato(e-mail, telefone, facebook e etc) da pessoa, fornecedor ou do supermercado.<br>
+ campo descricao: Insere os tipos de contatos, informando o telefone e/ou email e assim por diante .<br>
+
 
 TABELA: FUNCIONÁRIO<br>
 Campo cpf: possui como objetivo ser um identificador único de funcionário, é um atributo determinante.<br>
