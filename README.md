@@ -106,16 +106,10 @@ Larissa Santos da Motta: larissasantosdamotta@gmail.com<br>
 #### 5.2 DECISÕES DE PROJETO
     
 TABELA: CARTÃO<br>
-Campo numero: é um atributo determinante por não haver dados repitidos, sendo um identificador único para o cartão.<br>
-Campo tipo:  é um atributo simples e tem o objetivo de ser um especificador do cartão.<br>
-Campo bandeira:  é um atributo simples e serve como mais um identificador do cartão.<br>
-Campo autenticacao: é um atributo simples e também possui a funcionalidade de autenticar o cartão.<br>
-Campo nome_titular:  é um atributo simples e como o prórprio nome sugere, armazena o nome do titular do cartão.<br>
-Campo validade:  é um atributo simples e determina a validade do cartão.<br>
+Esta tabela foi criada com o intuito de armazenar o pagamento do cliente cadastrado. Como o supermercado não possui caixa, esta foi a opção selecionada da fatura das compras serem pagas e os campos são os dados necessários para o cliente poder efetuar a compra.
 
 TABELA: PESSOA<br>
-Campo id: é um atributo determinante , uma pessoa possui apenas um id para identificação da pessoa.<br>
-Campo nome: é um atributo simples, o qual identifica o nome do indivíduo.<br>
+Campo nome: é um atributo o qual pode ser herdado por outras tabelas.<br>
 
 TABELA: ENDEREÇO<br>
 Campo id: é um atributo determinante por não haver dados repitidos, ou seja, um endereço possui um único ID.<br>
