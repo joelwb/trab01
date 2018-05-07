@@ -190,19 +190,21 @@ TABELA: LOTE // FALTA JUSTIFICAR<br>
 ###modificar!!!!!!!!!!
 
 TABELA: CARTÃO<br>
- Campo numero: o campo numero é a chave primária, por isso, é um atributo determinante por não haver dados repitidos.<br>
- Campo tipo: o campo tipo é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
- Campo bandeira: o campo bandeira é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
- Campo autenticacao: o campo autenticacao é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
- Campo nome_titular: o campo nome_titular é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
- Campo validade: o campo validade é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
+autenticacao: Texto que corresponde a senha do cartão (se for de débito) ou código de validação (se for de débito).<br>
+bandeira: Texto que identifica a bandeira do cartão. Exemplo: "Visa".<br>
+nome_titular: Nome (texto) do titular responsável pelo cartão. Exemplo: "José da Silva".<br>
+numero: Número que identifica cada cartão de crédito ou débito.<br>
+tipo: Palavra (texto) que identifica o tipo do cartão, se é crédito ou débito.<br>
+validade: Data (date) de validade do cartão, indica a data que o cartão expira.<br>
 
 TABELA: PESSOA<br>
-Campo cpf: o campo cpf é a chave primária por isso, é um atributo determinante por não haver dados repitidos.<br>
-Campo data_nasc: o campo data_nasc é um atributo simples, portanto não possui uma característica especial e recebe um valor único<br>
-Campo login: é um atributo determinante,pois não haverá logins repetidos. //REVER<br>
-Campo senha: o campo senha é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
-Campo nome: o campo nome é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
+nome: Nome (texto) que identifica uma pessoa física ou não.<br>
+
+TABELA: PESSOA FÍSICA<br>
+cpf: Atributo ÚNICO de tipo texto que corresponde ao CPF de uma pessoa. Exemplo: "003.722.136-52".<br>
+data_nasc: Data (date) de nascimento de uma pessoa física. Exemplo: "2018/06/01".<br>
+login: Texto que identifica o nome de usuário usado pelo cliente para acessar o sistema.<br>
+senha: Texto que corresponde a senha de acesso usada pelo cliente.<br>
 
 TABELA: ENDEREÇO<br>
 Campo id: o campo id é a chave primária por isso e será usado como um identificador, é um atributo determinante por não haver dados repitidos.<br>
