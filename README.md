@@ -112,6 +112,7 @@ TABELA: PESSOA<br>
 Campo nome: é um atributo o qual pode ser herdado por outras tabelas.<br>
 
 TABELA: ENDEREÇO<br>
+Os campos são utilizados a fim de especificar os itens que compõe o endereço de uma pessoa.
 Campo id: é um atributo determinante por não haver dados repitidos, ou seja, um endereço possui um único ID.<br>
 Campo estado: é um atributo simples o qual identifica o estado.<br>
 Campo cidade: é um atributo simples o qual possui o objetivo de identificar uma cidade.<br>
