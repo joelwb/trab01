@@ -106,7 +106,8 @@ Larissa Santos da Motta: larissasantosdamotta@gmail.com<br>
 #### 5.2 DECISÕES DE PROJETO
     
 TABELA: CARTÃO<br>
-Esta tabela foi criada com o intuito de armazenar o pagamento do cliente cadastrado. Como o supermercado não possui caixa, esta foi a opção selecionada da fatura das compras serem pagas e os campos são os dados necessários para o cliente poder efetuar a compra.
+Esta tabela foi criada com o intuito de armazenar o pagamento do cliente cadastra
+      
 
 TABELA: PESSOA<br>
 Campo nome: é um atributo o qual pode ser herdado por outras tabelas.<br>
