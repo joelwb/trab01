@@ -109,43 +109,43 @@ Pessoa: No modelo conceitual optamos na decisão do projeto em não distinguir p
 
 TABELA: ENDEREÇO<br>
 Os campos são utilizados a fim de especificar os itens que compõe o endereço de uma pessoa.
-Campo id: é um atributo determinante por não haver dados repitidos, ou seja, um endereço possui um único ID.<br>
-Campo estado: é um atributo simples o qual identifica o estado.<br>
-Campo cidade: é um atributo simples o qual possui o objetivo de identificar uma cidade.<br>
-Campo bairro:é um atributo simples o qual indentifica um bairro.<br>
-Campo rua: é um atributo simples e indentifica uma rua.<br>
-Campo numero: é um atributo simples e armazena um número da residência.<br>
-Campo cep: é um atributo simples e mais específico para a identificação do endereço.<br>
+* Campo id: é um atributo determinante por não haver dados repitidos, ou seja, um endereço possui um único ID.<br>
+* Campo estado: é um atributo simples o qual identifica o estado.<br>
+* Campo cidade: é um atributo simples o qual possui o objetivo de identificar uma cidade.<br>
+* Campo bairro:é um atributo simples o qual indentifica um bairro.<br>
+* Campo rua: é um atributo simples e indentifica uma rua.<br>
+* Campo numero: é um atributo simples e armazena um número da residência.<br>
+* Campo cep: é um atributo simples e mais específico para a identificação do endereço.<br>
 
 TABELA: CONTATO <br>
- Campo id:possui a função de ser um identificador único do contato.<br>
- campo tipo: Tem como função descrever o tipo de contato(e-mail, telefone, facebook e etc) da pessoa, fornecedor ou do supermercado.<br>
- campo descricao: Insere os tipos de contatos, informando o telefone e/ou email e assim por diante .<br>
+ * Campo id:possui a função de ser um identificador único do contato.<br>
+ * Campo tipo: Tem como função descrever o tipo de contato(e-mail, telefone, facebook e etc) da pessoa, fornecedor ou do supermercado.<br>
+* Campo descricao: Insere os tipos de contatos, informando o telefone e/ou email e assim por diante .<br>
 
 TABELA: SUPERMERCADO<br>
-Campo unidade: é um atributo simples e identifica a unidade que este supermercado pertence , ex: CARONE - CENTRO DE VILA VELHA.<br>
- Campo latitude: o campo latitude é um atributo simples e representa a localização mais exata do supermercado dentro do mapa (plano cartesiano).<br>
- Campo longitude: o campo longitude é um atributo simples e representa a localização mais exata do supermercado dentro do mapa (plano cartesiano).<br>
+* Campo unidade: é um atributo simples e identifica a unidade que este supermercado pertence , ex: CARONE - CENTRO DE VILA VELHA.<br>
+* Campo latitude: o campo latitude é um atributo simples e representa a localização mais exata do supermercado dentro do mapa (plano cartesiano).<br>
+* Campo longitude: o campo longitude é um atributo simples e representa a localização mais exata do supermercado dentro do mapa (plano cartesiano).<br>
 
 TABELA: COMPRA<br>
- Campo preco_compra: o campo preco_compra é um atributo simples e representa o preço do produto no momento da compra, haja visto que o preço de um produto varia com o tempo.<br>
+* Campo preco_compra: o campo preco_compra é um atributo simples e representa o preço do produto no momento da compra, haja visto que o preço de um produto varia com o tempo.<br>
 
 
 TABELA: HIST_COMPRA<br>
- Campo timestamp: o campo timestamp é um atributo simples e identifica a data em que a compra foi efetuada, para eventuais consultas.<br>
+ * Campo timestamp: o campo timestamp é um atributo simples e identifica a data em que a compra foi efetuada, para eventuais consultas.<br>
 
 
 TABELA: PRODUTO <br>
-Campo quant_dispon: o campo quant_dipon é um atributo simples, e recebe um valor que será obtido através de um cálculo , e irá informar a quantidade de produtos disponíveis (estoque + prateleira) .<br>
-Campo custo: o campo custo é um atributo simples e informa o custo de fábrica do produto.
-Campo preco: o campo preco é um atributo simples e tem o objetivo de informar o preco que o mesmo será vendido.<br>
-Campo quant_prateleira: irá dizer a quantidades de produtos disponíveis na prateleira.<br>
+* Campo quant_dispon: o campo quant_dipon é um atributo simples, e recebe um valor que será obtido através de um cálculo , e irá informar a quantidade de produtos disponíveis (estoque + prateleira) .<br>
+* Campo custo: o campo custo é um atributo simples e informa o custo de fábrica do produto.
+* Campo preco: o campo preco é um atributo simples e tem o objetivo de informar o preco que o mesmo será vendido.<br>
+* Campo quant_prateleira: irá dizer a quantidades de produtos disponíveis na prateleira.<br>
 
 
 TABELA: LOTE <br>
-Campo data_compra: o campo data_compra é um atributo simples e irá armazanar a data da compra do lote <br>
-Campo quantidade: Informa a quantidade de produtos que este lote possui .<br>
-Campo validade: armazena a validade do lote, haja vista que cada lote pode possuir validades diferentes.<br>
+* Campo data_compra: o campo data_compra é um atributo simples e irá armazanar a data da compra do lote <br>
+* Campo quantidade: Informa a quantidade de produtos que este lote possui .<br>
+* Campo validade: armazena a validade do lote, haja vista que cada lote pode possuir validades diferentes.<br>
 
 
 
