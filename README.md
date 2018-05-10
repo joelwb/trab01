@@ -105,16 +105,16 @@ Larissa Santos da Motta: larissasantosdamotta@gmail.com<br>
 
 #### 5.2 DECISÕES DE PROJETO
 
-Pessoa: No modelo conceitual optamos na decisão do projeto em não distinguir pessoa física de pessoa jurídica.
+*Pessoa: No modelo conceitual optamos na decisão do projeto em não distinguir pessoa física de pessoa jurídica.
 
 TABELA: ENDEREÇO<br>
-Campo id: é um atributo determinante por não haver dados repitidos, ou seja, um endereço possui um único ID.<br>
-Campo estado: é um atributo simples o qual identifica o estado.<br>
-Campo cidade: é um atributo simples o qual possui o objetivo de identificar uma cidade.<br>
-Campo bairro :é um atributo simples o qual indentifica um bairro.<br>
-Campo rua: é um atributo simples e indentifica uma rua.<br>
-Campo numero: é um atributo simples e armazena um número da residência.<br>
-Campo cep: é um atributo simples e mais específico para a identificação do endereço.<br>
+*Campo id: é um atributo determinante por não haver dados repitidos, ou seja, um endereço possui um único ID.<br>
+*Campo estado: é um atributo simples o qual identifica o estado.<br>
+*Campo cidade: é um atributo simples o qual possui o objetivo de identificar uma cidade.<br>
+*Campo bairro :é um atributo simples o qual indentifica um bairro.<br>
+*Campo rua: é um atributo simples e indentifica uma rua.<br>
+*Campo numero: é um atributo simples e armazena um número da residência.<br>
+*Campo cep: é um atributo simples e mais específico para a identificação do endereço.<br>
 
 TABELA: CONTATO <br>
 Campo id: possui a função de ser um identificador único do contato.<br>
