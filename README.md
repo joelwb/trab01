@@ -157,87 +157,78 @@ Campo quantidade: o campo quantidade é um atributo simples, portanto não possu
     CLIENTE: Tabela que armazena as informações relativas ao cliente<br>
     CPF: campo que armazena o número de Cadastro de Pessoa Física para cada cliente da empresa.<br>
 
-###modificar!!!!!!!!!!
+CARTAO: Tabela que armazena dados sobre o cartão de crédito ou débito do cliente.<br>
+* autenticacao: Texto que corresponde a senha do cartão (se for de débito) ou código de validação (se for de débito).<br>
+* bandeira: Texto que identifica a bandeira do cartão. Exemplo: "Visa".<br>
+* nome_titular: Nome do titular responsável pelo cartão. Exemplo: "José da Silva".<br>
+* numero: Número que identifica cada cartão de crédito ou débito. Exemplo: 5453010000066167.<br>
+* tipo: Palavra que identifica o tipo do cartão, se é crédito ou débito.<br>
+* validade: Data de validade do cartão, indica a data que o cartão expira. Exemplo: “01/06/2019”.<br>
 
-TABELA: CARTÃO<br>
- Campo numero: o campo numero é a chave primária, por isso, é um atributo determinante por não haver dados repitidos.<br>
- Campo tipo: o campo tipo é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
- Campo bandeira: o campo bandeira é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
- Campo autenticacao: o campo autenticacao é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
- Campo nome_titular: o campo nome_titular é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
- Campo validade: o campo validade é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
+COMPRA: Tabela que armazena dados sobre o ato de uma compra. Contém preço dos produtos comprados e quantidades.<br>
+* preco_compra: Número flutuante que representa o preço de um produto no momento da compra.<br>
+* quant: Número inteiro que representa o número de unidades vendidas de um produto na compra.<br>
 
-TABELA: PESSOA<br>
-Campo cpf: o campo cpf é a chave primária por isso, é um atributo determinante por não haver dados repitidos.<br>
-Campo data_nasc: o campo data_nasc é um atributo simples, portanto não possui uma característica especial e recebe um valor único<br>
-Campo login: é um atributo determinante,pois não haverá logins repetidos. //REVER<br>
-Campo senha: o campo senha é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
-Campo nome: o campo nome é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
+CONTATO: Tabela que armazena dados sobre diversos tipos de contato.<br>
+* descricao: Texto com o conteúdo do contato propriamente dito. Exemplo: “3228-6125” (para o tipo “telefone”).<br>
+* tipo: Texto que informa qual domínio do contato. Exemplo: “telefone”, “celular”, “email”.<br> 
 
-TABELA: ENDEREÇO<br>
-Campo id: o campo id é a chave primária por isso e será usado como um identificador, é um atributo determinante por não haver dados repitidos.<br>
-Campo estado: o campo estado é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
-Campo cidade: o campo cidade é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
-Campo bairro: o campo bairro é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
-Campo rua: o campo rua é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
-Campo numero: o campo numero é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
-Campo cep: o campo cep é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
+ENDERECO: Tabela que armazena dados referentes a localização de uma pessoa (física ou jurídica).<br>
+* bairro: Texto que corresponde ao bairro da entidade. Exemplo: “Jardim Carapina”.<br>
+* CEP: Número que identifica o código de endereçamento postal da pessoa. Exemplo: 29161-699.<br>
+* cidade: Texto que indica o município onde a pessoa reside. Exemplo: “Serra”.<br>
+* estado: Texto que indica a unidade federativa (UF) onde a pessoa reside. Exemplo: “Espírito Santo”.<br>
+* numero: Número que localiza a residência (casa, prédio, etc.) da pessoa. Exemplo: 45.<br>
+* rua: Texto que indica a rua ou avenida onde a pessoa reside. Exemplo: “Av. Presidente Dutra”.<br>
 
-TABELA: FORNECEDOR<br>
- Campo id: o campo id é a chave primária por isso e será usado como um identificador, é um atributo determinante por não haver dados repitidos.<br>
- Campo cnpj: o campo cnpj é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
- Campo nome: o campo nome é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
+FORNECEDOR: Tabela que armazena dados sobre o fornecedor ligado ao supermercado.<br>
+* CNPJ: Número que corresponde ao registro de Cadastro Nacional de Pessoa Jurídica do fornecedor. Exemplo: “17.181.538/0001-42”.<br>
+* nome: Texto que representa o nome da organização ou pessoa física que fornece algo. Exemplo: “Seu Zé Refrigerantes Ltda.”.<br>
 
-TABELA: CONTATO<br>
- Campo id: o campo id é a chave primária por isso e será usado como um identificador, é um atributo determinante por não haver dados repitidos.<br>
- campo e-mail: o campo e-mail é um atributo multivalorado, poi é possível a pessoa possuir mais de um e-mail.<br>
- campo celular: o campo celular é um atributo multivalorado, poi é possível a pessoa possuir mais de um número de celular.<br>
- campo telefone: o campo telefone é um atributo multivalorado, poi é possível a pessoa possuir mais de um telefone.<br>
+FUNCIONÁRIO: Tabela que armazena dados sobre os funcionários do supermercado.<br>
+* cargo: Texto que identifica a profissão ocupada por um funcionário dentro de um setor. Exemplo: “Repositor”.<br>
+* CPF: Número único que identifica uma pessoa física. Exemplo: “003.728.136-59”.<br>
+* setor: Texto que indica o departamento em que o funcionário trabalha. Exemplo: “Almoxarifado”.<br>
 
-TABELA: FUNCIONÁRIO<br>
-Campo cpf: o campo cpf é a chave primária por isso, é um atributo determinante por não haver dados repitidos.<br>
-Campo cargo: o campo cargo é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
-Campo setor: o campo setor é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
+HIST_COMPRA: Tabela que armazena dados sobre um histórico de compras de um cliente.<br>
+* data: Data que representa o dia, mês e ano em que a compra foi realizada. Exemplo: “21/05/2017”.<br>
+* hora: Horário que representa a hora, minuto e segundos em que a compra foi realizada. Exemplo: “11:25:30”.<br>
+* valor: Número flutuante que representa o valor total gasto pelo cliente na compra. Exemplo: 732.50.<br>
 
-TABELA: SUPERMERCADO<br>
- Campo id: o campo id é a chave primária por isso e será usado como um identificador, é um atributo determinante por não haver dados repitidos.<br>
- Campo nome: o campo nome é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
- Campo unidade: o campo unidade é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
- Campo latitude: o campo latitude é um atributo simples, portanto não possui uma característica especial e recebe um valor único. Representa a localização mais exata do supermercado dentro do mapa (plano cartesiano).<br>
- Campo longitude: o campo longitude é um atributo simples, portanto não possui uma característica especial e recebe um valor único.
-Representa a localização mais exata do supermercado dentro do mapa (plano cartesiano).<br>
+LOTE: Tabela que armazena dados sobre os lotes (conjunto, aglomerado) dos produtos.<br>
+* data_compra: Data que registra o momento da compra. Exemplo: “01/05/2018”.<br>
+* data_fabricacao: Data que registra quando o lote foi fabricado. Exemplo: “01/04/2018”.<br>
+* numero: Texto que identifica um determinado lote. Exemplo: “038-15/00600”.<br>
+* quantidade: Número inteiro que indica quantas unidades do produto cabem no lote.<br>
+* validade: Data que registra quando os produtos desse lote expirarão. Exemplo: “10/06/2018”.<br>
 
-TABELA: COMPRA<br>
- Campo id: o campo id é a chave primária por isso e será usado como um identificador, é um atributo determinante por não haver dados repitidos.<br>
- Campo preco_compra: o campo preco_compra é um atributo simples, portanto não possui uma característica especial e recebe um valor único.    É o preço do produto no momento da compra, haja visto que o preço de um produto varia com o tempo.<br>
- Campo quant: o campo quant é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
+PESSOA: Tabela que armazena dados em comum entre pessoas físicas e jurídicas.<br>
+OBS. 1: Toda pessoa jurídica ou física possui meios de CONTATO e um ENDEREÇO.<br>
+* nome: Texto que representa o nome da pessoa. Exemplo: “João Silva” ou “Maria Supermercado”.<br>
 
-TABELA: HIST_COMPRA<br>
- Campo id: o campo id é a chave primária por isso e será usado como um identificador, é um atributo determinante por não haver dados repitidos.<br>
- Campo timestamp: o campo timestamp é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
- Campo valor: o campo valor é um atributo simples, portanto não possui uma característica especial e recebe um valor único que será obtido através de um cálculo.<br>
+PESSOA_FISICA: Tabela que armazena dados intrínsecos a uma pessoa física (cliente ou funcionário do supermercado).
+* CPF: Número único que identifica uma pessoa física. Exemplo: “003728136-59”.<br>
+* data_nasc: Data que representa a data de nascimento de uma pessoa física. Exemplo: “11/05/1997”.<br>
+* login: Texto que representa o nome de usuário que uma pessoa (cliente ou funcionário do supermercado) usa para acessar o * sistema. Exemplo: “faustop@extragood.com”.<br>
+* senha: Texto que representa a palavra-chave usada pela pessoa física (cliente ou funcionário) para acessar o sistema. Exemplo: “Aninha1561!”.<br>
 
-TABELA: PRODUTO<br>
- Campo id: o campo id é a chave primária por isso e será usado como um identificador, é um atributo determinante por não haver dados repitidos.<br>
- Campo quant_dispon: o campo quant_dipon é um atributo simples, portanto não possui uma característica especial e recebe um valor único que será obtido através de um cálculo.<br>
- Campo descricao: o campo descricao é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
- Campo marca: o campo marca é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
- Campo codigo: o campo codigo é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
- Campo estoque: o campo estoque é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
- Campo nome: o campo nome é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
- Campo tipo: o campo tipo é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
- Campo custo: o campo custo é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
- Campo preco: o campo preco é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
- Campo quant_prateleira: o campo quant_prateleira é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
+PRODUTO: Tabela que armazena dados sobre os produtos que o supermercado dispõe.<br>
+* codigo: Número inteiro único que identifica um determinado produto. Exemplo: código 1, identifica o produto de nome “Arroz Juparanã tipo 1 5kg”.<br>
+* custo: Número flutuante que representa o preço que o supermercado pagou pela unidade do produto.<br>
+* descricao: Texto que guarda uma descrição de um produto, área destinada para observações e outras informações descritivas. Exemplo: “Arroz orgânico produzido por famílias nativas da região Amazônica”.<br>
+* estoque: Número inteiro que indica quantas unidades de um produto o supermercado tem disponível em estoque.<br>
+* marca: Texto que representa a marca comercial de um produto, pode ter o nome do próprio supermercado se o produto for de fabricação própria. Exemplo: “Gola-gola”, marca fabricante de refrigerantes.<br>
+* nome: Texto que representa o nome formal do produto. Exemplo: “Arroz Sempé tipo 1 5kg”.<br>
+* preco: Número flutuante que representa o preço fixo de venda do produto, é o preço sem promoção ou descontos.<br>
+* quant_dispon: Número inteiro que indica a quantidade total disponível de um produto, é a soma da quantidade em estoque com a da prateleira.<br>
+* quant_prateleira: Número inteiro que indica quantas unidades de um produto o supermercado tem disponível na prateleira.<br>
+* tipo: Texto que indica o grupo o qual o produto faz parte. Exemplo: “Sabão em pó Homo Sapiens” é do tipo “limpeza”, pois se enquadra na categoria de produtos de limpeza.<br>
 
-TABELA: LOTE<br>
- Campo id: o campo id é a chave primária por isso e será usado como um identificador, é um atributo determinante por não haver dados repitidos.<br>
- Campo data_compra: o campo data_compra é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
- Campo numero: o campo numero é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
- Campo fabricacao: o campo fabricacao é um atributo simples, portanto não possui uma característica especial e recebe um valor único<br>
- Campo quantidade: o campo quantidade é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
-Campo validade: o campo validade é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
-
+SUPERMERCADO: Tabela que armazena dados sobre o supermercado.<br>
+* latitude: Número flutuante negativo ou positivo que junto à longitude identifica a localização do supermercado em um mapa (plano cartesiano).<br>
+* longitude: Número flutuante negativo ou positivo que junto à latitude identifica a localização do supermercado em um mapa (plano cartesiano).<br>
+* nome: Texto que representa o nome da organização. Exemplo: “Eita Supermercados.”.<br>
+* unidade: Texto que identifica uma unidade da rede de supermercados. Exemplo: “Anchieta”.<br>
 
 ### 6	MODELO LÓGICO<br>
         a) inclusão do modelo lógico do banco de dados
