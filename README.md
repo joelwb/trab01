@@ -136,16 +136,16 @@ TABELA: HIST_COMPRA<br>
 
 
 TABELA: PRODUTO // FALTA JUSTIFICAR<br>
-Campo quant_dispon: o campo quant_dipon é um atributo simples, portanto não possui uma característica especial e recebe um valor único que será obtido através de um cálculo.<br>
-Campo tipo: o campo tipo é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
-Campo custo: o campo custo é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
-Campo preco: o campo preco é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
-Campo quant_prateleira: o campo quant_prateleira é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
+Campo quant_dispon: o campo quant_dipon é um atributo simples, e recebe um valor que será obtido através de um cálculo , e irá informar a quantidades de produtos disponíveis .<br>
+Campo custo: o campo custo é um atributo simples e informa o custo de fábrica do produto.
+Campo preco: o campo preco é um atributo simples e tem o objetivo de informar o preco que o mesmo será vendido.<br>
+Campo quant_prateleira: irá dizer a quantidades de produtos disponíveis na prateleira.<br>
 
 
 TABELA: LOTE // FALTA JUSTIFICAR<br>
-Campo data_compra: o campo data_compra é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
-Campo quantidade: o campo quantidade é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br> Campo validade: o campo validade é um atributo simples, portanto não possui uma característica especial e recebe um valor único.<br>
+Campo data_compra: o campo data_compra é um atributo simples e irá armazanar a data da compra do lote <br>
+Campo quantidade: Informa a quantidade de produtos que este lote possui .<br>
+Campo validade: armazena a validade do lote, haja vista que cada lote pode possuir validades diferentes.<br>
 
 
 
