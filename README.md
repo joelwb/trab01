@@ -117,9 +117,9 @@ TABELA: ENDEREÇO<br>
 * Campo cep: é um atributo simples e mais específico para a identificação do endereço.<br>
 
 TABELA: CONTATO <br>
-* Campo id: possui a função de ser um identificador único do contato.<br>
-* Campo tipo: Tem como função descrever o tipo de contato(e-mail, telefone, facebook e etc) da pessoa, fornecedor ou do supermercado.<br>
-* Campo descricao: Insere os tipos de contatos, informando o telefone e/ou email e assim por diante .<br>
+* Campo id: é um atributo determinante, possui a função de ser um identificador único do contato.<br>
+* Campo tipo: é um atributo simples, Tem como função descrever o tipo de contato(e-mail, telefone, facebook e etc) da pessoa, fornecedor ou do supermercado.<br>
+//* Campo descricao: é um atributo simples, insere os tipos de contatos, informando o telefone e/ou email e assim por diante .<br>
 
 TABELA: SUPERMERCADO<br>
 * Campo unidade: é um atributo simples e identifica a unidade que este supermercado pertence , ex: CARONE - CENTRO DE VILA VELHA.<br>
@@ -136,15 +136,15 @@ TABELA: HIST_COMPRA<br>
 
 TABELA: PRODUTO <br>
 * Campo quant_dispon: é um atributo simples, e recebe um valor que será obtido através de um cálculo , e irá informar a quantidade de produtos disponíveis (estoque + prateleira) .<br>
-* Campo custo:é um atributo simples e informa o custo de fábrica do produto.
+* Campo custo: é um atributo simples e informa o custo de fábrica do produto.
 * Campo preco: é um atributo simples e tem o objetivo de informar o preco que o mesmo será vendido.<br>
-* Campo quant_prateleira: irá dizer a quantidades de produtos disponíveis na prateleira.<br>
+* Campo quant_prateleira: é um atributo simples, irá dizer a quantidades de produtos disponíveis na prateleira.<br>
 
 
 TABELA: LOTE <br>
-* Campo data_compra:é um atributo simples e irá armazanar a data da compra do lote <br>
-* Campo quantidade: Informa a quantidade de produtos que este lote possui .<br>
-* Campo validade: armazena a validade do lote, haja vista que cada lote pode possuir validades diferentes.<br>
+* Campo data_compra: é um atributo simples e irá armazanar a data da compra do lote <br>
+* Campo quantidade: é um atributo simples e informa a quantidade de produtos que este lote possui .<br>
+* Campo validade: é um atributo simples, armazena a validade do lote, haja vista que cada lote pode possuir validades diferentes.<br>
 
 
 
