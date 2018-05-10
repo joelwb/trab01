@@ -136,7 +136,7 @@ TABELA: HIST_COMPRA<br>
 
 
 TABELA: PRODUTO <br>
-Campo quant_dispon: o campo quant_dipon é um atributo simples, e recebe um valor que será obtido através de um cálculo , e irá informar a quantidades de produtos disponíveis .<br>
+Campo quant_dispon: o campo quant_dipon é um atributo simples, e recebe um valor que será obtido através de um cálculo , e irá informar a quantidade de produtos disponíveis (estoque + prateleira) .<br>
 Campo custo: o campo custo é um atributo simples e informa o custo de fábrica do produto.
 Campo preco: o campo preco é um atributo simples e tem o objetivo de informar o preco que o mesmo será vendido.<br>
 Campo quant_prateleira: irá dizer a quantidades de produtos disponíveis na prateleira.<br>
