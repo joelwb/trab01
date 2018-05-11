@@ -105,25 +105,16 @@ Larissa Santos da Motta: larissasantosdamotta@gmail.com<br>
 
 #### 5.2 DECISÕES DE PROJETO
 
-* Pessoa: No modelo conceitual optamos na decisão do projeto em não distinguir pessoa física de pessoa jurídica.
+* Pessoa: No modelo conceitual optamos na decisão do projeto em não distinguir pessoa física de pessoa jurídica, ademais, as informações referentes ao endereço da mesma estará na tabela pessoa.
 * Obs. 1: Foi estabelecido que vários clientes podem utilizar um mesmo cartão.
 * Obs. 2: Foi estabelecido que um cliente pode utilizar vários cartões.
 * Obs. 3: Foi estabelecido que várias pessoas podem habitar um mesmo endereço.
 * Obs. 4: No modelo conceitual optou-se em dividir entidade pessoa em pessoa física, mas não em pessoa jurídica, já que pessoa jurídica se destaca por 1 atributo.
 
-TABELA: ENDEREÇO<br>
-* Campo id: é um atributo determinante por não haver dados repitidos, ou seja, um endereço possui um único ID.<br>
-* Campo estado: é um atributo simples o qual identifica o estado.<br>
-* Campo cidade: é um atributo simples o qual possui o objetivo de identificar uma cidade.<br>
-* Campo bairro :é um atributo simples o qual indentifica um bairro.<br>
-* Campo rua: é um atributo simples e indentifica uma rua.<br>
-* Campo numero: é um atributo simples e armazena um número da residência.<br>
-* Campo cep: é um atributo simples e mais específico para a identificação do endereço.<br>
-
 TABELA: CONTATO <br>
 * Campo id: é um atributo determinante, possui a função de ser um identificador único do contato.<br>
 * Campo tipo: é um atributo simples, Tem como função descrever o tipo de contato(e-mail, telefone, facebook e etc) da pessoa, fornecedor ou do supermercado.<br>
-//* Campo descricao: é um atributo simples, insere os tipos de contatos, informando o telefone e/ou email e assim por diante .<br>
+* Campo descricao: é um atributo simples, insere os tipos de contatos, informando o telefone e/ou email e assim por diante .<br>
 
 TABELA: SUPERMERCADO<br>
 * Campo unidade: é um atributo simples e identifica a unidade que este supermercado pertence , ex: CARONE - CENTRO DE VILA VELHA.<br>
