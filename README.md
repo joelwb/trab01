@@ -106,6 +106,10 @@ Larissa Santos da Motta: larissasantosdamotta@gmail.com<br>
 #### 5.2 DECISÕES DE PROJETO
 
 * Pessoa: No modelo conceitual optamos na decisão do projeto em não distinguir pessoa física de pessoa jurídica.
+* Obs. 1: Foi estabelecido que vários clientes podem utilizar um mesmo cartão.
+* Obs. 2: Foi estabelecido que um cliente pode utilizar vários cartões.
+* Obs. 3: Foi estabelecido que várias pessoas podem habitar um mesmo endereço.
+* Obs. 4: No modelo conceitual optou-se em dividir entidade pessoa em pessoa física, mas não em pessoa jurídica, já que pessoa jurídica se destaca por 1 atributo.
 
 TABELA: ENDEREÇO<br>
 * Campo id: é um atributo determinante por não haver dados repitidos, ou seja, um endereço possui um único ID.<br>
