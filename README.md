@@ -100,16 +100,16 @@ Larissa Santos da Motta: larissasantosdamotta@gmail.com<br>
         
     
 #### 5.1 Validação do Modelo Conceitual
-    Grupo01 - estacIonA: Adreâgelo, Anne, Caike, Emanuel.
-    Grupo02 - CASA INTELIGENTE: Rafaela, Rebeca.
+Grupo01 - [estacIonA](https://github.com/CasaInteligenteBD1/trab01gv): Adreâgelo, Anne, Caike, Emanuel.<br>
+Grupo02 - [CASA INTELIGENTE](https://github.com/CasaInteligenteBD1/trab01_ci): Juliana, Nilzilane, Rafaela, Rebeca.<br>
 
 #### 5.2 DECISÕES DE PROJETO
 
 * Pessoa: No modelo conceitual optamos na decisão do projeto em não distinguir pessoa física de pessoa jurídica, ademais, as informações referentes ao endereço da mesma estará na tabela pessoa.
 * Obs. 1: Foi estabelecido que vários clientes podem utilizar um mesmo cartão.
 * Obs. 2: Foi estabelecido que um cliente pode utilizar vários cartões.
-* Obs. 3: Foi estabelecido que várias pessoas podem habitar um mesmo endereço.
-* Obs. 4: No modelo conceitual optou-se em dividir entidade pessoa em pessoa física, mas não em pessoa jurídica, já que pessoa jurídica se destaca por 1 atributo.
+* Obs. 3: Optou-se em dividir entidade pessoa em pessoa física, mas não em pessoa jurídica, já que pessoa jurídica se destaca por 1 atributo.<br>
+* Obs. 4: Foi aceita a sugestão do software de modelagem “brModelo”, de unificar a entidade Pessoa com a entidade Endereço.<br>
 
 TABELA: CONTATO <br>
 * Campo id: é um atributo determinante, possui a função de ser um identificador único do contato.<br>
@@ -167,14 +167,6 @@ CONTATO: Tabela que armazena dados sobre diversos tipos de contato.<br>
 * descricao: Texto com o conteúdo do contato propriamente dito. Exemplo: “3228-6125” (para o tipo “telefone”).<br>
 * tipo: Texto que informa qual domínio do contato. Exemplo: “telefone”, “celular”, “email”.<br> 
 
-ENDERECO: Tabela que armazena dados referentes a localização de uma pessoa (física ou jurídica).<br>
-* bairro: Texto que corresponde ao bairro da entidade. Exemplo: “Jardim Carapina”.<br>
-* CEP: Número que identifica o código de endereçamento postal da pessoa. Exemplo: 29161-699.<br>
-* cidade: Texto que indica o município onde a pessoa reside. Exemplo: “Serra”.<br>
-* estado: Texto que indica a unidade federativa (UF) onde a pessoa reside. Exemplo: “Espírito Santo”.<br>
-* numero: Número que localiza a residência (casa, prédio, etc.) da pessoa. Exemplo: 45.<br>
-* rua: Texto que indica a rua ou avenida onde a pessoa reside. Exemplo: “Av. Presidente Dutra”.<br>
-
 FORNECEDOR: Tabela que armazena dados sobre o fornecedor ligado ao supermercado.<br>
 * CNPJ: Número que corresponde ao registro de Cadastro Nacional de Pessoa Jurídica do fornecedor. Exemplo: “17.181.538/0001-42”.<br>
 * nome: Texto que representa o nome da organização ou pessoa física que fornece algo. Exemplo: “Seu Zé Refrigerantes Ltda.”.<br>
@@ -185,8 +177,7 @@ FUNCIONÁRIO: Tabela que armazena dados sobre os funcionários do supermercado.<
 * setor: Texto que indica o departamento em que o funcionário trabalha. Exemplo: “Almoxarifado”.<br>
 
 HIST_COMPRA: Tabela que armazena dados sobre um histórico de compras de um cliente.<br>
-* data: Data que representa o dia, mês e ano em que a compra foi realizada. Exemplo: “21/05/2017”.<br>
-* hora: Horário que representa a hora, minuto e segundos em que a compra foi realizada. Exemplo: “11:25:30”.<br>
+* timestamp: Estampa de tempo que representa a data (dia, mês e ano) e a hora (hora, minuto, segundos) em que a compra foi realizada. Exemplo: “21/05/2017 – 17:40:30”.<br>
 * valor: Número flutuante que representa o valor total gasto pelo cliente na compra. Exemplo: 732.50.<br>
 
 LOTE: Tabela que armazena dados sobre os lotes (conjunto, aglomerado) dos produtos.<br>
@@ -197,8 +188,13 @@ LOTE: Tabela que armazena dados sobre os lotes (conjunto, aglomerado) dos produt
 * validade: Data que registra quando os produtos desse lote expirarão. Exemplo: “10/06/2018”.<br>
 
 PESSOA: Tabela que armazena dados em comum entre pessoas físicas e jurídicas.<br>
-OBS. 1: Toda pessoa jurídica ou física possui meios de CONTATO e um ENDEREÇO.<br>
+* bairro: Texto que corresponde ao bairro da entidade. Exemplo: “Jardim Carapina”.<br>
+* CEP: Número que identifica o código de endereçamento postal da pessoa. Exemplo: 29161-699.<br>
+* cidade: Texto que indica o município onde a pessoa reside. Exemplo: “Serra”.<br>
+* estado: Texto que indica a unidade federativa (UF) onde a pessoa reside. Exemplo: “Espírito Santo”.<br>
 * nome: Texto que representa o nome da pessoa. Exemplo: “João Silva” ou “Maria Supermercado”.<br>
+* numero: Número que localiza a residência (casa, prédio, etc.) da pessoa. Exemplo: 45.<br>
+* rua: Texto que indica a rua ou avenida onde a pessoa reside. Exemplo: “Av. Presidente Dutra”.<br>
 
 PESSOA_FISICA: Tabela que armazena dados intrínsecos a uma pessoa física (cliente ou funcionário do supermercado).
 * CPF: Número único que identifica uma pessoa física. Exemplo: “003728136-59”.<br>
