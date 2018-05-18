@@ -105,10 +105,10 @@ Grupo02 - [CASA INTELIGENTE](https://github.com/CasaInteligenteBD1/trab01_ci): J
 
 #### 5.2 DECISÕES DE PROJETO
 
-* Pessoa: No modelo conceitual optamos na decisão do projeto em não distinguir pessoa física de pessoa jurídica, ademais, as informações referentes ao endereço da mesma estará na tabela pessoa.
+* Pessoa: No modelo conceitual optamos na decisão do projeto em não distinguir supermercado de fornecedor, ademais, as informações referentes ao endereço da mesma estará na tabela pessoa.
 * Obs. 1: Foi estabelecido que vários clientes podem utilizar um mesmo cartão.
 * Obs. 2: Foi estabelecido que um cliente pode utilizar vários cartões.
-* Obs. 3: Optou-se em dividir entidade pessoa em pessoa física, mas não em pessoa jurídica, já que pessoa jurídica se destaca por 1 atributo.<br>
+* Obs. 3: Optou-se em dividir entidade pessoa jurídica em supermercado , mas não em fornecedor, já que um fornecedor não tem campos que o diferencie de uma pessoa jurídica.<br>
 * Obs. 4: Foi aceita a sugestão do software de modelagem “brModelo”, de unificar a entidade Pessoa com a entidade Endereço.<br>
 
 TABELA: CONTATO <br>
@@ -167,9 +167,9 @@ CONTATO: Tabela que armazena dados sobre diversos tipos de contato.<br>
 * descricao: Texto com o conteúdo do contato propriamente dito. Exemplo: “3228-6125” (para o tipo “telefone”).<br>
 * tipo: Texto que informa qual domínio do contato. Exemplo: “telefone”, “celular”, “email”.<br> 
 
-FORNECEDOR: Tabela que armazena dados sobre o fornecedor ligado ao supermercado.<br>
+JURIDICA: Tabela que armazena dados sobre o uma pessoa jurídica (supermercado ou fornecedor).<br>
 * CNPJ: Número que corresponde ao registro de Cadastro Nacional de Pessoa Jurídica do fornecedor. Exemplo: “17.181.538/0001-42”.<br>
-* nome: Texto que representa o nome da organização ou pessoa física que fornece algo. Exemplo: “Seu Zé Refrigerantes Ltda.”.<br>
+OBS: É possivel saber se uma pessoa jurídica é um fornecedor ou supermercado, verificando se o id da pessoa jurídica está na entidade supermercado, se tiver a pessoa jurídica é um supermercado, senão é um fornecedor.
 
 FUNCIONÁRIO: Tabela que armazena dados sobre os funcionários do supermercado.<br>
 * cargo: Texto que identifica a profissão ocupada por um funcionário dentro de um setor. Exemplo: “Repositor”.<br>
@@ -199,8 +199,11 @@ PESSOA: Tabela que armazena dados em comum entre pessoas físicas e jurídicas.<
 PESSOA_FISICA: Tabela que armazena dados intrínsecos a uma pessoa física (cliente ou funcionário do supermercado).
 * CPF: Número único que identifica uma pessoa física. Exemplo: “003728136-59”.<br>
 * data_nasc: Data que representa a data de nascimento de uma pessoa física. Exemplo: “11/05/1997”.<br>
+* genero: É o genero de uma pessoa física ("M" ou "F"). Exemplo: “11/05/1997”.<br>
 * login: Texto que representa o nome de usuário que uma pessoa (cliente ou funcionário do supermercado) usa para acessar o * sistema. Exemplo: “faustop@extragood.com”.<br>
 * senha: Texto que representa a palavra-chave usada pela pessoa física (cliente ou funcionário) para acessar o sistema. Exemplo: “Aninha1561!”.<br>
+OBS: É possivel saber se uma pessoa física é um cliente ou funcionário, verificando se o id da pessoa física está na entidade funcionario, se tiver a pessoa física é um funcionario, senão é um cliente.
+
 
 PRODUTO: Tabela que armazena dados sobre os produtos que o supermercado dispõe.<br>
 * codigo: Número inteiro único que identifica um determinado produto. Exemplo: código 1, identifica o produto de nome “Arroz Juparanã tipo 1 5kg”.<br>
