@@ -228,7 +228,7 @@ SUPERMERCADO: Tabela que armazena dados sobre o supermercado.<br>
         
 
 ### 7	MODELO FÍSICO<br>
-![Alt text](https://github.com/rfidmarket/trab01/blob/master/arquivos/modeloFisico.docx "Modelo Físico")        
+<a href="https://github.com/rfidmarket/trab01/blob/master/arquivos/modeloFisico.docx">Modelo Físico</a><br>   
         
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
 #### 8.1 DETALHAMENTO DAS INFORMAÇÕES
