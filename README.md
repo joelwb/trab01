@@ -224,9 +224,8 @@ SUPERMERCADO: Tabela que armazena dados sobre o supermercado.<br>
 * unidade: Texto que identifica uma unidade da rede de supermercados. Exemplo: “Anchieta”.<br>
 
 ### 6	MODELO LÓGICO<br>
-        a) inclusão do modelo lógico do banco de dados
-        b) verificação de correspondencia com o modelo conceitual 
-        (não serão aceitos modelos que não estejam em conformidade)
+    ![Alt text](https://github.com/rfidmarket/trab01/blob/master/arquivos/modeloLogico.png "Modelo Lógico")
+        
 
 ### 7	MODELO FÍSICO<br>
         a) inclusão das instruções de criacão das estruturas DDL 
