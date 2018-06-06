@@ -232,8 +232,7 @@ SUPERMERCADO: Tabela que armazena dados sobre o supermercado.<br>
         
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
 #### 8.1 DETALHAMENTO DAS INFORMAÇÕES
-        a) inclusão das instruções de inserção dos dados nas tabelas criadas pelo script de modelo físic
-        b) formato .SQL
+      <a href="https://github.com/rfidmarket/trab01/blob/master/arquivos/EasyMarket.sql">Script/a><br>   
 
 #### 8.2 INCLUSÃO DO SCRIPT PARA CRIAÇÃO DE TABELA E INSERÇÃO DOS DADOS
         a) Junção dos scripts anteriores em um único script 
