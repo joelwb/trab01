@@ -239,11 +239,7 @@ SUPERMERCADO: Tabela que armazena dados sobre o supermercado.<br>
 <a href="https://github.com/rfidmarket/trab01/blob/master/arquivos/EasyMarket.sql">Create_and_Insert</a><br>
        
 #### 8.3 INCLUSÃO DO SCRIPT PARA EXCLUSÃO DE TABELAS EXISTENTES, CRIAÇÃO DE TABELA NOVAS E INSERÇÃO DOS DADOS
-        a) Junção dos scripts anteriores em um único script 
-        (Drop table + Create de tabelas e estruturas de dados + dados a serem inseridos)
-        b) Criar um novo banco de dados para testar a restauracao 
-        (em caso de falha na restauração o grupo não pontuará neste quesito)
-        c) formato .SQL
+<a href="https://github.com/rfidmarket/trab01/blob/master/arquivos/Drops%2CCreates%2CInserts">Drops, Creates, Inserts</a><br>
 >## Marco de Entrega 03 em: (14/05/2018)<br>
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
@@ -282,8 +278,31 @@ SELECT * FROM juridica WHERE fk_pessoa  > 95;
     b) Criar no mínimo 3 consultas com operadores aritméticos 
     c) Criar no mínimo 3 consultas com operação de renomear nomes de campos ou tabelas
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
-    a) Criar outras 5 consultas que envolvam like ou ilike
-    b) Criar uma consulta para cada tipo de função data apresentada.
+SELECT * FROM supermercado where unidade ilike 'Vi%';
+
+SELECT * FROM juridica where cnpj like '%0001-3%';
+
+SELECT * FROM fisica where login like '%bol.com.br';
+
+SELECT * FROM pessoa where nome ilike 'BR%';
+
+SELECT * FROM pessoa where rua like 'Av.%';
+
+SELECT * FROM pessoa where rua ilike 'Rua V%';
+
+SELECT * FROM pessoa where bairro ilike '%Praia da %';
+
+
+SELECT * FROM fisica where DATE_PART('year',AGE(CURRENT_DATE, data_nasc)) > 53;
+
+SELECT *, AGE(CURRENT_DATE, data_nasc) as idade FROM fisica where DATE_PART('year',AGE(CURRENT_DATE, data_nasc)) > 53;
+
+SELECT * FROM fisica where EXTRACT('year' FROM data_nasc) > 1996;
+
+SELECT *, CURRENT_DATE - data_nasc as dias_vida FROM fisica where EXTRACT('year' FROM data_nasc) > 1996;
+
+SELECT *, EXTRACT('month' FROM data_nasc) as mes_nasc FROM fisica where DATE_PART('year',AGE(CURRENT_DATE, data_nasc)) > 53;
+
 
 >## Marco de Entrega 04 em: (04/06/2017)<br>
     
