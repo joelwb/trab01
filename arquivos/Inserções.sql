@@ -108,7 +108,7 @@ INSERT INTO public.pessoa(nome,numero,rua,cep,bairro,estado,cidade) VALUES
 ('CARONE',5654,'RUA FORTALEZA-C COSTA AZUL','29101-600','Praia de Itapoã','ES','Vila Velha'),
 ('MACRO',4541,'Rua Antônio Ataíde','29100-295','Centro','ES','Vila Velha'),
 ('SEMPRE TEM',777,'Rua Professora Gladys Bernardo Lucas','29042-180','Jucutuquara','ES','Vitória'),
-('MACRO',5589,'Rua -Ademar Luiz Nepomuceno','29090520','Jardim Camburí','ES','Vitória');
+('MACRO',5589,'Rua -Ademar Luiz Nepomuceno','29090-520','Jardim Camburí','ES','Vitória');
 
 
 
