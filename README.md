@@ -236,7 +236,7 @@ SUPERMERCADO: Tabela que armazena dados sobre o supermercado.<br>
     
 
 #### 8.2 INCLUSÃO DO SCRIPT PARA CRIAÇÃO DE TABELA E INSERÇÃO DOS DADOS
-       <a href="https://github.com/rfidmarket/trab01/blob/master/arquivos/EasyMarket.sql">Script</a><br>
+<a href="https://github.com/rfidmarket/trab01/blob/master/arquivos/EasyMarket.sql">Create_and_Insert</a><br>
        
 #### 8.3 INCLUSÃO DO SCRIPT PARA EXCLUSÃO DE TABELAS EXISTENTES, CRIAÇÃO DE TABELA NOVAS E INSERÇÃO DOS DADOS
         a) Junção dos scripts anteriores em um único script 
