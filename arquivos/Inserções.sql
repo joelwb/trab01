@@ -348,4 +348,4 @@ INSERT INTO public.contato(id, descricao, tipo, fk_pessoa) VALUES
 (67,'(72) 9037338397','Telefone',67),
 (68,'(12) 8089403871','Telefone',68),
 (69,'(24) 7087583441','Telefone',69),
-(70,'(86) 7073607575',Telefone,70);
+(70,'(86) 7073607575','Telefone',70);
