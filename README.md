@@ -247,31 +247,37 @@ SUPERMERCADO: Tabela que armazena dados sobre o supermercado.<br>
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
 
 SELECT * FROM pessoa;
+![Alt text](https://github.com/rfidmarket/trab01/blob/master/arquivos/SELECT_ALL1.png "Print")
 
 
-SELECT * FROM funcionario;
+SELECT * FROM funcionario;<br>
+![Alt text](https://github.com/rfidmarket/trab01/blob/master/arquivos/SELECT_ALL2.png "Print")
 
 
-SELECT * FROM supermercado;
+SELECT * FROM supermercado;<br>
+![Alt text](https://github.com/rfidmarket/trab01/blob/master/arquivos/SELECT_ALL3.png "Print")
 
 
-SELECT * FROM juridica;
+SELECT * FROM juridica;<br>
+![Alt text](https://github.com/rfidmarket/trab01/blob/master/arquivos/SELECT_ALL4.png "Print")
 
-
-SELECT * FROM fisica;
+SELECT * FROM fisica;<br>
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
 
-SELECT * FROM pessoa WHERE id < 27;
+SELECT * FROM pessoa WHERE id < 27;<br>
+![Alt text](https://github.com/rfidmarket/trab01/blob/master/arquivos/WHERE1.png "Print")
 
 
-SELECT * FROM fisica WHERE genero = 'F';
+SELECT * FROM fisica WHERE genero = 'F';<br>
 
 
-SELECT * FROM funcionario WHERE cargo =  'estagiario';
+SELECT * FROM funcionario WHERE cargo =  'estagiario';<br>
+![Alt text](https://github.com/rfidmarket/trab01/blob/master/arquivos/WHERE3.png "Print")
 
 
-SELECT * FROM juridica WHERE fk_pessoa  > 95;
+SELECT * FROM juridica WHERE fk_pessoa  > 95;<br>
+![Alt text](https://github.com/rfidmarket/trab01/blob/master/arquivos/WHERE4.png "Print")
 
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
     a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
