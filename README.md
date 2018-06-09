@@ -279,29 +279,41 @@ SELECT * FROM juridica WHERE fk_pessoa  > 95;
     c) Criar no mínimo 3 consultas com operação de renomear nomes de campos ou tabelas
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
 SELECT * FROM supermercado where unidade ilike 'Vi%';
+![Alt text](https://github.com/rfidmarket/trab01/blob/master/arquivos/LIKE1.png "Print")
 
-SELECT * FROM juridica where cnpj like '%0001-3%';
+SELECT * FROM juridica where cnpj like '%0001-3%';<br>
+![Alt text](https://github.com/rfidmarket/trab01/blob/master/arquivos/LIKE2.png "Print")
 
 SELECT * FROM fisica where login like '%bol.com.br';
+![Alt text](https://github.com/rfidmarket/trab01/blob/master/arquivos/LIKE3.png "Print")
 
 SELECT * FROM pessoa where nome ilike 'BR%';
+![Alt text](https://github.com/rfidmarket/trab01/blob/master/arquivos/LIKE4.png "Print")
 
 SELECT * FROM pessoa where rua like 'Av.%';
+![Alt text](https://github.com/rfidmarket/trab01/blob/master/arquivos/LIKE5.png "Print")
 
 SELECT * FROM pessoa where rua ilike 'Rua V%';
+![Alt text](https://github.com/rfidmarket/trab01/blob/master/arquivos/LIKE6.png "Print")
 
 SELECT * FROM pessoa where bairro ilike '%Praia da %';
+![Alt text](https://github.com/rfidmarket/trab01/blob/master/arquivos/LIKE7.png "Print")
 
 
 SELECT * FROM fisica where DATE_PART('year',AGE(CURRENT_DATE, data_nasc)) > 53;
+![Alt text](https://github.com/rfidmarket/trab01/blob/master/arquivos/DATE1.png "Print")
 
 SELECT *, AGE(CURRENT_DATE, data_nasc) as idade FROM fisica where DATE_PART('year',AGE(CURRENT_DATE, data_nasc)) > 53;
+![Alt text](https://github.com/rfidmarket/trab01/blob/master/arquivos/DATE2.png "Print")
 
 SELECT * FROM fisica where EXTRACT('year' FROM data_nasc) > 1996;
+![Alt text](https://github.com/rfidmarket/trab01/blob/master/arquivos/DATE3.png "Print")
 
 SELECT *, CURRENT_DATE - data_nasc as dias_vida FROM fisica where EXTRACT('year' FROM data_nasc) > 1996;
+![Alt text](https://github.com/rfidmarket/trab01/blob/master/arquivos/DATE4.png "Print")
 
 SELECT *, EXTRACT('month' FROM data_nasc) as mes_nasc FROM fisica where DATE_PART('year',AGE(CURRENT_DATE, data_nasc)) > 53;
+![Alt text](https://github.com/rfidmarket/trab01/blob/master/arquivos/DATE5.png "Print")
 
 
 >## Marco de Entrega 04 em: (04/06/2017)<br>
