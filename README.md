@@ -388,7 +388,7 @@ where genero ilike 'm') as masc) as "Funcionários \[MASC]";*<br>
 *SELECT * FROM fisica where DATE_PART('year',AGE(CURRENT_DATE, data_nasc)) > 53;*<br>
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/201687c733eab6f37815782ad6abd0116533825d/arquivos/DATA1.png"></p>
 
-*SELECT login, data_nasc,cpf,senha,fk_pessoa,genero,AGE(CURRENT_DATE, data_nasc) as idade FROM fisica where DATE_PART('year',AGE(CURRENT_DATE, data_nasc)) > 53; *<br>
+*SELECT login, data_nasc,cpf,senha,fk_pessoa,genero,AGE(CURRENT_DATE, data_nasc) as idade FROM fisica where DATE_PART('year',AGE(CURRENT_DATE, data_nasc)) > 53;*<br>
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/201687c733eab6f37815782ad6abd0116533825d/arquivos/DATA2.png"></p>
 
 *SELECT * FROM fisica where EXTRACT('year' FROM data_nasc) > 1996;*<br>
