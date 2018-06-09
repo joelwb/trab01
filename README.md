@@ -309,7 +309,7 @@ SELECT * FROM pessoa where bairro ilike '%Praia da %';
 
 
 SELECT * FROM fisica where DATE_PART('year',AGE(CURRENT_DATE, data_nasc)) > 53;
-![Alt text](https://github.com/rfidmarket/trab01/blob/master/arquivos/DATE1.png "Print")
+![Alt text](https://github.com/rfidmarket/trab01/blob/201687c733eab6f37815782ad6abd0116533825d/arquivos/DATA1.png "Print")
 
 SELECT *, AGE(CURRENT_DATE, data_nasc) as idade FROM fisica where DATE_PART('year',AGE(CURRENT_DATE, data_nasc)) > 53;
 ![Alt text](https://github.com/rfidmarket/trab01/blob/master/arquivos/DATE2.png "Print")
