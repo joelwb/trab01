@@ -262,6 +262,7 @@ SELECT * FROM juridica;<br>
 ![Alt text](https://github.com/rfidmarket/trab01/blob/master/arquivos/SELECT_ALL4.png "Print")
 
 SELECT * FROM fisica;<br>
+![Alt text](https://github.com/rfidmarket/trab01/blob/master/arquivos/SELECT_ALL5.png "Print")
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
 
@@ -270,6 +271,7 @@ SELECT * FROM pessoa WHERE id < 27;<br>
 
 
 SELECT * FROM fisica WHERE genero = 'F';<br>
+![Alt text](https://github.com/rfidmarket/trab01/blob/master/arquivos/WHERE2.png "Print")
 
 
 SELECT * FROM funcionario WHERE cargo =  'estagiario';<br>
