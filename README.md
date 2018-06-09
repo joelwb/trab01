@@ -312,16 +312,16 @@ SELECT * FROM fisica where DATE_PART('year',AGE(CURRENT_DATE, data_nasc)) > 53;
 ![Alt text](https://github.com/rfidmarket/trab01/blob/201687c733eab6f37815782ad6abd0116533825d/arquivos/DATA1.png "Print")
 
 SELECT *, AGE(CURRENT_DATE, data_nasc) as idade FROM fisica where DATE_PART('year',AGE(CURRENT_DATE, data_nasc)) > 53;
-![Alt text](https://github.com/rfidmarket/trab01/blob/master/arquivos/DATE2.png "Print")
+![Alt text](https://github.com/rfidmarket/trab01/blob/201687c733eab6f37815782ad6abd0116533825d/arquivos/DATA2.png "Print")
 
 SELECT * FROM fisica where EXTRACT('year' FROM data_nasc) > 1996;
-![Alt text](https://github.com/rfidmarket/trab01/blob/master/arquivos/DATE3.png "Print")
+![Alt text](https://github.com/rfidmarket/trab01/blob/201687c733eab6f37815782ad6abd0116533825d/arquivos/DATA3.png "Print")
 
 SELECT *, CURRENT_DATE - data_nasc as dias_vida FROM fisica where EXTRACT('year' FROM data_nasc) > 1996;
-![Alt text](https://github.com/rfidmarket/trab01/blob/master/arquivos/DATE4.png "Print")
+![Alt text](https://github.com/rfidmarket/trab01/blob/201687c733eab6f37815782ad6abd0116533825d/arquivos/DATA4.png "Print")
 
 SELECT *, EXTRACT('month' FROM data_nasc) as mes_nasc FROM fisica where DATE_PART('year',AGE(CURRENT_DATE, data_nasc)) > 53;
-![Alt text](https://github.com/rfidmarket/trab01/blob/master/arquivos/DATE5.png "Print")
+![Alt text](https://github.com/rfidmarket/trab01/blob/201687c733eab6f37815782ad6abd0116533825d/arquivos/DATA5.png "Print")
 
 
 >## Marco de Entrega 04 em: (04/06/2017)<br>
