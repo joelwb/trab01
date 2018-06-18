@@ -130,7 +130,8 @@ CREATE TABLE Utiliza (
  
 CREATE TABLE FORNECIMENTO (
 	fk_supermercado INTEGER,
-	fk_fornecedor INTEGER
+	fk_fornecedor INTEGER,
+	UNIQUE (fk_supermercado,fk_fornecedor)
 );
  
 ALTER TABLE FUNCIONARIO ADD CONSTRAINT fk_pessoa_fisica
