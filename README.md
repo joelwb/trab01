@@ -270,7 +270,7 @@ SUPERMERCADO: Tabela que armazena dados sobre o supermercado.<br>
 *SELECT * FROM fisica WHERE genero = 'F';*<br>
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/arquivos/WHERE2.png"></p>
 
-*SELECT * FROM funcionario WHERE cargo =  'estagiario';*<br>
+*SELECT * FROM funcionario where setor ilike 'ti';*<br>
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/arquivos/WHERE3.png"></p>
 
 *SELECT * FROM juridica WHERE fk_pessoa  > 95;*<br>
