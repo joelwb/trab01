@@ -247,19 +247,19 @@ SUPERMERCADO: Tabela que armazena dados sobre o supermercado.<br>
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
 
 *SELECT * FROM pessoa;*
-<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/arquivos/SELECT_ALL1.png"></p>
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/arquivos/selectAllPessoas.png"></p>
 
 *SELECT * FROM funcionario;*<br>
-<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/arquivos/SELECT_ALL2.png"></p>
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/arquivos/SelectAllFuncionario.png"></p>
 
 *SELECT * FROM supermercado;*<br>
-<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/arquivos/SELECT_ALL3.png"></p>
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/arquivos/selectAllSupermecado.png"></p>
 
 *SELECT * FROM juridica;*<br>
-<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/arquivos/SELECT_ALL4.png"></p>
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/arquivos/SelectAllJuridica.png"></p>
 
 *SELECT * FROM fisica;*<br>
-<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/arquivos/SELECT_ALL5.png"></p>
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/arquivos/selectAllFisica.png"></p>
 
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
