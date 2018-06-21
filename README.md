@@ -279,20 +279,20 @@ SUPERMERCADO: Tabela que armazena dados sobre o supermercado.<br>
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
     a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
     
---Pegue os dados de todos funcionários que sejam repositores ou atendentes;<br>
+--Pegue os dados de todos funcionários que sejam gerentes ou repositores;<br>
 *select p.nome, fis.genero, fun.cargo, fun.setor, fis.cpf
 from pessoa as p inner join fisica as fis on p.id = fis.fk_pessoa
 inner join funcionario as fun on fis.fk_pessoa = fun.fk_pessoa_fisica
-where cargo ilike 'repositor' or cargo ilike 'atendente';*<br>
+where cargo ilike 'gerente' or cargo ilike '%repositor%';*<br>
 <p align="center">
   <img src="https://github.com/rfidmarket/trab01/blob/master/images/LOGICO1.png"></p>
 
---Pegue os dados de todos funcionários que não sejam estagiários;<br>
-*select * from funcionario where not cargo ilike 'estagiario';*<br>
+--Pegue os dados de todos funcionários que não sejam gerentes;<br>
+*select * from funcionario where not cargo ilike 'gerente';*<br>
 <p align="center">
   <img src="https://github.com/rfidmarket/trab01/blob/master/images/LOGICO2.png"></p>
 
---Pegue os dados de todAs atendentes;<br>
+--Pegue os dados de todos as publicitárias;<br>
 *select p.nome, fis.genero, fun.cargo, fun.setor, fis.data_nasc, fis.login, fis.cpf
 from pessoa as p inner join fisica as fis on p.id = fis.fk_pessoa
 inner join funcionario as fun on fis.fk_pessoa = fun.fk_pessoa_fisica
@@ -300,13 +300,13 @@ where fun.cargo ilike 'atendente' and fis.genero ilike 'f';*<br>
 <p align="center">
   <img src="https://github.com/rfidmarket/trab01/blob/master/images/LOGICO3.png"></p>
 
---Pegue os dados de todos estagiários do setor administrativo;<br>
-*select * from funcionario where cargo ilike 'estagiario' and setor ilike 'administrativo';*<br>
+--Pegue os dados de todos os técnicos em informática do setor de TI;<br>
+*select * from funcionario where cargo ilike 'técnico em informática' and setor ilike 'TI';*<br>
 <p align="center">
   <img src="https://github.com/rfidmarket/trab01/blob/master/images/LOGICO4.png"></p>
 
---Pegue os dados de todos os gerentes do setor administrativo ou de vendas;<br>
-*select * from funcionario where cargo ilike 'gerente' and (setor ilike 'vendas' or setor ilike 'administrativo');*<br>
+--Pegue os dados de todos os gerentes do setor administrativo;<br>
+*select * from funcionario where cargo ilike 'gerente' and (setor ilike 'administrativo');*<br>
 <p align="center">
   <img src="https://github.com/rfidmarket/trab01/blob/master/images/LOGICO5.png"></p>
 
@@ -327,8 +327,8 @@ from (select * from (select extract(year from age(now(), data_nasc)) as idades f
 
 --Exiba o número de pessoas (físicas e jurídicas) em Vitória e de outras cidades;<br>
 *select
-(select count(\*) from pessoa where cidade ilike 'vit%') as "Qtd. residentes Vitória",
-(select count(\*) from pessoa) - (select count(\*) from pessoa where cidade ilike 'vit%') as "Qtd. residentes demais cidades";*<br>
+(select count(*) from pessoa where cidade ilike 'vit%') as "Qtd. residentes Vitória",
+(select count(*) from pessoa) - (select count(*) from pessoa where cidade ilike 'vit%') as "Qtd. residentes demais cidades";*<br>
 <p align="center">
   <img src="https://github.com/rfidmarket/trab01/blob/master/images/ARIT3.png"></p>
     
@@ -364,7 +364,7 @@ where genero ilike 'm') as masc) as "Funcionários \[MASC]";*<br>
   <img src="https://github.com/rfidmarket/trab01/blob/master/images/RENOME3.png"></p>
     
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
-*SELECT * FROM supermercado where unidade ilike 'Vi%';*<br>
+*SELECT * FROM supermercado where unidade ilike 'No%';*<br>
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/arquivos/LIKE1.png"></p>
 
 *SELECT * FROM juridica where cnpj like '%0001-3%';*<br>
@@ -376,10 +376,10 @@ where genero ilike 'm') as masc) as "Funcionários \[MASC]";*<br>
 *SELECT * FROM pessoa where nome ilike 'BR%';*<br>
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/arquivos/LIKE4.png"></p>
 
-*SELECT * FROM pessoa where rua like 'Av.%';*<br>
+*SELECT * FROM pessoa where rua Ilike 'Av%';*<br>
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/arquivos/LIKE5.png"></p>
 
-*SELECT * FROM pessoa where rua ilike 'Rua V%';*<br>
+*SELECT * FROM pessoa where rua ilike 'Avenida a %';*<br>
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/arquivos/LIKE6.png"></p>
 
 *SELECT * FROM pessoa where bairro ilike '%Praia da %';*<br>
