@@ -15,37 +15,60 @@ Jennifer de Castro Gonçalves: jenny_cg23@hotmail.com<br>
 Joel Will Belmiro: joel-willb@hotmail.com<br>
 Larissa Santos da Motta: larissasantosdamotta@gmail.com<br>
 
-### 2.INTRODUÇÃO E MOTIVAÇAO<br>
+### 2. PROPÓSITO DO SISTEMA<br>
+>Este documento contém a especificação do projeto do banco de dados e motivação da escolha realizada.
 
-<p align = "justify"> Easy Market é um sistema para grandes estoques que facilita o controle do fluxo de mercadorias gerenciando desde quantidade, validade, preço, localização desses no interior do estabelecimento até sua chegada ao cliente. Por utilizar etiquetas RFID para acelerar o processo de pagamento de compras o sistema extingue a necessidade de operadores de caixa. Com a economia gerada pela menor necessidade de contratação de funcionários, esperamos minimizar o impacto dos altos preços das etiquetas sobre os preço dos produtos comercializados.</p>
+<p align = "justify">O “EasyMarket” é um sistema que traz como principal proposta a informatização parcial ou total de alguns processos dentro de estabelecimentos comerciais, neste caso, supermercados. Os processos alvos de informatização parcial ou total são: Controle de produtos e seus lotes, controle de funcionários, registro de fornecedores e de clientes.
 
-### 3.MINI-MUNDO<br>
+A versão móvel do sistema busca atender a demanda de clientes do estabelecimento, de modo a oferecer-lhes comodidade na palma da mão, por meio de recursos como disponibilização das informações (Nome, preço, unidades) de cada produto adicionado à sua compra, contagem e contabilização dos itens sem a necessidade de passá-los por um operador de caixa, controle de meios de pagamentos como cartão de crédito ou débito. Além disso, há disponível um histórico de compras com informações dos produtos adquiridos e estabelecimento, o que possibilita acompanhar quanto e com que itens suas economias estão sendo gastas em cada supermercado.
 
-<p align = "justify"> Devido à pressa do cotidiano aliada às imensas filas que se formam nos caixas dos supermercados, ir às compras tornou-se algo exaustivo. Baseado neste problema, com o sistema EasyMarket, ao invés de utilizar o trabalho manual de caixas para leitura de códigos de barra de produtos em supermercados, os clientes terão seus produtos lidos de forma automática através de sensores na saída do supermercado, todos de uma só vez, ainda no carrinho, gerando uma fatura a ser paga. Isso porque os produtos serão identificados por etiquetas RFID (identificação por radiofreqüência). Uma antena estará conectada a um leitor, sendo responsável por enviar e receber sinais de rádio com as informações que estão nessas etiquetas. O leitor então vai converter as ondas de rádio em informações digitais que serão repassadas ao computador. </p>
-<p align = "justify"> Primeiramente, para entrar no sistema EasyMarket para supermercados é solicitado um login e senha. É permitido o acesso de gerentes, almoxarifado, funcionários que fazem a reposição de mercadorias, entre outros setores, e as permissões de acesso  dependem de cada setor. O sistema permite o cadastro de produtos com todas as informações necessárias (tipo, validade, preço de compra, código, descrição, quantidade na prateleira, quantidade total, data de compra, fornecedor, situação,venda, em estoque) e conta com uma opção para remover produtos vendidos. O sistema também permite o cadastro de usuários (nome, cargo, setor, CPF, login, senha), a geração de relatórios, o controle de estoque e pesquisa de produtos. </p>
-<p align = "justify"> Para facilitar o pagamento para o cliente proporcionando maior comodidade e auxiliar em maior controle por parte dos supermercados, foi criado o EasyMarket Mobile. O cliente, portando um aparelho celular ou tablet, realiza seu cadastro no aplicativo ondevai selecionar a forma de pagamento (débito ou crédito), podendo inserir um ou mais cartões e selecionar o desejado para o ato da compra. Com isso, poderá validar seu cadastro na entrada da loja através de um QRCode, liberando sua entrada para efetuar as compras. A partir daí, ele poderá visualizar todo o histórico de compras (local, data, horário, valor, detalhes da compra) pelo aplicativo, tendo a opção de gerar uma nota fiscal eletrônica. Com isso, o mercado poderá ter o controle de pagamentos já que, quando cadastrados, ao efetuar uma compra é realizado débito automático na conta do cliente. </p>
-<p align = "justify">As etiquetas RFID vão automatizar o processo de pagamento, reduzindo em grande parte as filas com o intuito de tornar o processo de compra mais agradável e menos moroso para o cliente. Além disso, é possível fazer o controle do estoque de mercadorias de forma eficiente e precisa, evitando erros e dispensando balanços mensais manuais e demorados. </p>
+Dessa forma, o estabelecimento desfrutará não só do controle de suas mercadorias mas também de informações de seus colaboradores, clientes e fornecedores, em um único sistema.</p>
 
-<b> REGRAS DE NEGÓCIO </b>
+### 3. MINI-MUNDO<br>
+>Descrever o mini-mundo! (Não deve ser maior do que 30 linhas) 
+>Entrevista com o usuário e identificação dos requisitos.
+>Descrição textual das regras de negócio definidas como um subconjunto do mundo real cujos elementos são propriedades que desejamos incluir, processar, armazenar, gerenciar, atualizar, e que descrevem a proposta/solução a ser desenvolvida.
 
-<p align = "justify"> RN01: O preço de um produto é o resultado da expressão: valor da compra + impostos + porcentagem sobre o custo do negócio + valor da etiqueta RFID + porcentagem de lucro. </p>
-<p align = "justify"> RN02: Um produto não deve ser colocado à venda caso esteja vencido. </p>
-<p align = "justify"> RN03: Cobrança de taxa de entrega. </p>
-<p align = "justify"> RN04: Entregas somente em endereços situados a um raio de 4km do estabelecimento. </p>
-<p align = "justify"> RN05: Cada cliente deve ter somente uma conta. Para evitar duplicidade, o número de CPF deve ser obrigatório no cadastro. </p>
+<p align = "justify">
+    O estabelecimento opera revendendo produtos adquiridos de um fornecedor ou comercializando itens de fabricação própria para clientes.
+    
+Todo funcionário do estabelecimento deve ser registrado com informações pessoais como CPF, data de nascimento, nome, sexo, um endereço e, pelo menos, uma forma de contato, além do cargo e setor em que trabalha.
+
+Sempre que um produto novo, nunca vendido antes pelo supermercado, for adquirido de algum fornecedor ou confeccionado para venda aos clientes, ele deve ser registrado com sua categoria, código de barras, custo, marca, nome, preço de venda, quantidade na prateleira, quantidade no estoque, além de poder ter uma descrição.
+
+Para facilitar a comunicação com seu(s) fornecedor(es), o supermercado necessita do registro do nome, endereço, pelo menos um meio de contato (e-mail, celular, telefone fixo), além de armazenar o CNPJ de quem lhe fornece mercadorias.
+
+Quando o supermercado negocia com algum fornecedor, ele costuma adquirir um ou mais lotes de produtos. Informações sobre os lotes dos produtos como a data de fabricação, data de compra, data de validade e seu número de identificação, são bastante relevantes, pois caso algum item venha apresentar problemas de fabricação, por exemplo, é por meio do lote do produto que outras unidades serão identificadas e retiradas de circulação.
+
+Durante a compra, o cliente do supermercado deve escolher os produtos desejados e colocá-los no carrinho. Ao final da compra, se todas informações de pagamento do cliente estiverem corretas, então basta que ele escolha um cartão de crédito ou débito e realize o pagamento. Se o pagamento foi feito sem problemas, o cliente receberá uma nota fiscal eletrônica em seu e-mail e poderá consultar qual, quantas unidades e preço de cada produto comprado, além de saber a data, hora e em qual supermercado a compra foi realizada.
+
+Para o supermercado conhecer melhor as preferências e a proximidade com seus compradores, espera-se registrar informações pessoais (CPF, data de nascimento, nome, sexo, um endereço) de seus clientes, além de um ou mais meios de contatos e seu(s) cartão(ões) usados para pagar suas compras.
+</p>
+
+<b> REQUISITOS </b>
+- RF001: O sistema deve registrar os clientes (pessoa física) do estabelecimento
+- RF002: O sistema deve auxiliar os clientes no controle de seus meios de pagamentos
+- RF003: O sistema deve auxiliar o estabelecimento no controle de seus funcionários
+- RF004: O sistema deve auxiliar o estabelecimento no controle de seus fornecedores
+- RF005: O sistema deve auxiliar o estabelecimento no controle de produtos e lotes adquiridos
+- RF006: O sistema deve auxiliar os clientes no controle de suas compras
+- RF007: O sistema deve requisitar o débito do valor da compra na conta do cliente
+- RF008: O sistema deve reduzir o número de produtos no estoque a cada compra do cliente
+- RF009: O sistema deve gerar nota fiscal após o cliente efetuar a compra
+- RF010: O sistema deve atualizar o histórico de compra após o cliente efetuá-la
 
 ### 4. MOCKUPS<br>
 
-<a href="https://github.com/rfidmarket/trab01/raw/master/Easy%20Market.pdf">EasyMarket Desktop</a><br>
-<a href="https://github.com/rfidmarket/trab01/blob/master/EasyMarketMobile.pdf">EasyMarket Mobile</a><br>
+<a href="https://github.com/rfidmarket/trab01/blob/master/prototipos_NOVOS/Easy_Market_Desktop_2.0.pdf">EasyMarket Desktop</a><br>
+<a href="https://github.com/rfidmarket/trab01/blob/master/prototipos_NOVOS/Prototipo_easy_market_CEL.pdf">EasyMarket Mobile</a><br>
 
 #### 4.1 TABELA DE DADOS DO SISTEMA:
 
 <a href="https://github.com/rfidmarket/trab01/blob/master/arquivos/Tabela%20de%20dados%20-%20BD.xlsx">Tabela</a><br>
 
 #### 4.2 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?
-    a) O sistema proposto poderá fornecer quais tipos de relatórios e informaçes? 
-    b) Crie uma lista com os 10 principais relatórios que poderão ser obtidos por meio do sistema proposto!
+>a) O sistema proposto poderá fornecer quais tipos de relatórios e informaçes?<br>
+>b) Crie uma lista com os 10 principais relatórios que poderão ser obtidos por meio do sistema proposto! 
     
 É de grande relevância para o estabelecimento ter os seguintes relatórios acessíveis:
 * Quais são os produtos com a data mais próxima do vencimento?<br>
