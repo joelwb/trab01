@@ -360,7 +360,7 @@ WHERE NOT cargo LIKE 'gerente';
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.3/a/2.png"></p>
 
 ```sql
---Obtenha os dados de todas as técnicas em alguma área;<br>
+--Obtenha os dados de todas as técnicas em alguma área;
 SELECT p.nome, fis.genero, fun.cargo, fun.setor, fis.data_nasc FROM pessoa AS p
 INNER JOIN fisica AS fis ON p.id = fis.fk_pessoa 
 INNER JOIN funciONario AS fun ON fis.fk_pessoa = fun.fk_pessoa_fisica
@@ -369,7 +369,7 @@ WHERE fun.cargo ILIKE 'técnic%' AND fis.genero = 'F';
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.3/a/3.png"></p>
 
 ```sql
---Obtenha os dados de todos os técnicos do setor de TI;<br>
+--Obtenha os dados de todos os técnicos do setor de TI;
 SELECT p.nome, fis.genero, fun.cargo, fun.setor, fis.data_nasc FROM pessoa AS p
 INNER JOIN fisica AS fis ON p.id = fis.fk_pessoa 
 INNER JOIN funciONario AS fun ON fis.fk_pessoa = fun.fk_pessoa_fisica
@@ -378,7 +378,7 @@ WHERE cargo ILIKE 'técnico%' AND setor = 'TI';
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.3/a/4.png"></p>
 
 ```sql
---Obtenha os dados de todos funcionários que são balconistas;<br>
+--Obtenha os dados de todos funcionários que são balconistas;
 SELECT p.nome, fis.genero, fun.cargo, fun.setor, fis.data_nasc FROM pessoa AS p
 INNER JOIN fisica AS fis ON p.id = fis.fk_pessoa 
 INNER JOIN funciONario AS fun ON fis.fk_pessoa = fun.fk_pessoa_fisica
@@ -388,7 +388,7 @@ WHERE cargo ILIKE 'balconista%';
 
 >b) Criar no mínimo 3 consultas com operadores aritméticos<br>
 ```sql
---Exiba a média de idade das pessoas fisicas de Vila Velha;<br>
+--Exiba a média de idade das pessoas fisicas de Vila Velha;
 SELECT SUM(idades)/COUNT(idades) AS "Média idade (Vila Velha)"
 FROM (
 	SELECT EXTRACT(year FROM AGE(NOW(), data_nasc)) AS idades FROM fisica AS f
@@ -398,7 +398,7 @@ FROM (
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.3/b/1.png"></p>
 
 ```sql
---Exiba o nome dos clientes e o valor total gasto no supermercado desde que esse valor seja maior que 500;<br>
+--Exiba o nome dos clientes e o valor total gasto no supermercado desde que esse valor seja maior que 500;
 SELECT nome AS "Nome (cliente)", total AS "Total comprado" FROM (
 	SELECT p.nome nome, SUM(c.preco_compra) total FROM pessoa p
 	INNER JOIN fisica f ON f.fk_pessoa = p.id
@@ -411,7 +411,7 @@ WHERE total > 500 ORDER BY 2 DESC;
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.3/b/2.png"></p>
 
 ```sql
---Exiba o número de pessoas (físicas e jurídicas) em Serra e de outras cidades;<br>
+--Exiba o número de pessoas (físicas e jurídicas) em Serra e de outras cidades;
 SELECT (
 	SELECT COUNT(*) FROM pessoa WHERE cidade LIKE 'Serra') AS "Qtd. residentes Serra",
 	(SELECT COUNT(*) FROM pessoa) - (SELECT COUNT(*) FROM pessoa WHERE cidade LIKE 'Serra')
