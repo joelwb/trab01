@@ -24,6 +24,7 @@ A versão móvel do sistema busca atender a demanda de clientes do estabelecimen
 
 Dessa forma, o estabelecimento desfrutará não só do controle de suas mercadorias mas também de informações de seus colaboradores, clientes e fornecedores, em um único sistema.</p>
 
+
 ### 3. MINI-MUNDO<br>
 >Descrever o mini-mundo! (Não deve ser maior do que 30 linhas) 
 >Entrevista com o usuário e identificação dos requisitos.
@@ -56,6 +57,7 @@ Para o supermercado conhecer melhor as preferências e a proximidade com seus co
 - RF008: O sistema deve reduzir o número de produtos no estoque a cada compra do cliente
 - RF009: O sistema deve gerar nota fiscal após o cliente efetuar a compra
 - RF010: O sistema deve atualizar o histórico de compra após o cliente efetuá-la
+
 
 ### 4. MOCKUPS<br>
 
@@ -113,6 +115,7 @@ e deve ser criada antes do modelo conceitual<br>
 
 >## Marco de Entrega 01 em: (02/04/2018)<br>
 
+
 ### 5.MODELO CONCEITUAL<br>
     A) NOTACAO ENTIDADE RELACIONAMENTO 
         * Para nosso prótótipo limitaremos o modelo conceitual nas 6 principais entidades do escopo
@@ -135,6 +138,7 @@ e deve ser criada antes do modelo conceitual<br>
 Grupo01 - [estacIonA](https://github.com/CasaInteligenteBD1/trab01gv): Adreâgelo, Anne, Caike, Emanuel.<br>
 Grupo02 - [CASA INTELIGENTE](https://github.com/CasaInteligenteBD1/trab01_ci): Juliana, Nilzilane, Rafaela, Rebeca.<br>
 
+
 #### 5.2 DECISÕES DE PROJETO
 >[atributo]: [descrição da decisão]<br><br>
 >EXEMPLO:<br>
@@ -150,6 +154,7 @@ pode possuir para cada departamento mais de uma localização...<br>
 * Obs. 5: Para fornecedores, o cliente exigiu apenas cadastro de endereço, contato e CNPJ, não requeriu controle de funcionários ou outras funcionalidades que interagissem com processos internos dos fornecedores.
 
 >## Marco de Entrega 02 em: (23/04/2018)<br>
+
 #### 5.3 DESCRIÇÃO DOS DADOS 
     [objeto]: [descrição do objeto]
     
@@ -229,9 +234,11 @@ SUPERMERCADO: Tabela que armazena dados sobre o supermercado.<br>
 ### 6	MODELO LÓGICO<br>
 ![Alt text](https://github.com/rfidmarket/trab01/blob/master/arquivos/modeloLogico.png "Modelo Lógico")
 
+
 ### 7	MODELO FÍSICO<br>
 <a href="https://github.com/rfidmarket/trab01/blob/master/arquivos/modeloFisico.sql">Modelo Físico</a><br>   
-        
+
+
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
 #### 8.1 DETALHAMENTO DAS INFORMAÇÕES
 <a href="https://github.com/rfidmarket/trab01/blob/master/arquivos/Inser%C3%A7%C3%B5es.sql">Insert</a><br>   
@@ -243,24 +250,76 @@ SUPERMERCADO: Tabela que armazena dados sobre o supermercado.<br>
 <a href="https://github.com/rfidmarket/trab01/blob/master/arquivos/Drops%2CCreates%2CInserts.sql">Drops, Creates, Inserts</a><br>
 >## Marco de Entrega 03 em: (14/05/2018)<br>
 
+
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
     OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
+    
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
 
-*SELECT * FROM pessoa;*
-<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/arquivos/selectAllPessoas.png"></p>
+```sql
+SELECT * FROM cartao;
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.1/select_cartao.png"></p>
 
-*SELECT * FROM funcionario;*<br>
-<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/arquivos/SelectAllFuncionario.png"></p>
+```sql
+SELECT * FROM compra;
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.1/select_compra.png"></p>
 
-*SELECT * FROM supermercado;*<br>
-<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/arquivos/selectAllSupermecado.png"></p>
+```sql
+SELECT * FROM contato;
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.1/select_contato.png"></p>
 
-*SELECT * FROM juridica;*<br>
-<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/arquivos/SelectAllJuridica.png"></p>
+```sql
+SELECT * FROM fisica;
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.1/select_fisica.png"></p>
 
-*SELECT * FROM fisica;*<br>
-<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/arquivos/selectAllFisica.png"></p>
+```sql
+SELECT * FROM fornecimento;
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.1/select_fornecimento.png"></p>
+
+```sql
+SELECT * FROM funcionario;
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.1/select_funcionario.png"></p>
+
+```sql
+SELECT * FROM hist_compra;
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.1/select_hist_compra.png"></p>
+
+```sql
+SELECT * FROM juridica;
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.1/select_juridica.png"></p>
+
+```sql
+SELECT * FROM lote;
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.1/select_lote.png"></p>
+
+```sql
+SELECT * FROM pessoa;
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.1/select_pessoa.png"></p>
+
+```sql
+SELECT * FROM produto;
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.1/select_produto.png"></p>
+
+```sql
+SELECT * FROM supermercado;
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.1/select_supermercado.png"></p>
+
+```sql
+SELECT * FROM utiliza;
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.1/select_utiliza.png"></p>
 
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
@@ -277,63 +336,90 @@ SUPERMERCADO: Tabela que armazena dados sobre o supermercado.<br>
 *SELECT * FROM juridica WHERE fk_pessoa  > 95;*<br>
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/arquivos/WHERE4.png"></p>
 
+
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
-    a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
+
+>a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
     
---Obtenha os dados de todos funcionários que sejam gerentes ou repositores;<br>
-*select p.nome, fis.genero, fun.cargo, fun.setor, fis.cpf
-from pessoa as p inner join fisica as fis on p.id = fis.fk_pessoa
-inner join funcionario as fun on fis.fk_pessoa = fun.fk_pessoa_fisica
-where cargo ilike 'gerente' or cargo ilike '%repositor%';*<br>
-<p align="center">
-  <img src="https://github.com/rfidmarket/trab01/blob/master/images/LOGICO1.png"></p>
+```sql
+--Obtenha os dados de todos funcionários que sejam gerentes ou repositores;
+SELECT p.nome, fis.genero, fun.cargo, fun.setor, fis.cpf FROM pessoa AS p
+INNER JOIN fisica AS fis ON p.id = fis.fk_pessoa
+INNER JOIN funciONario AS fun ON fis.fk_pessoa = fun.fk_pessoa_fisica
+WHERE cargo = 'gerente' OR cargo LIKE 'repositor%';
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.3/a/1.png"></p>
 
---Obtenha os dados de todos funcionários que não sejam gerentes;<br>
-*select * from funcionario where not cargo ilike 'gerente';*<br>
-<p align="center">
-  <img src="https://github.com/rfidmarket/trab01/blob/master/images/LOGICO2.png"></p>
+```sql
+--Obtenha os dados de todos funcionários que não sejam gerentes;
+SELECT p.nome, fis.genero, fun.cargo, fun.setor, fis.data_nasc FROM pessoa AS p
+INNER JOIN fisica AS fis ON p.id = fis.fk_pessoa 
+INNER JOIN funciONario AS fun ON fis.fk_pessoa = fun.fk_pessoa_fisica
+WHERE NOT cargo LIKE 'gerente';
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.3/a/2.png"></p>
 
---Obtenha os dados de todas as publicitárias;<br>
-*select p.nome, fis.genero, fun.cargo, fun.setor, fis.data_nasc, fis.login, fis.cpf
-from pessoa as p inner join fisica as fis on p.id = fis.fk_pessoa
-inner join funcionario as fun on fis.fk_pessoa = fun.fk_pessoa_fisica
-where fun.cargo ilike 'atendente' and fis.genero ilike 'f';*<br>
-<p align="center">
-  <img src="https://github.com/rfidmarket/trab01/blob/master/images/LOGICO3.png"></p>
+```sql
+--Obtenha os dados de todas as técnicas em alguma área;<br>
+SELECT p.nome, fis.genero, fun.cargo, fun.setor, fis.data_nasc FROM pessoa AS p
+INNER JOIN fisica AS fis ON p.id = fis.fk_pessoa 
+INNER JOIN funciONario AS fun ON fis.fk_pessoa = fun.fk_pessoa_fisica
+WHERE fun.cargo ILIKE 'técnic%' AND fis.genero = 'F';
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.3/a/3.png"></p>
 
---Obtenha os dados de todos os técnicos em informática do setor de TI;<br>
-*select * from funcionario where cargo ilike 'técnico em informática' and setor ilike 'TI';*<br>
-<p align="center">
-  <img src="https://github.com/rfidmarket/trab01/blob/master/images/LOGICO4.png"></p>
+```sql
+--Obtenha os dados de todos os técnicos do setor de TI;<br>
+SELECT p.nome, fis.genero, fun.cargo, fun.setor, fis.data_nasc FROM pessoa AS p
+INNER JOIN fisica AS fis ON p.id = fis.fk_pessoa 
+INNER JOIN funciONario AS fun ON fis.fk_pessoa = fun.fk_pessoa_fisica
+WHERE cargo ILIKE 'técnico%' AND setor = 'TI';
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.3/a/4.png"></p>
 
---Obtenha os dados de todos os gerentes do setor administrativo;<br>
-*select * from funcionario where cargo ilike 'gerente' and (setor ilike 'administrativo');*<br>
-<p align="center">
-  <img src="https://github.com/rfidmarket/trab01/blob/master/images/LOGICO5.png"></p>
+```sql
+--Obtenha os dados de todos funcionários que são balconistas;<br>
+SELECT p.nome, fis.genero, fun.cargo, fun.setor, fis.data_nasc FROM pessoa AS p
+INNER JOIN fisica AS fis ON p.id = fis.fk_pessoa 
+INNER JOIN funciONario AS fun ON fis.fk_pessoa = fun.fk_pessoa_fisica
+WHERE cargo ILIKE 'balconista%';
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.3/a/5.png"></p>
 
-    b) Criar no mínimo 3 consultas com operadores aritméticos<br>
-
+>b) Criar no mínimo 3 consultas com operadores aritméticos<br>
+```sql
 --Exiba a média de idade das pessoas fisicas de Vila Velha;<br>
-*select sum(idades)/count(idades) as "Media Idade Vila Velha"
-from (select extract(year from age(now(), data_nasc)) as idades
-from fisica as f inner join pessoa as p on f.fk_pessoa = p.id where p.cidade ilike 'vila velha') as idades;*<br>
-<p align="center">
-  <img src="https://github.com/rfidmarket/trab01/blob/master/images/ARIT1.png"></p>
+SELECT SUM(idades)/COUNT(idades) AS "Média idade (Vila Velha)"
+FROM (
+	SELECT EXTRACT(year FROM AGE(NOW(), data_nasc)) AS idades FROM fisica AS f
+	INNER JOIN pessoa AS p ON f.fk_pessoa = p.id
+	WHERE p.cidade ILIKE 'vila velha') AS idades;
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.3/b/1.png"></p>
 
---Exiba a média de idade de todas pessoas fisicas;<br>
-*select sum(idades)/count(idades) "Media idade PF"
-from (select * from (select extract(year from age(now(), data_nasc)) as idades from fisica) as idades) as idades;*<br>
-<p align="center">
-  <img src="https://github.com/rfidmarket/trab01/blob/master/images/ARIT2.png"></p>
+```sql
+--Exiba o nome dos clientes e o valor total gasto no supermercado desde que esse valor seja maior que 500;<br>
+SELECT nome AS "Nome (cliente)", total AS "Total comprado" FROM (
+	SELECT p.nome nome, SUM(c.preco_compra) total FROM pessoa p
+	INNER JOIN fisica f ON f.fk_pessoa = p.id
+	INNER JOIN hist_compra hc ON hc.id = f.fk_pessoa
+	INNER JOIN compra c ON c.fk_hist_compra = hc.id
+	WHERE hc.fk_supermercado = 401
+	GROUP BY p.nome) nome_total
+WHERE total > 500 ORDER BY 2 DESC;
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.3/b/2.png"></p>
 
---Exiba o número de pessoas (físicas e jurídicas) em Vitória e de outras cidades;<br>
-*select
-(select count(*) from pessoa where cidade ilike 'vit%') as "Qtd. residentes Vitória",
-(select count(*) from pessoa) - (select count(*) from pessoa where cidade ilike 'vit%') as "Qtd. residentes demais cidades";*<br>
-<p align="center">
-  <img src="https://github.com/rfidmarket/trab01/blob/master/images/ARIT3.png"></p>
+```sql
+--Exiba o número de pessoas (físicas e jurídicas) em Serra e de outras cidades;<br>
+SELECT (
+	SELECT COUNT(*) FROM pessoa WHERE cidade LIKE 'Serra') AS "Qtd. residentes Serra",
+	(SELECT COUNT(*) FROM pessoa) - (SELECT COUNT(*) FROM pessoa WHERE cidade LIKE 'Serra')
+	AS "Qtd. residentes demais cidades";
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.3/b/3.png"></p>
     
-    c) Criar no mínimo 3 consultas com operação de renomear nomes de campos ou tabelas
+>c) Criar no mínimo 3 consultas com operação de renomear nomes de campos ou tabelas
 
 --Exiba quantas pessoas físicas moram em Vila Velha;<br>
 *select count(colunas) as "Pessoas físicas de Vila Velha" from (
