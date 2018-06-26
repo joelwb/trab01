@@ -42,7 +42,7 @@ Quando o supermercado negocia com algum fornecedor, ele costuma adquirir um ou m
 
 Durante a compra, o cliente do supermercado deve escolher os produtos desejados e colocá-los no carrinho. Ao final da compra, se todas informações de pagamento do cliente estiverem corretas, então basta que ele escolha um cartão de crédito ou débito e realize o pagamento. Se o pagamento foi feito sem problemas, o cliente receberá uma nota fiscal eletrônica em seu e-mail e poderá consultar qual, quantas unidades e preço de cada produto comprado, além de saber a data, hora e em qual supermercado a compra foi realizada.
 
-Para o supermercado conhecer melhor as preferências e a proximidade com seus compradores, espera-se registrar informações pessoais (CPF, data de nascimento, nome, sexo, um endereço) de seus clientes, além de um ou mais meios de contatos e seu(s) cartão(ões) usados para pagar suas compras.
+Para o supermercado conhecer melhor as preferências e a proximidade com seus compradores, espera-se registrar informações pessoais (CPF, data de nascimento, nome, sexo, um endereço) de seus clientes, além de um ou mais meios de contatos e seus cartões usados para pagar suas compras. Somente será aceito cartão (crédito ou débito) como meio principal de pagamento, portanto é importante registrar seu número, nome do titular, bandeira, data de validade e código de verificação.
 </p>
 
 <b> REQUISITOS </b>
@@ -63,6 +63,10 @@ Para o supermercado conhecer melhor as preferências e a proximidade com seus co
 <a href="https://github.com/rfidmarket/trab01/blob/master/prototipos_NOVOS/Prototipo_easy_market_CEL.pdf">EasyMarket Mobile</a><br>
 
 #### 4.1 TABELA DE DADOS DO SISTEMA:
+>a) Esta tabela deve conter todos os atributos do sistema e um mínimo de 10 linhas/registros de dados.<br>
+>b) Esta tabela tem a intenção de simular um relatório com todos os dados que serão armazenados
+e deve ser criada antes do modelo conceitual<br>
+>c) Após criada esta tabela não deve ser modificada, pois será comparada com os resultados finais na conclusão do trabalho
 
 <a href="https://github.com/rfidmarket/trab01/blob/master/arquivos/Tabela%20de%20dados%20-%20BD.xlsx">Tabela</a><br>
 
@@ -71,35 +75,41 @@ Para o supermercado conhecer melhor as preferências e a proximidade com seus co
 >b) Crie uma lista com os 10 principais relatórios que poderão ser obtidos por meio do sistema proposto! 
     
 É de grande relevância para o estabelecimento ter os seguintes relatórios acessíveis:
-* Quais são os produtos com a data mais próxima do vencimento?<br>
--Inclui informações como: Nome do produto e data de validade.<br>
+* Quais são os lotes que vencerão entre a data atual e uma X (data futura)?<br>
+-Inclui informações como: Nome do produto, data de validade, dias restantes, identificador do lote.<br>
+-Exemplo: O lote 12345, de Arroz Tia Jô 5kg, vencerá entre 26/06/2018 e 26/07/2018, tem 30 dias restantes.<br>
 
-* Quais são os produtos mais vendidos?<br>
--Inclui informações como: Nome do produto, Número de vendas e Data de intervalo  (produtos mais vendidos nos últimos 15 dias, por exemplo).<br>
+* Quais são os N produtos mais vendidos entre a data X e a data Y?<br>
+-Inclui informações como: Código do produto, nome do produto, marca, categoria, número de vendas.
+-Se o usuário não limitar quantos produtos serão exibidos, todos produtos serão apresentados.
+-Exemplo: Os 10 produtos mais vendidos entre 10/05/2018 e 10/06/2018.<br>
 
-* Quais são os clientes que mais consumiram?<br>
--Inclui informações como: Nome do cliente, Número indicando valor gasto e Data de intervalo.<br>
+* Quais são os N clientes que foram mais rentáveis para o supermercado entre a data X e a data Y?<br>
+-Inclui informações como: Nome do cliente, valor total gasto, cpf.<br>
 
-* Qual é a média de consumo por cliente?<br>
--Inclui informações como: Número indicando valor gasto e Data de intervalo.<br>
+* Quais é a média de consumo por cliente entre a data X e a data Y?<br>
+-Inclui informações como: Nome do cliente, média de consumo, cpf.<br>
+-Se o usuário não limitar a quantidade de clientes, as médias de todos serão apresentadas.
 
-* Qual é o dia da semana mais lucrativo?<br>
+* Quanto foi a rentabilidade das vendas em cada dia da semana entre a data X e a data Y?<br>
 -Inclui informações como: Dia da semana, Data de intervalo e Soma de ganhos nesse dia da semana.<br>
--Exemplo: Nos últimos 30 dias foram vendidos R$65000 nas quartas-feiras (dia mais lucrativo).<br>
+-Exemplo: Foi vendido R$5000 nas quartas-feiras, R$2000 nas segundas, R$1600 nas quintas-feiras, … entre a data 05/01/2018 e 05/06/2018.<br>
 
-* Qual é o tipo de produto mais comprado (maior número de unidades vendidas) em cada dia da semana?<br>
+* Qual é o tipo de produto mais comprado (maior número de unidades vendidas) em cada dia da semana entre a data X e a data Y?<br>
 -Exemplo: Nos últimos 30 dias, nas quartas-feiras foram vendidos 10000 unidades de verduras; nas quintas-feiras, 20000 produtos de limpeza, ...<br>
 
-* Quais são as datas do ano mais lucrativas?<br>
+* Quais são as datas do ano mais lucrativas entre a data X e a data Y?<br>
 -Inclui informações como: Data, Dia da semana, Data de intervalo e Ganho nessa data.<br>
--Exemplo: Em 12/10 (Dia das crianças), sexta-feira, em 2018, foi vendido R$200 mil.<br>
+-Exemplo: Em 12/10/2017, foi vendido R$200 mil; em 08/03/2018, R$175 mil, etc<br>
+-Se o usuário não limitar a quantidade de datas, todas elas serão apresentadas.
 
-* Qual o meio de pagamento mais utilizado?<br>
+* Qual é o número total de usos de cada meio de pagamento entre a data X e a data Y?<br>
 -Inclui informações como: Meio, Número de usuários e Data de intervalo.<br>
--Exemplo: Nos últimos 6 meses, PayPal foi mais usado, com 800 usuários.<br>
+-Exemplo: Entre 25/06/2017 e 25/06/2018, o cartão de crédito foi usados 800 vezes; o cartão de débito, 700; etc<br>
 
-* Qual o meio de pagamento mais lucrativo?<br>
+* Qual o meio de pagamento mais rentável para o supermercado entre a data X e a data Y?<br>
 -Inclui informações como: Meio, Ganhos e Data de intervalo.<br>
+-Exemplo: Entre 25/06/2017 e 25/06/2018, gastou-se R$540 mil no cartão de crédito; R$360 mil, no de débito; etc<br>
 
 >## Marco de Entrega 01 em: (02/04/2018)<br>
 
@@ -119,7 +129,6 @@ Para o supermercado conhecer melhor as preferências e a proximidade com seus co
         Garantir que a semântica dos atributos seja clara no esquema
         Criar o esquema de forma a garantir a redução de informação redundante, possibilidade de valores null, 
         e tuplas falsas
-    
         
     
 #### 5.1 Validação do Modelo Conceitual
@@ -127,44 +136,18 @@ Grupo01 - [estacIonA](https://github.com/CasaInteligenteBD1/trab01gv): Adreâgel
 Grupo02 - [CASA INTELIGENTE](https://github.com/CasaInteligenteBD1/trab01_ci): Juliana, Nilzilane, Rafaela, Rebeca.<br>
 
 #### 5.2 DECISÕES DE PROJETO
+>[atributo]: [descrição da decisão]<br><br>
+>EXEMPLO:<br>
+>a) Campo endereço: em nosso projeto optamos por um campo multivalorado e composto, pois a empresa 
+pode possuir para cada departamento mais de uma localização...<br>
+>b) justifique!
 
 * Pessoa: No modelo conceitual optamos na decisão do projeto em não distinguir supermercado de fornecedor, ademais, as informações referentes ao endereço da mesma estará na tabela pessoa.
 * Obs. 1: Foi estabelecido que vários clientes podem utilizar um mesmo cartão.
 * Obs. 2: Foi estabelecido que um cliente pode utilizar vários cartões.
 * Obs. 3: Optou-se em dividir entidade pessoa jurídica em supermercado , mas não em fornecedor, já que um fornecedor não tem campos que o diferencie de uma pessoa jurídica.<br>
-* Obs. 4: Foi aceita a sugestão do software de modelagem “brModelo”, de unificar a entidade Pessoa com a entidade Endereço.<br>
-
-TABELA: CONTATO <br>
-* Campo id: é um atributo determinante, possui a função de ser um identificador único do contato.<br>
-* Campo tipo: é um atributo simples, Tem como função descrever o tipo de contato(e-mail, telefone, facebook e etc) da pessoa, fornecedor ou do supermercado.<br>
-* Campo descricao: é um atributo simples, insere os tipos de contatos, informando o telefone e/ou email e assim por diante .<br>
-
-TABELA: SUPERMERCADO<br>
-* Campo unidade: é um atributo simples e identifica a unidade que este supermercado pertence , ex: CARONE - CENTRO DE VILA VELHA.<br>
-* Campo latitude: é um atributo simples e representa a localização mais exata do supermercado dentro do mapa (plano cartesiano).<br>
-* Campo longitude: é um atributo simples e representa a localização mais exata do supermercado dentro do mapa (plano cartesiano).<br>
-
-TABELA: COMPRA<br>
-* Campo preco_compra: é um atributo simples e representa o preço do produto no momento da compra, haja visto que o preço de um produto varia com o tempo.<br>
-
-
-TABELA: HIST_COMPRA<br>
-* Campo timestamp: é um atributo simples e identifica a data em que a compra foi efetuada, para eventuais consultas.<br>
-
-
-TABELA: PRODUTO <br>
-* Campo quant_dispon: é um atributo simples, e recebe um valor que será obtido através de um cálculo , e irá informar a quantidade de produtos disponíveis (estoque + prateleira) .<br>
-* Campo custo: é um atributo simples e informa o custo de fábrica do produto.
-* Campo preco: é um atributo simples e tem o objetivo de informar o preco que o mesmo será vendido.<br>
-* Campo quant_prateleira: é um atributo simples, irá dizer a quantidade de produtos disponíveis na prateleira.<br>
-
-
-TABELA: LOTE <br>
-* Campo data_compra: é um atributo simples e irá armazenar a data da compra do lote <br>
-* Campo quantidade: é um atributo simples e informa a quantidade de produtos que este lote possui .<br>
-* Campo validade: é um atributo simples, armazena a validade do lote, haja vista que cada lote pode possuir validades diferentes.<br>
-
-
+* Obs. 4: Foi aceita a sugestão do software “brModelo”, de unificar a entidade Pessoa com a entidade Endereço.<br>
+* Obs. 5: Para fornecedores, o cliente exigiu apenas cadastro de endereço, contato e CNPJ, não requeriu controle de funcionários ou outras funcionalidades que interagissem com processos internos dos fornecedores.
 
 >## Marco de Entrega 02 em: (23/04/2018)<br>
 #### 5.3 DESCRIÇÃO DOS DADOS 
@@ -175,7 +158,6 @@ TABELA: LOTE <br>
     CPF: campo que armazena o número de Cadastro de Pessoa Física para cada cliente da empresa.<br>
 
 CARTAO: Tabela que armazena dados sobre o cartão de crédito ou débito do cliente.<br>
-* autenticacao: Texto que corresponde a senha do cartão (se for de débito) ou código de validação (se for de débito).<br>
 * bandeira: Texto que identifica a bandeira do cartão. Exemplo: "Visa".<br>
 * nome_titular: Nome do titular responsável pelo cartão. Exemplo: "José da Silva".<br>
 * numero: Número que identifica cada cartão de crédito ou débito. Exemplo: 5453010000066167.<br>
@@ -227,7 +209,6 @@ PESSOA_FISICA: Tabela que armazena dados intrínsecos a uma pessoa física (clie
 * senha: Texto que representa a palavra-chave usada pela pessoa física (cliente ou funcionário) para acessar o sistema. Exemplo: “Aninha1561!”.<br>
 OBS: É possivel saber se uma pessoa física é um cliente ou funcionário, verificando se o id da pessoa física está na entidade funcionario, se tiver a pessoa física é um funcionario, senão é um cliente.
 
-
 PRODUTO: Tabela que armazena dados sobre os produtos que o supermercado dispõe.<br>
 * codigo: Número inteiro único que identifica um determinado produto. Exemplo: código 1, identifica o produto de nome “Arroz Juparanã tipo 1 5kg”.<br>
 * custo: Número flutuante que representa o preço que o supermercado pagou pela unidade do produto.<br>
@@ -236,9 +217,8 @@ PRODUTO: Tabela que armazena dados sobre os produtos que o supermercado dispõe.
 * marca: Texto que representa a marca comercial de um produto, pode ter o nome do próprio supermercado se o produto for de fabricação própria. Exemplo: “Gola-gola”, marca fabricante de refrigerantes.<br>
 * nome: Texto que representa o nome formal do produto. Exemplo: “Arroz Sempé tipo 1 5kg”.<br>
 * preco: Número flutuante que representa o preço fixo de venda do produto, é o preço sem promoção ou descontos.<br>
-* quant_dispon: Número inteiro que indica a quantidade total disponível de um produto, é a soma da quantidade em estoque com a da prateleira.<br>
 * quant_prateleira: Número inteiro que indica quantas unidades de um produto o supermercado tem disponível na prateleira.<br>
-* tipo: Texto que indica o grupo o qual o produto faz parte. Exemplo: “Sabão em pó Homo Sapiens” é do tipo “limpeza”, pois se enquadra na categoria de produtos de limpeza.<br>
+* tipo: Texto que indica o grupo o qual o produto faz parte. Exemplo: “Sabão em pó Homo Sapiens” é do tipo “Limpeza”, pois se enquadra na categoria de produtos de limpeza.<br>
 
 SUPERMERCADO: Tabela que armazena dados sobre o supermercado.<br>
 * latitude: Número flutuante negativo ou positivo que junto à longitude identifica a localização do supermercado em um mapa (plano cartesiano).<br>
@@ -248,7 +228,6 @@ SUPERMERCADO: Tabela que armazena dados sobre o supermercado.<br>
 
 ### 6	MODELO LÓGICO<br>
 ![Alt text](https://github.com/rfidmarket/trab01/blob/master/arquivos/modeloLogico.png "Modelo Lógico")
-        
 
 ### 7	MODELO FÍSICO<br>
 <a href="https://github.com/rfidmarket/trab01/blob/master/arquivos/modeloFisico.sql">Modelo Físico</a><br>   
@@ -256,13 +235,12 @@ SUPERMERCADO: Tabela que armazena dados sobre o supermercado.<br>
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
 #### 8.1 DETALHAMENTO DAS INFORMAÇÕES
 <a href="https://github.com/rfidmarket/trab01/blob/master/arquivos/Inser%C3%A7%C3%B5es.sql">Insert</a><br>   
-    
 
 #### 8.2 INCLUSÃO DO SCRIPT PARA CRIAÇÃO DE TABELA E INSERÇÃO DOS DADOS
 <a href="https://github.com/rfidmarket/trab01/blob/master/arquivos/EasyMarket.sql">Create_and_Insert</a><br>
        
 #### 8.3 INCLUSÃO DO SCRIPT PARA EXCLUSÃO DE TABELAS EXISTENTES, CRIAÇÃO DE TABELA NOVAS E INSERÇÃO DOS DADOS
-<a href="https://github.com/rfidmarket/trab01/blob/master/arquivos/Drops%2CCreates%2CInserts">Drops, Creates, Inserts</a><br>
+<a href="https://github.com/rfidmarket/trab01/blob/master/arquivos/Drops%2CCreates%2CInserts.sql">Drops, Creates, Inserts</a><br>
 >## Marco de Entrega 03 em: (14/05/2018)<br>
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
@@ -302,7 +280,7 @@ SUPERMERCADO: Tabela que armazena dados sobre o supermercado.<br>
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
     a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
     
---Pegue os dados de todos funcionários que sejam gerentes ou repositores;<br>
+--Obtenha os dados de todos funcionários que sejam gerentes ou repositores;<br>
 *select p.nome, fis.genero, fun.cargo, fun.setor, fis.cpf
 from pessoa as p inner join fisica as fis on p.id = fis.fk_pessoa
 inner join funcionario as fun on fis.fk_pessoa = fun.fk_pessoa_fisica
@@ -310,12 +288,12 @@ where cargo ilike 'gerente' or cargo ilike '%repositor%';*<br>
 <p align="center">
   <img src="https://github.com/rfidmarket/trab01/blob/master/images/LOGICO1.png"></p>
 
---Pegue os dados de todos funcionários que não sejam gerentes;<br>
+--Obtenha os dados de todos funcionários que não sejam gerentes;<br>
 *select * from funcionario where not cargo ilike 'gerente';*<br>
 <p align="center">
   <img src="https://github.com/rfidmarket/trab01/blob/master/images/LOGICO2.png"></p>
 
---Pegue os dados de todos as publicitárias;<br>
+--Obtenha os dados de todas as publicitárias;<br>
 *select p.nome, fis.genero, fun.cargo, fun.setor, fis.data_nasc, fis.login, fis.cpf
 from pessoa as p inner join fisica as fis on p.id = fis.fk_pessoa
 inner join funcionario as fun on fis.fk_pessoa = fun.fk_pessoa_fisica
@@ -323,12 +301,12 @@ where fun.cargo ilike 'atendente' and fis.genero ilike 'f';*<br>
 <p align="center">
   <img src="https://github.com/rfidmarket/trab01/blob/master/images/LOGICO3.png"></p>
 
---Pegue os dados de todos os técnicos em informática do setor de TI;<br>
+--Obtenha os dados de todos os técnicos em informática do setor de TI;<br>
 *select * from funcionario where cargo ilike 'técnico em informática' and setor ilike 'TI';*<br>
 <p align="center">
   <img src="https://github.com/rfidmarket/trab01/blob/master/images/LOGICO4.png"></p>
 
---Pegue os dados de todos os gerentes do setor administrativo;<br>
+--Obtenha os dados de todos os gerentes do setor administrativo;<br>
 *select * from funcionario where cargo ilike 'gerente' and (setor ilike 'administrativo');*<br>
 <p align="center">
   <img src="https://github.com/rfidmarket/trab01/blob/master/images/LOGICO5.png"></p>
