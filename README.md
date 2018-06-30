@@ -324,17 +324,25 @@ SELECT * FROM utiliza;
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
 
-*SELECT * FROM pessoa WHERE id < 27;*<br>
-<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/arquivos/WHERE1.png"></p>
+```sql
+SELECT * FROM pessoa WHERE id < 27;
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.2/1.png"></p>
 
-*SELECT * FROM fisica WHERE genero = 'F';*<br>
-<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/arquivos/WHERE2.png"></p>
+```sql
+SELECT * FROM fisica WHERE genero = 'F';
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.2/2.png"></p>
 
-*SELECT * FROM funcionario where setor ilike 'ti';*<br>
-<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/arquivos/WHERE3.png"></p>
+```sql
+SELECT * FROM funcionario WHERE setor = 'ti' or setor = 'TI';
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.2/3.png"></p>
 
-*SELECT * FROM juridica WHERE fk_pessoa  > 95;*<br>
-<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/arquivos/WHERE4.png"></p>
+```sql
+SELECT * FROM juridica WHERE fk_pessoa > 95;
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.2/4.png"></p>
 
 
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
@@ -399,7 +407,8 @@ FROM (
 
 ```sql
 --Exiba o nome dos clientes e o valor total gasto no supermercado desde que esse valor seja maior que 500;
-SELECT nome AS "Nome (cliente)", total AS "Total comprado" FROM (
+SELECT nome AS "Nome (cliente)", total AS "Total comprado"
+FROM (
 	SELECT p.nome nome, SUM(c.preco_compra) total FROM pessoa p
 	INNER JOIN fisica f ON f.fk_pessoa = p.id
 	INNER JOIN hist_compra hc ON hc.id = f.fk_pessoa
@@ -421,71 +430,107 @@ SELECT (
     
 >c) Criar no mínimo 3 consultas com operação de renomear nomes de campos ou tabelas
 
+```sql
 --Exiba quantas pessoas físicas moram em Vila Velha;<br>
-*select count(colunas) as "Pessoas físicas de Vila Velha" from (
-select * from fisica as f inner join pessoa as p on f.fk_pessoa = p.id
-where p.cidade ilike 'vila velha') as colunas;*<br>
-<p align="center">
-  <img src="https://github.com/rfidmarket/trab01/blob/master/images/RENOME1.png"></p>
+SELECT COUNT(colunas) AS "Pessoas físicas de Vila Velha"
+FROM(
+	SELECT * FROM fisica AS f INNER JOIN pessoa AS p ON f.fk_pessoa = p.id
+	WHERE p.cidade ILIKE 'vila velha') AS colunas
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.3/c/1.png"></p>
 
-/\*Exiba o nome, data de nascimento e idade atual (em anos) dos 5 funcionários mais velhos do supermercado*/<br>
-*select p.nome as "Nome funcionário",
-data_nasc as "Data de nascimento",
-extract(year from age(now(), data_nasc)) as "Idade atual do funcionário"
-from (funcionario as fun inner join pessoa as p on fun.fk_pessoa_fisica = p.id
-inner join fisica as fis on fis.fk_pessoa = p.id)
-order by data_nasc asc limit 5;*<br>
-<p align="center">
-  <img src="https://github.com/rfidmarket/trab01/blob/master/images/RENOME2.png"></p>
+```sql
+--Exiba o nome, data de nascimento e idade atual (em anos) dos 5 funcionários mais velhos do supermercado*/
+SELECT
+	p.nome AS "Nome funcionário",
+	data_nasc AS "Data de nascimento",
+	EXTRACT(YEAR FROM AGE(NOW(), data_nasc)) AS "Idade atual do funcionário"
+FROM funcionario AS fun
+INNER JOIN pessoa AS p ON fun.fk_pessoa_fisica = p.id
+INNER JOIN fisica AS fis ON fis.fk_pessoa = p.id
+ORDER BY data_nasc ASC LIMIT 5;
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.3/c/2.png"></p>
 
-/\*Exiba a quantidade de funcionários do sexo feminino e masculino*/<br>
-*select (select count(fem) from (select genero
-from fisica as fis inner join pessoa as p on fis.fk_pessoa = p.id
-inner join funcionario as fun on fun.fk_pessoa_fisica = fis.fk_pessoa
-where genero ilike 'f') as fem) as "Funcionários \[FEM]",
-(select count(masc) from (select genero
-from fisica as fis inner join pessoa as p on fis.fk_pessoa = p.id
-inner join funcionario as fun on fun.fk_pessoa_fisica = fis.fk_pessoa
-where genero ilike 'm') as masc) as "Funcionários \[MASC]";*<br>
-<p align="center">
-  <img src="https://github.com/rfidmarket/trab01/blob/master/images/RENOME3.png"></p>
+```sql
+SELECT
+   SUM(CASE WHEN tab.genero = 'F' THEN 1 ELSE 0 END) as "Funcionárias [FEM]",
+   SUM(CASE WHEN tab.genero = 'M' THEN 1 ELSE 0 END) as "Funcionários [MASC]"
+   from (SELECT genero FROM fisica AS fis
+		 INNER JOIN pessoa AS p ON fis.fk_pessoa = p.id
+		 INNER JOIN funcionario AS fun ON fun.fk_pessoa_fisica = fis.fk_pessoa) tab;
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.3/c/3.png"></p>
     
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
-*SELECT * FROM supermercado where unidade ilike 'No%';*<br>
-<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/arquivos/LIKE1.png"></p>
+```sql
+SELECT * FROM supermercado WHERE unidade ILIKE 'No%';
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.4/1.png"></p>
 
-*SELECT * FROM juridica where cnpj like '%0001-3%';*<br>
-<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/arquivos/LIKE2.png"></p>
+```sql
+SELECT * FROM juridica WHERE cnpj LIKE '%0001-3%';
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.4/2.png"></p>
 
-*SELECT * FROM fisica where login like '%bol.com.br';*<br>
-<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/arquivos/LIKE3.png"></p>
+```sql
+SELECT * FROM fisica WHERE login LIKE '%bol.com.br';
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.4/3.png"></p>
 
-*SELECT * FROM pessoa where nome ilike 'BR%';*<br>
-<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/arquivos/LIKE4.png"></p>
+```sql
+SELECT * FROM pessoa WHERE nome ILIKE 'BR%';
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.4/4.png"></p>
 
-*SELECT * FROM pessoa where rua Ilike 'Av%';*<br>
-<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/arquivos/LIKE5.png"></p>
+```sql
+SELECT * FROM pessoa WHERE rua ILIKE 'Av%';
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.4/5.png"></p>
 
-*SELECT * FROM pessoa where rua ilike 'Avenida a %';*<br>
-<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/arquivos/LIKE6.png"></p>
+```sql
+SELECT * FROM pessoa WHERE rua ILIKE 'Avenida a %';
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.4/6.png"></p>
 
-*SELECT * FROM pessoa where bairro ilike '%Praia da %';*<br>
-<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/arquivos/LIKE7.png"></p>
+```sql
+SELECT * FROM pessoa WHERE bairro ILIKE '%Praia da %';
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.4/7.png"></p>
 
-*SELECT * FROM fisica where DATE_PART('year',AGE(CURRENT_DATE, data_nasc)) > 53;*<br>
-<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/201687c733eab6f37815782ad6abd0116533825d/arquivos/DATA1.png"></p>
+```sql
+SELECT * FROM fisica WHERE DATE_PART('YEAR', AGE(CURRENT_DATE, data_nasc)) > 53;
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.4/8.png"></p>
 
-*SELECT login, data_nasc,cpf,senha,fk_pessoa,genero,AGE(CURRENT_DATE, data_nasc) as idade FROM fisica where DATE_PART('year',AGE(CURRENT_DATE, data_nasc)) > 53;*<br>
-<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/201687c733eab6f37815782ad6abd0116533825d/arquivos/DATA2.png"></p>
+```sql
+SELECT
+	login, data_nasc, cpf, senha, fk_pessoa, genero,
+	EXTRACT(YEAR FROM AGE(CURRENT_DATE, data_nasc)) AS idade
+FROM fisica WHERE DATE_PART('YEAR', AGE(CURRENT_DATE, data_nasc)) > 53;
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.4/9.png"></p>
 
-*SELECT * FROM fisica where EXTRACT('year' FROM data_nasc) > 1996;*<br>
-<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/201687c733eab6f37815782ad6abd0116533825d/arquivos/DATA3.png"></p>
+```sql
+SELECT * FROM fisica WHERE EXTRACT('YEAR' FROM data_nasc) > 1996;
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.4/10.png"></p>
 
-*SELECT login, data_nasc,cpf,senha,fk_pessoa,genero, CURRENT_DATE - data_nasc as dias_vida FROM fisica where EXTRACT('year' FROM data_nasc) > 1996;*<br>
-<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/201687c733eab6f37815782ad6abd0116533825d/arquivos/DATA4.png"></p>
+```sql
+SELECT
+	login, data_nasc, cpf, senha, fk_pessoa, genero,
+	CURRENT_DATE - data_nasc AS "Dias vividos"
+FROM fisica WHERE EXTRACT('YEAR' FROM data_nasc) > 1996;
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.4/11.png"></p>
 
-*SELECT login, data_nasc,cpf,senha,fk_pessoa,genero, EXTRACT('month' FROM data_nasc) as mes_nasc FROM fisica where DATE_PART('year',AGE(CURRENT_DATE, data_nasc)) > 53;*<br>
-<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/201687c733eab6f37815782ad6abd0116533825d/arquivos/DATA5.png"></p>
+```sql
+SELECT
+	login, data_nasc, cpf, senha, fk_pessoa, genero,
+	EXTRACT('MONTH' FROM data_nasc) AS "Mês de nasc."
+FROM fisica WHERE DATE_PART('YEAR', AGE(CURRENT_DATE, data_nasc)) > 53;
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.4/12.png"></p>
 
 >## Marco de Entrega 04 em: (04/06/2017)<br>
     
