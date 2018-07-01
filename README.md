@@ -77,39 +77,39 @@ e deve ser criada antes do modelo conceitual<br>
 >b) Crie uma lista com os 10 principais relatórios que poderão ser obtidos por meio do sistema proposto! 
     
 É de grande relevância para o estabelecimento ter os seguintes relatórios acessíveis:
-* Quais são os lotes que vencerão entre a data atual e uma X (data futura)?<br>
+01. Quais são os lotes que vencerão entre a data atual e uma X (data futura)?<br>
 -Inclui informações como: Nome do produto, data de validade, dias restantes, identificador do lote.<br>
 -Exemplo: O lote 12345, de Arroz Tia Jô 5kg, vencerá entre 26/06/2018 e 26/07/2018, tem 30 dias restantes.<br>
 
-* Quais são os N produtos mais vendidos entre a data X e a data Y?<br>
--Inclui informações como: Código do produto, nome do produto, marca, categoria, número de vendas.
--Se o usuário não limitar quantos produtos serão exibidos, todos produtos serão apresentados.
+02. Quais são os N produtos mais vendidos entre a data X e a data Y?<br>
+-Inclui informações como: Código do produto, nome do produto, marca, categoria, número de vendas.<br>
+-Se o usuário não limitar quantos produtos serão exibidos, todos produtos serão apresentados.<br>
 -Exemplo: Os 10 produtos mais vendidos entre 10/05/2018 e 10/06/2018.<br>
 
-* Quais são os N clientes que foram mais rentáveis para o supermercado entre a data X e a data Y?<br>
+03. Quais são os N clientes que foram mais rentáveis para o supermercado entre a data X e a data Y?<br>
 -Inclui informações como: Nome do cliente, valor total gasto, cpf.<br>
 
-* Quais é a média de consumo por cliente entre a data X e a data Y?<br>
+04. Qual é a média de consumo por cliente entre a data X e a data Y?<br>
 -Inclui informações como: Nome do cliente, média de consumo, cpf.<br>
 -Se o usuário não limitar a quantidade de clientes, as médias de todos serão apresentadas.
 
-* Quanto foi a rentabilidade das vendas em cada dia da semana entre a data X e a data Y?<br>
+05. Quanto foi a rentabilidade das vendas em cada dia da semana entre a data X e a data Y?<br>
 -Inclui informações como: Dia da semana, Data de intervalo e Soma de ganhos nesse dia da semana.<br>
 -Exemplo: Foi vendido R$5000 nas quartas-feiras, R$2000 nas segundas, R$1600 nas quintas-feiras, … entre a data 05/01/2018 e 05/06/2018.<br>
 
-* Qual é o tipo de produto mais comprado (maior número de unidades vendidas) em cada dia da semana entre a data X e a data Y?<br>
+06. Qual é o tipo de produto mais comprado (maior número de unidades vendidas) em cada dia da semana entre a data X e a data Y?<br>
 -Exemplo: Nos últimos 30 dias, nas quartas-feiras foram vendidos 10000 unidades de verduras; nas quintas-feiras, 20000 produtos de limpeza, ...<br>
 
-* Quais são as datas do ano mais lucrativas entre a data X e a data Y?<br>
+07. Quais são as datas do ano mais lucrativas entre a data X e a data Y?<br>
 -Inclui informações como: Data, Dia da semana, Data de intervalo e Ganho nessa data.<br>
 -Exemplo: Em 12/10/2017, foi vendido R$200 mil; em 08/03/2018, R$175 mil, etc<br>
 -Se o usuário não limitar a quantidade de datas, todas elas serão apresentadas.
 
-* Qual é o número total de usos de cada meio de pagamento entre a data X e a data Y?<br>
+08. Qual é o número total de usos de cada meio de pagamento entre a data X e a data Y?<br>
 -Inclui informações como: Meio, Número de usuários e Data de intervalo.<br>
 -Exemplo: Entre 25/06/2017 e 25/06/2018, o cartão de crédito foi usados 800 vezes; o cartão de débito, 700; etc<br>
 
-* Qual o meio de pagamento mais rentável para o supermercado entre a data X e a data Y?<br>
+09. Qual o meio de pagamento mais rentável para o supermercado entre a data X e a data Y?<br>
 -Inclui informações como: Meio, Ganhos e Data de intervalo.<br>
 -Exemplo: Entre 25/06/2017 e 25/06/2018, gastou-se R$540 mil no cartão de crédito; R$360 mil, no de débito; etc<br>
 
