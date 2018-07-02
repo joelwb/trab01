@@ -906,7 +906,7 @@ CREATE MATERIALIZED VIEW rel_lote_prox_venc AS
   <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.9/b/1.png"></p>
   
 ```sql  
- --RELATÓRIO 2: Quais são os N produtos mais vendidos?
+--RELATÓRIO 2: Quais são os N produtos mais vendidos?
 --Inclui informações como: Código do produto, nome do produto, marca, categoria, número de vendas.
 CREATE MATERIALIZED VIEW rel_prod_mais_vend AS
   SELECT
@@ -923,8 +923,8 @@ CREATE MATERIALIZED VIEW rel_prod_mais_vend AS
    ```
    <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.9/b/2.png"></p>
    
-  ```sql
-  --RELATÓRIO 3: Quais clientes que foram mais rentáveis para o supermercado?
+```sql
+--RELATÓRIO 3: Quais clientes que foram mais rentáveis para o supermercado?
 --Inclui informações Nome do cliente, valor total gasto, cpf.
 CREATE MATERIALIZED VIEW rel_cli_mais_rent AS
   SELECT
@@ -941,8 +941,8 @@ CREATE MATERIALIZED VIEW rel_cli_mais_rent AS
   ```
   <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.9/b/3.png"></p>
   
-  ```sql
-  --RELATÓRIO 4: Qual é a média de consumo por cliente?
+```sql
+--RELATÓRIO 4: Qual é a média de consumo por cliente?
 --Inclui informações como: Nome do cliente, média de consumo, cpf.
 CREATE MATERIALIZED VIEW rel_cli_media_consumo AS
   SELECT
@@ -958,7 +958,8 @@ CREATE MATERIALIZED VIEW rel_cli_media_consumo AS
 ```
 
   <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.9/b/4.png"></p>
-  ```sql
+
+```sql
 --RELATÓRIO 5: Quanto foi a rentabilidade das vendas em cada dia da semana?
 --Inclui informações como: Dia da semana, Soma de ganhos nesse dia da semana.
 CREATE MATERIALIZED VIEW rel_semana_vendas AS
@@ -980,8 +981,8 @@ CREATE MATERIALIZED VIEW rel_semana_vendas AS
   ```
    <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.9/b/5.png"></p> 
    
-   ```sql
-    --RELATÓRIO 6: Qual é o tipo de produto mais comprado (número de unidades) em cada dia da semana?
+```sql
+--RELATÓRIO 6: Qual é o tipo de produto mais comprado (número de unidades) em cada dia da semana?
 --Inclui informações como: Dia da semana, Categoria do produto, Unidades vendidas.
 CREATE MATERIALIZED VIEW rel_semana_prod_categ AS
   SELECT DIA_SEM "Dia da semana", CATEG "Categoria", UNIDS "Vendas (UN)"
@@ -1051,7 +1052,7 @@ CREATE MATERIALIZED VIEW rel_tipo_cartao_mais_usado AS
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.9/b/8.png"></p>
   
 ```sql
-    --RELATÓRIO 9: Qual o meio de pagamento mais rentável para o supermercado?
+--RELATÓRIO 9: Qual o meio de pagamento mais rentável para o supermercado?
 --Inclui informações como: Meio, Ganhos.
 CREATE MATERIALIZED VIEW rel_tipo_cartao_mais_lucr AS
   SELECT
