@@ -875,8 +875,196 @@ FROM supermercado S
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.8/4.png"></p>
 
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
-        a) Uma junção que envolva Self Join
-        b) Outras junções com views que o grupo considere como sendo de relevante importância para o trabalho
+
+```sql
+--Para cada fornecedor exiba os outros fornecedores que também fornecem para o mesmo supermercado;
+--Para cada fornecedor (X1), exiba outro fornecedor(X2) que compartilhe o supermercado Y;
+SELECT
+  f1.fk_fornecedor "ID Fornecedor 1",
+  f2.fk_fornecedor "ID Fornecedor 2",
+  f1.fk_supermercado "ID Supermercado compartilhado"
+FROM fornecimento f1, fornecimento f2
+WHERE f1.fk_fornecedor <> F2.fk_fornecedor AND f1.fk_supermercado = f2.fk_supermercado
+ORDER BY 1, 3;
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.9/a/1.png"></p>
+
+```sql
+--RELATÓRIO 1: Quais lotes mais próximos do vencimento (dada data corrente)?
+--Inclui informações como: Nome do produto, data de validade, dias restantes, identificador do lote.
+CREATE MATERIALIZED VIEW rel_lote_prox_venc AS
+  SELECT
+    p.nome "Nome do produto",
+    l.validade "Data validade",
+    DATE_PART('day', l.validade :: TIMESTAMP - current_date :: TIMESTAMP) "Dias restantes",
+    l.identificador "Código do Lote"
+  FROM produto p INNER JOIN lote l ON l.fk_produto = p.id
+  WHERE l.validade >= CURRENT_DATE
+  ORDER BY 2;
+  ```
+  
+  <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.9/b/1.png"></p>
+  
+```sql  
+ --RELATÓRIO 2: Quais são os N produtos mais vendidos?
+--Inclui informações como: Código do produto, nome do produto, marca, categoria, número de vendas.
+CREATE MATERIALIZED VIEW rel_prod_mais_vend AS
+  SELECT
+    p.nome "Nome",
+    p.codigo "Código",
+    p.marca "Marca",
+    p.tipo "Categoria",
+    SUM(c.quant) "Vendas (UN)"
+  FROM produto p
+    INNER JOIN compra c ON c.fk_produto = p.id
+    INNER JOIN hist_compra h ON h.id = c.fk_hist_compra
+  WHERE h.timestamp >= '2018-05-01' AND h.timestamp <= '2018-06-01'
+  GROUP BY p.nome, p.codigo, p.marca, p.tipo ORDER BY 5 DESC;
+   ```
+   <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.9/b/2.png"></p>
+   
+  ```sql
+  --RELATÓRIO 3: Quais clientes que foram mais rentáveis para o supermercado?
+--Inclui informações Nome do cliente, valor total gasto, cpf.
+CREATE MATERIALIZED VIEW rel_cli_mais_rent AS
+  SELECT
+    p.nome "Nome do cliente",
+    f.cpf "CPF",
+    ROUND(SUM(c.preco_compra) :: NUMERIC, 2) "Total comprado (R$)"
+  FROM pessoa p
+    INNER JOIN fisica f ON f.fk_pessoa = p.id
+    INNER JOIN hist_compra hc ON hc.id = f.fk_pessoa
+    INNER JOIN compra c ON c.fk_hist_compra = hc.id
+  WHERE hc.timestamp >= '2018-05-01' AND hc.timestamp <= '2018-06-01'
+  GROUP BY p.nome, f.cpf ORDER BY 3 DESC;
+
+  ```
+  <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.9/b/3.png"></p>
+  
+  ```sql
+  --RELATÓRIO 4: Qual é a média de consumo por cliente?
+--Inclui informações como: Nome do cliente, média de consumo, cpf.
+CREATE MATERIALIZED VIEW rel_cli_media_consumo AS
+  SELECT
+    p.nome "Nome do cliente",
+    f.cpf "CPF",
+    ROUND(AVG(c.preco_compra) :: NUMERIC, 2) "Média de consumo (R$)"
+  FROM pessoa p
+    INNER JOIN fisica f ON f.fk_pessoa = p.id
+    INNER JOIN hist_compra hc ON hc.id = f.fk_pessoa
+    INNER JOIN compra c ON c.fk_hist_compra = hc.id
+  WHERE hc.timestamp >= '2018-05-01' AND hc.timestamp <= '2018-06-01'
+  GROUP BY p.nome, f.cpf ORDER BY 3 DESC;
+```
+
+  <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.9/b/4.png"></p>
+  ```sql
+--RELATÓRIO 5: Quanto foi a rentabilidade das vendas em cada dia da semana?
+--Inclui informações como: Dia da semana, Soma de ganhos nesse dia da semana.
+CREATE MATERIALIZED VIEW rel_semana_vendas AS
+  SELECT
+    CASE EXTRACT(DOW FROM "timestamp")
+    WHEN 0 THEN 'Domingo'
+    WHEN 1 THEN 'Segunda-Feira'
+    WHEN 2 THEN 'Terça-Feira'
+    WHEN 3 THEN 'Quarta-Feira'
+    WHEN 4 THEN 'Quinta-Feira'
+    WHEN 5 THEN 'Sexta-Feira'
+    WHEN 6 THEN 'Sábado'
+    END AS "Dia da semana",
+    ROUND(SUM(c.preco_compra) :: NUMERIC, 2) "Venda (R$)"
+  FROM hist_compra hc
+    INNER JOIN compra c ON c.fk_hist_compra = hc.id
+  WHERE hc.timestamp >= '2018-05-01' AND hc.timestamp <= '2018-06-01'
+  GROUP BY 1 ORDER BY 2 DESC;
+  ```
+   <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.9/b/5.png"></p> 
+   
+   ```sql
+    --RELATÓRIO 6: Qual é o tipo de produto mais comprado (número de unidades) em cada dia da semana?
+--Inclui informações como: Dia da semana, Categoria do produto, Unidades vendidas.
+CREATE MATERIALIZED VIEW rel_semana_prod_categ AS
+  SELECT DIA_SEM "Dia da semana", CATEG "Categoria", UNIDS "Vendas (UN)"
+  FROM
+    (SELECT
+       DISTINCT ON (PRE_TAB.DIA_SEM)
+       PRE_TAB.DIA_SEM dia_semana,
+       PRE_TAB.*
+     FROM
+       (SELECT
+          CASE EXTRACT(DOW FROM hc."timestamp")
+          WHEN 0 THEN 'Domingo'
+          WHEN 1 THEN 'Segunda-Feira'
+          WHEN 2 THEN 'Terça-Feira'
+          WHEN 3 THEN 'Quarta-Feira'
+          WHEN 4 THEN 'Quinta-Feira'
+          WHEN 5 THEN 'Sexta-Feira'
+          WHEN 6 THEN 'Sábado'
+          END dia_sem,
+          p.tipo categ,
+          SUM(c.quant) unids
+
+        FROM hist_compra hc
+          INNER JOIN compra c ON c.fk_hist_compra = hc.id
+          INNER JOIN produto p ON c.fk_produto = p.id
+        WHERE hc.timestamp >= '2017-07-01' AND hc.timestamp <= '2018-07-01'
+        GROUP BY categ, dia_sem
+       ) pre_tab
+    ) pre_tab2 ORDER BY 3 DESC;
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.9/b/6.png"></p>
+    
+```sql
+--RELATÓRIO 7: Quais são as datas do ano mais lucrativas?
+--Inclui informações como: Data, Dia da semana, Ganho nessa data.
+CREATE MATERIALIZED VIEW rel_data_mais_lucr AS
+  SELECT
+    ROUND(SUM(c.preco_compra) :: NUMERIC, 2) "Venda (R$)",
+    hc.timestamp::date "Data",
+    CASE EXTRACT(DOW FROM hc."timestamp")
+    WHEN 0 THEN 'Domingo'
+    WHEN 1 THEN 'Segunda-Feira'
+    WHEN 2 THEN 'Terça-Feira'
+    WHEN 3 THEN 'Quarta-Feira'
+    WHEN 4 THEN 'Quinta-Feira'
+    WHEN 5 THEN 'Sexta-Feira'
+    WHEN 6 THEN 'Sábado'
+    END dia_sem
+  FROM hist_compra hc INNER JOIN compra c ON c.fk_hist_compra = hc.id
+  WHERE hc.timestamp >= '2017-07-01' AND hc.timestamp <= '2018-07-01'
+  GROUP BY 2, 3 ORDER BY 1 DESC;
+  ```
+  <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.9/b/7.png"></p>
+    ```sql
+--RELATÓRIO 8: Qual é o número total de usos de cada meio de pagamento?
+--Inclui informações como: Meio, Número de usuários.
+CREATE MATERIALIZED VIEW rel_tipo_cartao_mais_usado AS
+  SELECT
+    c.tipo "Tipo de cartão",
+    COUNT(c.tipo) "Numero de usuários"
+  FROM hist_compra hc
+    INNER JOIN cartao c ON hc.id = c.id
+  WHERE hc.timestamp >= '2018-05-01' AND hc.timestamp <= '2018-06-01'
+  GROUP BY c.tipo ORDER BY 2 DESC;
+```
+
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.9/b/8.png"></p>
+  
+```sql
+    --RELATÓRIO 9: Qual o meio de pagamento mais rentável para o supermercado?
+--Inclui informações como: Meio, Ganhos.
+CREATE MATERIALIZED VIEW rel_tipo_cartao_mais_lucr AS
+  SELECT
+    c.tipo "Tipo de cartão",
+    ROUND(SUM(com.preco_compra) :: NUMERIC, 2) "Compras (R$)"
+  FROM cartao c
+    INNER JOIN hist_compra hc ON hc.fk_cartao = c.id
+    INNER JOIN compra com ON com.fk_hist_compra = hc.id
+  WHERE hc.timestamp >= '2018-05-01' AND hc.timestamp <= '2018-06-01'
+  GROUP BY c.tipo ORDER BY 2 DESC;
+  ```
+  <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.9/b/9.png"></p>
+
 #### 9.10	SUBCONSULTAS (Mínimo 3)<br>
 ### 10	ATUALIZAÇÃO DA DOCUMENTAÇÃO DOS SLIDES PARA APRESENTAÇAO FINAL (Mínimo 6 e Máximo 10)<br>
 
