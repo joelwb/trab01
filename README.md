@@ -1036,6 +1036,7 @@ CREATE MATERIALIZED VIEW rel_data_mais_lucr AS
   GROUP BY 2, 3 ORDER BY 1 DESC;
   ```
   <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.9/b/7.png"></p>
+
 ```sql
 --RELATÓRIO 8: Qual é o número total de usos de cada meio de pagamento?
 --Inclui informações como: Meio, Número de usuários.
