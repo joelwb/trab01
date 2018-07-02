@@ -125,8 +125,9 @@ e deve ser criada antes do modelo conceitual<br>
 ![Alt text](https://github.com/rfidmarket/trab01/blob/master/arquivos/modeloConceitual.png "Modelo Conceitual")
     
     B) NOTACAO UML (Caso esteja fazendo a disciplina de analise)
- 
-![Alt text](https://github.com/rfidmarket/trab01/blob/master/images/diag_classe.png "Diagrama de Classes")
+
+*Diagrama usada para implementação da versão desktop do sistema, sendo mais coerente, portanto, com as disciplinas de Banco de Dados I e Programação Orientada a Objetos I.*
+![Alt text](https://github.com/rfidmarket/trab01/blob/master/images/secao_5/classes_DIAG2.png "Diagrama de Classes")
 
     C) QUALIDADE 
         Garantir que a semântica dos atributos seja clara no esquema
