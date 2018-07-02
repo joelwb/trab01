@@ -754,6 +754,61 @@ ORDER BY 1 ASC;
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.7/6.png"></p>
 
 #### 9.8	CONSULTAS COM LEFT E RIGHT JOIN (Mínimo 4)<br>
+```sql
+--Obtenha os dados de todos fornecedores registrados no sistema;
+SELECT
+  P.id "ID", J.cnpj "CNPJ", P.nome "Nome",
+  P.rua "Logradouro", P.cep "CEP", P.numero "Número",
+  P.bairro "Bairro", P.estado "Estado", P.cidade "Cidade"
+FROM juridica J
+  INNER JOIN pessoa P ON J.fk_pessoa = P.id
+  LEFT JOIN supermercado S ON J.fk_pessoa = S.fk_pessoa_juridica
+WHERE S.fk_pessoa_juridica ISNULL ORDER BY nome;
+```
+
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.8/1.png"></p>
+
+```sql
+--Obtenha o número de funcionários registrados no sistema para cada supermercado;
+SELECT
+  S.fk_pessoa_juridica "ID Supermercado",
+  SUM(CASE WHEN F.cargo NOTNULL THEN 1 ELSE 0 END) "Núm. de funcionários"
+FROM supermercado S
+  LEFT JOIN funcionario F ON S.fk_pessoa_juridica = F.fk_supermercado
+GROUP BY S.fk_pessoa_juridica ORDER BY 2 DESC;
+```
+
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.8/2.png"></p>
+
+```sql
+--Obtenha o número de supermercados ligados a cada fornecedor;
+SELECT
+  J.fk_pessoa "ID do fornecedor",
+  P.nome "Nome do fornecedor",
+  count(*) "Núm. supermercados"
+FROM juridica J
+  LEFT JOIN supermercado S ON J.fk_pessoa = S.fk_pessoa_juridica
+  LEFT JOIN fornecimento F ON J.fk_pessoa = F.fk_fornecedor
+  INNER JOIN pessoa P ON J.fk_pessoa = P.id
+WHERE fk_pessoa_juridica ISNULL GROUP BY J.fk_pessoa, P.nome ORDER BY 1 ASC;
+```
+
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.8/3.png"></p>
+
+```sql
+--Obtenha o número de clientes registrados no sistema para cada supermercado;
+SELECT
+  count(*) "Núm. clientes",
+  P.nome "Nome supermercado",
+  HC.fk_supermercado "ID supermercado"
+FROM supermercado S
+  RIGHT JOIN hist_compra HC ON S.fk_pessoa_juridica = HC.fk_supermercado
+  INNER JOIN pessoa P ON S.fk_pessoa_juridica = P.id
+  GROUP BY P.nome, HC.fk_supermercado ORDER BY 1 DESC, 2 ASC;
+```
+
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.8/4.png"></p>
+
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
         a) Uma junção que envolva Self Join
         b) Outras junções com views que o grupo considere como sendo de relevante importância para o trabalho
