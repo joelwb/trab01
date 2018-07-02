@@ -644,6 +644,8 @@ FROM
 
 ORDER BY 1 ASC;
 ```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.6/1.png"></p>
+
 >b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho<br>
 
 *Tais consultas serão abordadas ao longo da seção 9, logo abaixo!*
