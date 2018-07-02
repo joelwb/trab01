@@ -539,18 +539,24 @@ FROM fisica WHERE DATE_PART('YEAR', AGE(CURRENT_DATE, data_nasc)) > 53;
     
 #### 9.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
 
+
+
 ```sql
 --Aumente em 25% o custo dos produtos de limpeza do supermercado de ID 401;
 UPDATE produto SET custo = (custo * 1.25)
 WHERE fk_supermercado = 601 AND tipo ILIKE '%limpeza%';
 ```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.5/1_ANTES.png"></p>
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.5/1_DEPOIS.png"></p>
+
+
 
 ```sql
 --Aumente em 50% o preço dos alimentos do supermercado de ID 402;
 UPDATE produto SET preco = (preco * 1.5)
 WHERE fk_supermercado = 602 AND tipo = 'Alimentos' OR tipo = 'alimentos';
 ```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.5/2_ANTES.png"></p>
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.5/2_DEPOIS.png"></p>
 
 
@@ -562,6 +568,7 @@ UPDATE produto SET (custo, preco) = (custo * 2, preco * 2)
 WHERE nome ILIKE 'leite%';
 ```
 
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.5/3_ANTES.png"></p>
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.5/3_DEPOIS.png"></p>
 
 
@@ -571,7 +578,7 @@ WHERE nome ILIKE 'leite%';
 DELETE FROM funcionario
 WHERE fk_supermercado = 607 AND (setor = 'ti' OR setor = 'TI');
 ```
-
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.5/4_ANTES.png"></p>
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.5/4_DEPOIS.png"></p>
 
 
@@ -581,6 +588,7 @@ DELETE FROM funcionario
 WHERE fk_supermercado = 625 AND setor ILIKE 'admin%' AND cargo = 'subgerente';
 ```
 
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.5/5_ANTES.png"></p>
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.5/5_DEPOIS.png"></p>
 
 ```sql
@@ -588,6 +596,8 @@ WHERE fk_supermercado = 625 AND setor ILIKE 'admin%' AND cargo = 'subgerente';
 DELETE FROM funcionario
 WHERE fk_supermercado = 627 AND cargo ILIKE 'publici%';
 ```
+
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.5/6_ANTES.png"></p>
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.5/6_DEPOIS.png"></p>
 
 
