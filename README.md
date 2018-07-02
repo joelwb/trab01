@@ -652,6 +652,107 @@ ORDER BY 1 ASC;
 *Tais consultas serão abordadas ao longo da seção 9, logo abaixo!*
 
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
+```sql
+	--Obtenha a categoria de produtos mais vendida;
+	SELECT
+	  P.tipo "Categoria",
+	  sum(C.quant) "Venda(R$)"
+	FROM hist_compra H
+	  INNER JOIN compra C ON H.id = C.fk_hist_compra
+	  INNER JOIN produto P ON C.fk_produto = P.id
+	GROUP BY P.tipo ORDER BY 2 DESC;
+```
+	
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.7/1.png"></p>
+
+```sql
+	--Caculule a média de consumo das pessoas do gênero masculino e do gênero feminino;
+	SELECT
+	  ROUND(sum(C.quant)/(SELECT count(*) FROM hist_compra)::NUMERIC, 2) "Média de consumo(R$)",
+	  F.genero "Gênero"
+	FROM hist_compra H
+	  INNER JOIN compra C ON H.id = C.fk_hist_compra
+	  INNER JOIN produto P ON C.fk_produto = P.id
+	  INNER JOIN fisica F ON H.fk_cliente = F.fk_pessoa
+	GROUP BY F.genero ORDER BY 1 DESC;
+```
+
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.7/2.png"></p>
+
+```sql
+	--Obtenha a porcentagem de vendas de cada produto frente ao total de vendas;
+	--Para o supermercado de id 606;
+	SELECT
+	  nome "Nome produto",
+	  PROD_UNIDS "Unidades vendidas",
+	  ROUND(PROD_UNIDS/UNIDS_TOTAL::NUMERIC, 8)*100 "% Total de vendas"
+	FROM
+	  (SELECT S.fk_pessoa_juridica pk_super, P.nome nome, SUM(C.quant) prod_unids
+	   FROM hist_compra H
+	     INNER JOIN supermercado S ON H.fk_supermercado = S.fk_pessoa_juridica
+	     INNER JOIN compra C ON H.id = C.fk_hist_compra
+	     INNER JOIN produto P ON C.fk_produto = P.id
+	   WHERE S.fk_pessoa_juridica = 606
+	   GROUP BY S.fk_pessoa_juridica, P.nome ORDER BY 1 DESC) tab_prod
+	  INNER JOIN
+	  (SELECT S.fk_pessoa_juridica pk_super, SUM(C.quant) unids_total
+	   FROM hist_compra H
+	     INNER JOIN supermercado S ON H.fk_supermercado = S.fk_pessoa_juridica
+	     INNER JOIN compra C ON H.id = C.fk_hist_compra
+	   WHERE S.fk_pessoa_juridica = 606
+	   GROUP BY S.fk_pessoa_juridica ORDER BY 1 DESC) tab_total
+	  ON TAB_PROD.PK_SUPER = TAB_TOTAL.PK_SUPER ORDER BY 2 DESC;
+```
+
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.7/3.png"></p>
+```sql
+	--Caculule a porcentagem de ganhos sobre cada produto;
+	SELECT
+	  P.nome "Nome do produto",
+	  P.custo "Custo (UN)",
+	  P.preco "Preço de venda (UN)",
+	  ROUND(1-(P.custo/P.preco)::NUMERIC, 8)*100 "% Margem de lucro"
+	FROM supermercado S
+	  INNER JOIN produto P ON P.fk_supermercado = S.fk_pessoa_juridica
+	GROUP BY P.nome, P.custo, P.preco ORDER BY 1 DESC;
+```
+
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.7/4.png"></p>
+
+```sql
+	--Caclule o custo corrigido/atual com a mercadoria em estoque e prateleira para cada produto;
+	--Para o supermercado de ID 606;
+	SELECT
+	  P.nome "Nome do produto",
+	  P.quant_prateleira "Em prateleira (Unid.)",
+	  P.estoque "Em estoque (Unid.)",
+	  P.custo "Custo/UN (R$)",
+	  ROUND(sum(P.estoque * P.custo + P.quant_prateleira * P.custo) :: NUMERIC, 2) "Custo atual total (R$)"
+	FROM supermercado S
+	  INNER JOIN produto P ON P.fk_supermercado = S.fk_pessoa_juridica
+	WHERE S.fk_pessoa_juridica = 606
+	GROUP BY P.nome, P.quant_prateleira, P.estoque, P.custo, P.preco ORDER BY 5 DESC;
+```
+
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.7/5.png"></p>
+
+```sql
+	--Obtenha os 10 fornecedores que vendem lotes ao supermercado de ID 606;
+	SELECT
+	  L.fk_fornecedor "ID fornecedor",
+	  P.nome "Nome do fornecedor",
+	  count(*) "Núm. de lotes fornecidos"
+
+	FROM supermercado S
+	  INNER JOIN fornecimento F ON S.fk_pessoa_juridica = F.fk_supermercado
+	  INNER JOIN lote L ON F.fk_fornecedor = L.fk_fornecedor
+	  INNER JOIN pessoa P ON F.fk_fornecedor = P.id
+	WHERE S.fk_pessoa_juridica = 606
+	GROUP BY L.fk_fornecedor, P.nome ORDER BY 3 DESC LIMIT 10;
+```
+
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.7/6.png"></p>
+
 #### 9.8	CONSULTAS COM LEFT E RIGHT JOIN (Mínimo 4)<br>
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
         a) Uma junção que envolva Self Join
