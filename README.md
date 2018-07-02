@@ -666,7 +666,7 @@ ORDER BY 1 ASC;
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.7/1.png"></p>
 
 ```sql
-	--Caculule a média de consumo das pessoas do gênero masculino e do gênero feminino;
+	--Calcule a média de consumo das pessoas do gênero masculino e do gênero feminino;
 	SELECT
 	  ROUND(sum(C.quant)/(SELECT count(*) FROM hist_compra)::NUMERIC, 2) "Média de consumo(R$)",
 	  F.genero "Gênero"
@@ -706,7 +706,7 @@ ORDER BY 1 ASC;
 
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.7/3.png"></p>
 ```sql
-	--Caculule a porcentagem de ganhos sobre cada produto;
+	--Calcule a porcentagem de ganhos sobre cada produto;
 	SELECT
 	  P.nome "Nome do produto",
 	  P.custo "Custo (UN)",
