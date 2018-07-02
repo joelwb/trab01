@@ -706,6 +706,7 @@ ORDER BY 1 ASC;
 
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.7/3.png"></p>
 ```sql
+
 	--Calcule a porcentagem de ganhos sobre cada produto;
 	SELECT
 	  P.nome "Nome do produto",
@@ -715,6 +716,7 @@ ORDER BY 1 ASC;
 	FROM supermercado S
 	  INNER JOIN produto P ON P.fk_supermercado = S.fk_pessoa_juridica
 	GROUP BY P.nome, P.custo, P.preco ORDER BY 1 DESC;
+	
 ```
 
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.7/4.png"></p>
