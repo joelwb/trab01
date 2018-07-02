@@ -770,6 +770,7 @@ ORDER BY 1 ASC;
 ```
 
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.7/3.png"></p>
+
 ```sql
 	--Calcule a porcentagem de ganhos sobre cada produto;
 	SELECT
