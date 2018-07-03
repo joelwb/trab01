@@ -114,7 +114,7 @@ e deve ser criada antes do modelo conceitual<br>
 -Inclui informações como: Meio, Ganhos e Data de intervalo.<br>
 -Exemplo: Entre 25/06/2017 e 25/06/2018, gastou-se R$540 mil no cartão de crédito; R$360 mil, no de débito; etc<br>
 
->## Marco de Entrega 01 em: (02/04/2018)<br>
+>Marco de Entrega 01 em: (02/04/2018)<br>
 
 
 ### 5.MODELO CONCEITUAL<br>
@@ -157,7 +157,7 @@ pode possuir para cada departamento mais de uma localização...<br>
 - Obs. 6: No modelo conceitual optamos por não distinguir supermercado de fornecedor, ademais, as informações referentes ao endereço da mesma estará na tabela pessoa.
 
 
->## Marco de Entrega 02 em: (23/04/2018)<br>
+>Marco de Entrega 02 em: (23/04/2018)<br>
 
 #### 5.3 DESCRIÇÃO DOS DADOS 
     [objeto]: [descrição do objeto]
@@ -236,6 +236,10 @@ SUPERMERCADO: Tabela que armazena dados sobre o supermercado.<br>
 * unidade: Texto que identifica uma unidade da rede de supermercados. Exemplo: “Anchieta”.<br>
 
 ### 6	MODELO LÓGICO<br>
+>a) inclusão do modelo lógico do banco de dados<br>
+>b) verificação de correspondencia com o modelo conceitual<br>
+		(não serão aceitos modelos que não estejam em conformidade)
+
 ![Alt text](https://github.com/rfidmarket/trab01/blob/master/arquivos/modeloLogico.png "Modelo Lógico")
 
 
@@ -245,82 +249,107 @@ SUPERMERCADO: Tabela que armazena dados sobre o supermercado.<br>
 
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
 #### 8.1 DETALHAMENTO DAS INFORMAÇÕES
+>a) inclusão das instruções de inserção dos dados nas tabelas criadas pelo script de modelo físico 
+>b) formato .SQL
+
 <a href="https://github.com/rfidmarket/trab01/blob/master/arquivos/INSERT.sql">INSERT</a><br>   
 
 #### 8.2 INCLUSÃO DO SCRIPT PARA CRIAÇÃO DE TABELA E INSERÇÃO DOS DADOS
+>a) Junção dos scripts anteriores em um único script (create para tabelas e estruturas de dados + dados a serem inseridos)<br>
+>b) Criar um novo banco de dados para testar a restauracao (em caso de falha na restauração o grupo não pontuará neste quesito)<br>
+>c) formato .SQL<br>
+
 <a href="https://github.com/rfidmarket/trab01/blob/master/arquivos/CREATE_INSERT.sql">CREATE E INSERT</a><br>
        
 #### 8.3 INCLUSÃO DO SCRIPT PARA EXCLUSÃO DE TABELAS EXISTENTES, CRIAÇÃO DE TABELA NOVAS E INSERÇÃO DOS DADOS
+>a) Junção dos scripts anteriores em um único script (create para tabelas e estruturas de dados + dados a serem inseridos)<br>
+>b) Criar um novo banco de dados para testar a restauracao (em caso de falha na restauração o grupo não pontuará neste quesito)<br>
+>c) formato .SQL<br>
+
 <a href="https://github.com/rfidmarket/trab01/blob/master/arquivos/DROP_CREATE_INSERT.sql">DROP, CREATE, INSERT</a><br>
->## Marco de Entrega 03 em: (14/05/2018)<br>
+
+>Marco de Entrega 03 em: (14/05/2018)<br>
 
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
-    OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
+>OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
     
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
 
 ```sql
+--SELECT 1:
 SELECT * FROM cartao;
 ```
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.1/select_cartao.png"></p>
 
 ```sql
+--SELECT 2:
 SELECT * FROM compra;
 ```
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.1/select_compra.png"></p>
 
 ```sql
+--SELECT 3:
 SELECT * FROM contato;
 ```
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.1/select_contato.png"></p>
 
 ```sql
+--SELECT 4:
 SELECT * FROM fisica;
 ```
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.1/select_fisica.png"></p>
 
 ```sql
+--SELECT 5:
 SELECT * FROM fornecimento;
 ```
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.1/select_fornecimento.png"></p>
 
 ```sql
+--SELECT 6:
 SELECT * FROM funcionario;
 ```
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.1/select_funcionario.png"></p>
 
 ```sql
+--SELECT 7:
 SELECT * FROM hist_compra;
 ```
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.1/select_hist_compra.png"></p>
 
 ```sql
+--SELECT 8:
 SELECT * FROM juridica;
 ```
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.1/select_juridica.png"></p>
 
 ```sql
+--SELECT 9:
 SELECT * FROM lote;
 ```
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.1/select_lote.png"></p>
 
 ```sql
+--SELECT 10:
 SELECT * FROM pessoa;
 ```
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.1/select_pessoa.png"></p>
 
 ```sql
+--SELECT 11:
 SELECT * FROM produto;
 ```
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.1/select_produto.png"></p>
 
 ```sql
+--SELECT 12:
 SELECT * FROM supermercado;
 ```
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.1/select_supermercado.png"></p>
 
 ```sql
+--SELECT 13:
 SELECT * FROM utiliza;
 ```
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.1/select_utiliza.png"></p>
@@ -329,21 +358,25 @@ SELECT * FROM utiliza;
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
 
 ```sql
+--QUERY 1:
 SELECT * FROM pessoa WHERE id < 27;
 ```
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.2/1.png"></p>
 
 ```sql
+--QUERY 2:
 SELECT * FROM fisica WHERE genero = 'F';
 ```
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.2/2.png"></p>
 
 ```sql
+--QUERY 3:
 SELECT * FROM funcionario WHERE setor = 'ti' or setor = 'TI';
 ```
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.2/3.png"></p>
 
 ```sql
+--QUERY 4:
 SELECT * FROM juridica WHERE fk_pessoa > 95;
 ```
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.2/4.png"></p>
@@ -354,7 +387,7 @@ SELECT * FROM juridica WHERE fk_pessoa > 95;
 >a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
     
 ```sql
---Obtenha os dados de todos funcionários que sejam gerentes ou repositores;
+--QUERY 1: Obtenha os dados de todos funcionários que sejam gerentes ou repositores;
 SELECT p.nome, fis.genero, fun.cargo, fun.setor, fis.cpf FROM pessoa AS p
 INNER JOIN fisica AS fis ON p.id = fis.fk_pessoa
 INNER JOIN funciONario AS fun ON fis.fk_pessoa = fun.fk_pessoa_fisica
@@ -363,7 +396,7 @@ WHERE cargo = 'gerente' OR cargo LIKE 'repositor%';
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.3/a/1.png"></p>
 
 ```sql
---Obtenha os dados de todos funcionários que não sejam gerentes;
+--QUERY 2: Obtenha os dados de todos funcionários que não sejam gerentes;
 SELECT p.nome, fis.genero, fun.cargo, fun.setor, fis.data_nasc FROM pessoa AS p
 INNER JOIN fisica AS fis ON p.id = fis.fk_pessoa 
 INNER JOIN funciONario AS fun ON fis.fk_pessoa = fun.fk_pessoa_fisica
@@ -372,7 +405,7 @@ WHERE NOT cargo LIKE 'gerente';
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.3/a/2.png"></p>
 
 ```sql
---Obtenha os dados de todas as técnicas em alguma área;
+--QUERY 3: Obtenha os dados de todas as técnicas em alguma área;
 SELECT p.nome, fis.genero, fun.cargo, fun.setor, fis.data_nasc FROM pessoa AS p
 INNER JOIN fisica AS fis ON p.id = fis.fk_pessoa 
 INNER JOIN funciONario AS fun ON fis.fk_pessoa = fun.fk_pessoa_fisica
@@ -381,7 +414,7 @@ WHERE fun.cargo ILIKE 'técnic%' AND fis.genero = 'F';
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.3/a/3.png"></p>
 
 ```sql
---Obtenha os dados de todos os técnicos do setor de TI;
+--QUERY 4: Obtenha os dados de todos os técnicos do setor de TI;
 SELECT p.nome, fis.genero, fun.cargo, fun.setor, fis.data_nasc FROM pessoa AS p
 INNER JOIN fisica AS fis ON p.id = fis.fk_pessoa 
 INNER JOIN funciONario AS fun ON fis.fk_pessoa = fun.fk_pessoa_fisica
@@ -390,7 +423,7 @@ WHERE cargo ILIKE 'técnico%' AND setor = 'TI';
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.3/a/4.png"></p>
 
 ```sql
---Obtenha os dados de todos funcionários que são balconistas;
+--QUERY 5: Obtenha os dados de todos funcionários que são balconistas;
 SELECT p.nome, fis.genero, fun.cargo, fun.setor, fis.data_nasc FROM pessoa AS p
 INNER JOIN fisica AS fis ON p.id = fis.fk_pessoa 
 INNER JOIN funciONario AS fun ON fis.fk_pessoa = fun.fk_pessoa_fisica
@@ -400,7 +433,7 @@ WHERE cargo ILIKE 'balconista%';
 
 >b) Criar no mínimo 3 consultas com operadores aritméticos<br>
 ```sql
---Exiba a média de idade das pessoas fisicas de Vila Velha;
+--QUERY 1: Exiba a média de idade das pessoas fisicas de Vila Velha;
 SELECT SUM(idades)/COUNT(idades) AS "Média idade (Vila Velha)"
 FROM (
 	SELECT EXTRACT(year FROM AGE(NOW(), data_nasc)) AS idades FROM fisica AS f
@@ -410,7 +443,7 @@ FROM (
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.3/b/1.png"></p>
 
 ```sql
---Exiba o nome dos clientes e o valor total gasto no supermercado desde que esse valor seja maior que 500;
+--QUERY 2: Exiba o nome dos clientes e o valor total gasto no supermercado desde que esse valor seja maior que 500;
 SELECT nome AS "Nome (cliente)", total AS "Total comprado"
 FROM (
 	SELECT p.nome nome, SUM(c.preco_compra) total FROM pessoa p
@@ -424,7 +457,7 @@ WHERE total > 500 ORDER BY 2 DESC;
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.3/b/2.png"></p>
 
 ```sql
---Exiba o número de pessoas (físicas e jurídicas) em Serra e de outras cidades;
+--QUERY 3: Exiba o número de pessoas (físicas e jurídicas) em Serra e de outras cidades;
 SELECT (
 	SELECT COUNT(*) FROM pessoa WHERE cidade LIKE 'Serra') AS "Qtd. residentes Serra",
 	(SELECT COUNT(*) FROM pessoa) - (SELECT COUNT(*) FROM pessoa WHERE cidade LIKE 'Serra')
@@ -435,7 +468,7 @@ SELECT (
 >c) Criar no mínimo 3 consultas com operação de renomear nomes de campos ou tabelas
 
 ```sql
---Exiba quantas pessoas físicas moram em Vila Velha;<br>
+--QUERY 1: Exiba quantas pessoas físicas moram em Vila Velha;<br>
 SELECT COUNT(colunas) AS "Pessoas físicas de Vila Velha"
 FROM(
 	SELECT * FROM fisica AS f INNER JOIN pessoa AS p ON f.fk_pessoa = p.id
@@ -444,7 +477,7 @@ FROM(
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.3/c/1.png"></p>
 
 ```sql
---Exiba o nome, data de nascimento e idade atual (em anos) dos 5 funcionários mais velhos do supermercado*/
+--QUERY 2: Exiba o nome, data de nascimento e idade atual (em anos) dos 5 funcionários mais velhos do supermercado*/
 SELECT
 	p.nome AS "Nome funcionário",
 	data_nasc AS "Data de nascimento",
@@ -457,6 +490,7 @@ ORDER BY data_nasc ASC LIMIT 5;
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.3/c/2.png"></p>
 
 ```sql
+--QUERY 3: Exiba o número de funcionário do sexo feminino e masculino; 
 SELECT
    SUM(CASE WHEN tab.genero = 'F' THEN 1 ELSE 0 END) as "Funcionárias [FEM]",
    SUM(CASE WHEN tab.genero = 'M' THEN 1 ELSE 0 END) as "Funcionários [MASC]"
@@ -468,46 +502,55 @@ SELECT
     
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
 ```sql
+--QUERY 1:
 SELECT * FROM supermercado WHERE unidade ILIKE 'No%';
 ```
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.4/1.png"></p>
 
 ```sql
+--QUERY 2:
 SELECT * FROM juridica WHERE cnpj LIKE '%0001-3%';
 ```
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.4/2.png"></p>
 
 ```sql
+--QUERY 3:
 SELECT * FROM fisica WHERE login LIKE '%bol.com.br';
 ```
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.4/3.png"></p>
 
 ```sql
+--QUERY 4:
 SELECT * FROM pessoa WHERE nome ILIKE 'BR%';
 ```
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.4/4.png"></p>
 
 ```sql
+--QUERY 5:
 SELECT * FROM pessoa WHERE rua ILIKE 'Av%';
 ```
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.4/5.png"></p>
 
 ```sql
+--QUERY 6:
 SELECT * FROM pessoa WHERE rua ILIKE 'Avenida a %';
 ```
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.4/6.png"></p>
 
 ```sql
+--QUERY 7:
 SELECT * FROM pessoa WHERE bairro ILIKE '%Praia da %';
 ```
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.4/7.png"></p>
 
 ```sql
+--QUERY 8:
 SELECT * FROM fisica WHERE DATE_PART('YEAR', AGE(CURRENT_DATE, data_nasc)) > 53;
 ```
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.4/8.png"></p>
 
 ```sql
+--QUERY 9:
 SELECT
 	login, data_nasc, cpf, senha, fk_pessoa, genero,
 	EXTRACT(YEAR FROM AGE(CURRENT_DATE, data_nasc)) AS idade
@@ -516,11 +559,13 @@ FROM fisica WHERE DATE_PART('YEAR', AGE(CURRENT_DATE, data_nasc)) > 53;
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.4/9.png"></p>
 
 ```sql
+--QUERY 10:
 SELECT * FROM fisica WHERE EXTRACT('YEAR' FROM data_nasc) > 1996;
 ```
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.4/10.png"></p>
 
 ```sql
+--QUERY 11:
 SELECT
 	login, data_nasc, cpf, senha, fk_pessoa, genero,
 	CURRENT_DATE - data_nasc AS "Dias vividos"
@@ -529,6 +574,7 @@ FROM fisica WHERE EXTRACT('YEAR' FROM data_nasc) > 1996;
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.4/11.png"></p>
 
 ```sql
+--QUERY 12:
 SELECT
 	login, data_nasc, cpf, senha, fk_pessoa, genero,
 	EXTRACT('MONTH' FROM data_nasc) AS "Mês de nasc."
@@ -536,24 +582,25 @@ FROM fisica WHERE DATE_PART('YEAR', AGE(CURRENT_DATE, data_nasc)) > 53;
 ```
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.4/12.png"></p>
 
->## Marco de Entrega 04 em: (04/06/2017)<br>
+>Marco de Entrega 04 em: (04/06/2017)<br>
     
 #### 9.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
 
 
-
 ```sql
---Aumente em 25% o custo dos produtos de limpeza do supermercado de ID 401;
+--QUERY 1: Aumente em 25% o custo dos produtos de limpeza do supermercado de ID 401;
 UPDATE produto SET custo = (custo * 1.25)
 WHERE fk_supermercado = 601 AND tipo ILIKE '%limpeza%';
 ```
+
+>ANTES da execução (1ª Imagem) e DEPOIS da execução da query (2ª Imagem)<br>
+
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.5/1_ANTES.png"></p>
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.5/1_DEPOIS.png"></p>
 
 
-
 ```sql
---Aumente em 50% o preço dos alimentos do supermercado de ID 402;
+--QUERY 2: Aumente em 50% o preço dos alimentos do supermercado de ID 402;
 UPDATE produto SET preco = (preco * 1.5)
 WHERE fk_supermercado = 602 AND tipo = 'Alimentos' OR tipo = 'alimentos';
 ```
@@ -561,21 +608,18 @@ WHERE fk_supermercado = 602 AND tipo = 'Alimentos' OR tipo = 'alimentos';
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.5/2_DEPOIS.png"></p>
 
 
-
 ```sql
-/*Aumente em 100% o custo e o preço dos produtos com a palavra "leite" em nome de
+/*QUERY 3: Aumente em 100% o custo e o preço dos produtos com a palavra "leite" em nome de
  *todos supermercados, devido a época de estiagem*/
 UPDATE produto SET (custo, preco) = (custo * 2, preco * 2)
 WHERE nome ILIKE 'leite%';
 ```
-
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.5/3_ANTES.png"></p>
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.5/3_DEPOIS.png"></p>
 
 
-
 ```sql
---Remova todos funcionários do setor de TI do supermercado de id 407;
+--QUERY 4: Remova todos funcionários do setor de TI do supermercado de id 407;
 DELETE FROM funcionario
 WHERE fk_supermercado = 607 AND (setor = 'ti' OR setor = 'TI');
 ```
@@ -584,245 +628,140 @@ WHERE fk_supermercado = 607 AND (setor = 'ti' OR setor = 'TI');
 
 
 ```sql
---Remova todos subgerentes dos setores administrativos do supermercado de id 425;
+--QUERY 5: Remova todos subgerentes dos setores administrativos do supermercado de id 425;
 DELETE FROM funcionario
 WHERE fk_supermercado = 625 AND setor ILIKE 'admin%' AND cargo = 'subgerente';
 ```
-
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.5/5_ANTES.png"></p>
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.5/5_DEPOIS.png"></p>
 
+
 ```sql
---Remova do supermercado de id 427, todos funcionários de cargo ligado à publicidade;
+--QUERY 6: Remova do supermercado de id 427, todos funcionários de cargo ligado à publicidade;
 DELETE FROM funcionario
 WHERE fk_supermercado = 627 AND cargo ILIKE 'publici%';
 ```
-
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.5/6_ANTES.png"></p>
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.5/6_DEPOIS.png"></p>
 
 
-
-
 #### 9.6	CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Mínimo 6)<br>
->a) Uma junção que envolva todas as tabelas possuindo no mínimo 3 registros no resultado
-```sql
-SELECT
-  TAB_SUPER.NOME   "Superm. (Nome)",
-  TAB_SUPER.UNID   "Unidade",
-  TAB_SUPER.PK_SUPER "ID",
-  TAB_VENDAS.TIPO_CARTAO "Tipo cartão mais rentável",
-  TAB_CUSTO.CUSTO_TOTAL "Custo atual c/ mercadoria(R$)",
-  TAB_FUNC.NUM_FUNC "Núm. func.",
-  TAB_CONTATO.CONTATO "Contato",
-  TAB_FORN.NUM_FORN "Núm. forn.",
-  TAB_LOTE.PROD_TIPO "Categoria c/ mais lotes",
-  TAB_GEN.GENERO "Gênero que mais consumiu"
+>a) Uma junção que envolva todas as tabelas possuindo no mínimo 3 registros no resultado<br>
 
-FROM
-  --Tabelas envolvidas abaixo: juridica, pessoa, supermercado;
-  (SELECT P.nome nome, S.unidade unid, S.fk_pessoa_juridica pk_super
-   FROM supermercado S
-     INNER JOIN juridica J ON S.fk_pessoa_juridica = J.fk_pessoa
-     INNER JOIN pessoa P ON J.fk_pessoa = P.id
-  ) TAB_SUPER
-
-  INNER JOIN
-  --Tabelas envolvidas abaixo: cartao, compra, hist_compra, supermercado;
-  (SELECT
-     DISTINCT ON(S.fk_pessoa_juridica) S.fk_pessoa_juridica pk_super,
-     ROUND(SUM(C.preco_compra) :: NUMERIC, 2) total,
-     C2.tipo tipo_cartao
-   FROM supermercado S
-     INNER JOIN hist_compra H ON S.fk_pessoa_juridica = H.fk_supermercado
-     INNER JOIN compra C ON H.id = C.fk_hist_compra
-     INNER JOIN cartao C2 ON H.fk_cartao = C2.id
-   GROUP BY TIPO_CARTAO, PK_SUPER ORDER BY 1,2 DESC
-  ) TAB_VENDAS
-    ON TAB_SUPER.PK_SUPER = TAB_VENDAS.PK_SUPER
-
-  INNER JOIN
-  --Tabelas envolvidas abaixo: produto, supermercado;
-  (SELECT
-     S.fk_pessoa_juridica pk_super,
-     ROUND(sum(P.estoque * P.custo + P.quant_prateleira * P.custo) :: NUMERIC, 2) custo_total
-   FROM produto P
-     INNER JOIN supermercado S ON P.fk_supermercado = S.fk_pessoa_juridica
-   GROUP BY PK_SUPER
-  ) TAB_CUSTO
-    ON TAB_VENDAS.PK_SUPER = TAB_CUSTO.PK_SUPER
-
-  INNER JOIN
-  --Tabelas envolvidas abaixo: funcionario, supermercado;
-  (SELECT S.fk_pessoa_juridica pk_super, SUM(CASE WHEN F.cargo NOTNULL THEN 1 ELSE 0 END) num_func
-   FROM supermercado S
-     LEFT JOIN funcionario F ON S.fk_pessoa_juridica = F.fk_supermercado
-   GROUP BY PK_SUPER
-  ) TAB_FUNC
-    ON TAB_CUSTO.PK_SUPER = TAB_FUNC.PK_SUPER
-
-  INNER JOIN
-  --Tabelas envolvidas abaixo: contato, supermercado;
-  (SELECT DISTINCT ON (S.fk_pessoa_juridica) S.fk_pessoa_juridica pk_super, C.descricao contato
-   FROM supermercado S
-     INNER JOIN contato C ON S.fk_pessoa_juridica = C.fk_pessoa
-   ORDER BY pk_super
-  ) TAB_CONTATO
-    ON TAB_SUPER.PK_SUPER = TAB_CONTATO.PK_SUPER
-
-  INNER JOIN
-  --Tabelas envolvidas abaixo: fornecimento, supermercado;
-  (SELECT F.fk_supermercado pk_super, COUNT(F.fk_fornecedor) num_forn
-   FROM supermercado S
-     INNER JOIN fornecimento F ON F.fk_supermercado = S.fk_pessoa_juridica
-   GROUP BY PK_SUPER
-  ) TAB_FORN
-    ON TAB_SUPER.PK_SUPER = TAB_FORN.PK_SUPER
-
-  INNER JOIN
-  --Tabelas envolvidas abaixo: lote, produto, supermercado;
-  (SELECT
-     DISTINCT ON (S.fk_pessoa_juridica)
-     S.fk_pessoa_juridica pk_super,
-     P.tipo prod_tipo,
-     COUNT(P.id) num_lotes
-   FROM supermercado S
-     INNER JOIN lote L ON S.fk_pessoa_juridica = L.fk_supermercado
-     INNER JOIN produto P ON L.fk_produto = P.id
-   GROUP BY PK_SUPER, PROD_TIPO
-   ORDER BY 1, 3 DESC
-  ) TAB_LOTE
-    ON TAB_SUPER.PK_SUPER = TAB_LOTE.PK_SUPER
-
-  INNER JOIN
-  --Tabelas envolvidas abaixo: compra, fisica, hist_compra, supermercado;
-  (SELECT
-     DISTINCT ON(S.fk_pessoa_juridica) S.fk_pessoa_juridica pk_super,
-     F.genero genero,
-     ROUND(SUM(C.preco_compra)::NUMERIC, 2) gasto_total
-   FROM supermercado S
-     INNER JOIN hist_compra H ON S.fk_pessoa_juridica = H.fk_supermercado
-     INNER JOIN compra C ON H.id = C.fk_hist_compra
-     INNER JOIN fisica F ON H.fk_cliente = F.fk_pessoa
-   GROUP BY PK_SUPER, GENERO
-   ORDER BY 1, 3 DESC
-  ) TAB_GEN
-    ON TAB_SUPER.PK_SUPER = TAB_GEN.PK_SUPER
-
-ORDER BY 1 ASC;
-```
+[SQL_com_maximo_tabelas](https://github.com/rfidmarket/trab01/blob/master/arquivos/secao_9.6.sql)
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.6/1.png"></p>
 
 >b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho<br>
 
-*Tais consultas serão abordadas ao longo da seção 9, logo abaixo!*
+*Tais consultas serão abordadas ao longo da seção 9, com enfoque na seção das Views!*
 
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
+
 ```sql
-	--Obtenha a categoria de produtos mais vendida;
-	SELECT
-	  P.tipo "Categoria",
-	  sum(C.quant) "Venda(R$)"
-	FROM hist_compra H
-	  INNER JOIN compra C ON H.id = C.fk_hist_compra
-	  INNER JOIN produto P ON C.fk_produto = P.id
-	GROUP BY P.tipo ORDER BY 2 DESC;
+--QUERY 1: Obtenha a categoria de produtos mais vendida;
+SELECT
+  P.tipo "Categoria",
+  sum(C.quant) "Venda(R$)"
+FROM hist_compra H
+  INNER JOIN compra C ON H.id = C.fk_hist_compra
+  INNER JOIN produto P ON C.fk_produto = P.id
+GROUP BY P.tipo ORDER BY 2 DESC;
 ```
-	
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.7/1.png"></p>
 
-```sql
-	--Calcule a média de consumo das pessoas do gênero masculino e do gênero feminino;
-	SELECT
-	  ROUND(sum(C.quant)/(SELECT count(*) FROM hist_compra)::NUMERIC, 2) "Média de consumo(R$)",
-	  F.genero "Gênero"
-	FROM hist_compra H
-	  INNER JOIN compra C ON H.id = C.fk_hist_compra
-	  INNER JOIN produto P ON C.fk_produto = P.id
-	  INNER JOIN fisica F ON H.fk_cliente = F.fk_pessoa
-	GROUP BY F.genero ORDER BY 1 DESC;
-```
 
+```sql
+--QUERY 2: Calcule a média de consumo das pessoas do gênero masculino e do gênero feminino;
+SELECT
+  ROUND(sum(C.quant)/(SELECT count(*) FROM hist_compra)::NUMERIC, 2) "Média de consumo(R$)",
+  F.genero "Gênero"
+FROM hist_compra H
+  INNER JOIN compra C ON H.id = C.fk_hist_compra
+  INNER JOIN produto P ON C.fk_produto = P.id
+  INNER JOIN fisica F ON H.fk_cliente = F.fk_pessoa
+GROUP BY F.genero ORDER BY 1 DESC;
+```
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.7/2.png"></p>
 
-```sql
-	--Obtenha a porcentagem de vendas de cada produto frente ao total de vendas;
-	--Para o supermercado de id 606;
-	SELECT
-	  nome "Nome produto",
-	  PROD_UNIDS "Unidades vendidas",
-	  ROUND(PROD_UNIDS/UNIDS_TOTAL::NUMERIC, 8)*100 "% Total de vendas"
-	FROM
-	  (SELECT S.fk_pessoa_juridica pk_super, P.nome nome, SUM(C.quant) prod_unids
-	   FROM hist_compra H
-	     INNER JOIN supermercado S ON H.fk_supermercado = S.fk_pessoa_juridica
-	     INNER JOIN compra C ON H.id = C.fk_hist_compra
-	     INNER JOIN produto P ON C.fk_produto = P.id
-	   WHERE S.fk_pessoa_juridica = 606
-	   GROUP BY S.fk_pessoa_juridica, P.nome ORDER BY 1 DESC) tab_prod
-	  INNER JOIN
-	  (SELECT S.fk_pessoa_juridica pk_super, SUM(C.quant) unids_total
-	   FROM hist_compra H
-	     INNER JOIN supermercado S ON H.fk_supermercado = S.fk_pessoa_juridica
-	     INNER JOIN compra C ON H.id = C.fk_hist_compra
-	   WHERE S.fk_pessoa_juridica = 606
-	   GROUP BY S.fk_pessoa_juridica ORDER BY 1 DESC) tab_total
-	  ON TAB_PROD.PK_SUPER = TAB_TOTAL.PK_SUPER ORDER BY 2 DESC;
-```
 
+```sql
+/*QUERY 3: Obtenha a porcentagem de vendas de cada produto frente ao total de vendas;
+ *Para o supermercado de id 606*/
+SELECT
+  nome "Nome produto",
+  PROD_UNIDS "Unidades vendidas",
+  ROUND(PROD_UNIDS/UNIDS_TOTAL::NUMERIC, 8)*100 "% Total de vendas"
+FROM
+  (SELECT S.fk_pessoa_juridica pk_super, P.nome nome, SUM(C.quant) prod_unids
+   FROM hist_compra H
+     INNER JOIN supermercado S ON H.fk_supermercado = S.fk_pessoa_juridica
+     INNER JOIN compra C ON H.id = C.fk_hist_compra
+     INNER JOIN produto P ON C.fk_produto = P.id
+   WHERE S.fk_pessoa_juridica = 606
+   GROUP BY S.fk_pessoa_juridica, P.nome ORDER BY 1 DESC) tab_prod
+  INNER JOIN
+  (SELECT S.fk_pessoa_juridica pk_super, SUM(C.quant) unids_total
+   FROM hist_compra H
+     INNER JOIN supermercado S ON H.fk_supermercado = S.fk_pessoa_juridica
+     INNER JOIN compra C ON H.id = C.fk_hist_compra
+   WHERE S.fk_pessoa_juridica = 606
+   GROUP BY S.fk_pessoa_juridica ORDER BY 1 DESC) tab_total
+  ON TAB_PROD.PK_SUPER = TAB_TOTAL.PK_SUPER ORDER BY 2 DESC;
+```
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.7/3.png"></p>
 
-```sql
-	--Calcule a porcentagem de ganhos sobre cada produto;
-	SELECT
-	  P.nome "Nome do produto",
-	  P.custo "Custo (UN)",
-	  P.preco "Preço de venda (UN)",
-	  ROUND(1-(P.custo/P.preco)::NUMERIC, 8)*100 "% Margem de lucro"
-	FROM supermercado S
-	  INNER JOIN produto P ON P.fk_supermercado = S.fk_pessoa_juridica
-	GROUP BY P.nome, P.custo, P.preco ORDER BY 1 DESC;	
-```
 
+```sql
+--QUERY 4: Calcule a porcentagem de ganhos sobre cada produto;
+SELECT
+  P.nome "Nome do produto",
+  P.custo "Custo (UN)",
+  P.preco "Preço de venda (UN)",
+  ROUND(1-(P.custo/P.preco)::NUMERIC, 8)*100 "% Margem de lucro"
+FROM supermercado S
+  INNER JOIN produto P ON P.fk_supermercado = S.fk_pessoa_juridica
+GROUP BY P.nome, P.custo, P.preco ORDER BY 1 DESC;
+```
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.7/4.png"></p>
 
-```sql
-	--Caclule o custo corrigido/atual com a mercadoria em estoque e prateleira para cada produto;
-	--Para o supermercado de ID 606;
-	SELECT
-	  P.nome "Nome do produto",
-	  P.quant_prateleira "Em prateleira (Unid.)",
-	  P.estoque "Em estoque (Unid.)",
-	  P.custo "Custo/UN (R$)",
-	  ROUND(sum(P.estoque * P.custo + P.quant_prateleira * P.custo) :: NUMERIC, 2) "Custo atual total (R$)"
-	FROM supermercado S
-	  INNER JOIN produto P ON P.fk_supermercado = S.fk_pessoa_juridica
-	WHERE S.fk_pessoa_juridica = 606
-	GROUP BY P.nome, P.quant_prateleira, P.estoque, P.custo, P.preco ORDER BY 5 DESC;
-```
 
+```sql
+/*QUERY 5: Caclule o custo corrigido/atual com a mercadoria em estoque e prateleira para cada produto;
+ *Para o supermercado de ID 606;*/
+SELECT
+  P.nome "Nome do produto",
+  P.quant_prateleira "Em prateleira (Unid.)",
+  P.estoque "Em estoque (Unid.)",
+  P.custo "Custo/UN (R$)",
+  ROUND(sum(P.estoque * P.custo + P.quant_prateleira * P.custo) :: NUMERIC, 2) "Custo atual total (R$)"
+FROM supermercado S
+  INNER JOIN produto P ON P.fk_supermercado = S.fk_pessoa_juridica
+WHERE S.fk_pessoa_juridica = 606
+GROUP BY P.nome, P.quant_prateleira, P.estoque, P.custo, P.preco ORDER BY 5 DESC;
+```
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.7/5.png"></p>
 
+
 ```sql
-	--Obtenha os 10 fornecedores que vendem lotes ao supermercado de ID 606;
-	SELECT
-	  L.fk_fornecedor "ID fornecedor",
-	  P.nome "Nome do fornecedor",
-	  count(*) "Núm. de lotes fornecidos"
+--QUERY 6: Obtenha os 10 fornecedores que vendem lotes ao supermercado de ID 606;
+SELECT
+  L.fk_fornecedor "ID fornecedor",
+  P.nome "Nome do fornecedor",
+  count(*) "Núm. de lotes fornecidos"
 
-	FROM supermercado S
-	  INNER JOIN fornecimento F ON S.fk_pessoa_juridica = F.fk_supermercado
-	  INNER JOIN lote L ON F.fk_fornecedor = L.fk_fornecedor
-	  INNER JOIN pessoa P ON F.fk_fornecedor = P.id
-	WHERE S.fk_pessoa_juridica = 606
-	GROUP BY L.fk_fornecedor, P.nome ORDER BY 3 DESC LIMIT 10;
+FROM supermercado S
+  INNER JOIN fornecimento F ON S.fk_pessoa_juridica = F.fk_supermercado
+  INNER JOIN lote L ON F.fk_fornecedor = L.fk_fornecedor
+  INNER JOIN pessoa P ON F.fk_fornecedor = P.id
+WHERE S.fk_pessoa_juridica = 606
+GROUP BY L.fk_fornecedor, P.nome ORDER BY 3 DESC LIMIT 10;
 ```
-
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.7/6.png"></p>
 
 #### 9.8	CONSULTAS COM LEFT E RIGHT JOIN (Mínimo 4)<br>
+
 ```sql
---Obtenha os dados de todos fornecedores registrados no sistema;
+--QUERY 1: Obtenha os dados de todos fornecedores registrados no sistema;
 SELECT
   P.id "ID", J.cnpj "CNPJ", P.nome "Nome",
   P.rua "Logradouro", P.cep "CEP", P.numero "Número",
@@ -832,11 +771,11 @@ FROM juridica J
   LEFT JOIN supermercado S ON J.fk_pessoa = S.fk_pessoa_juridica
 WHERE S.fk_pessoa_juridica ISNULL ORDER BY nome;
 ```
-
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.8/1.png"></p>
 
+
 ```sql
---Obtenha o número de funcionários registrados no sistema para cada supermercado;
+--QUERY 2: Obtenha o número de funcionários registrados no sistema para cada supermercado;
 SELECT
   S.fk_pessoa_juridica "ID Supermercado",
   SUM(CASE WHEN F.cargo NOTNULL THEN 1 ELSE 0 END) "Núm. de funcionários"
@@ -844,11 +783,11 @@ FROM supermercado S
   LEFT JOIN funcionario F ON S.fk_pessoa_juridica = F.fk_supermercado
 GROUP BY S.fk_pessoa_juridica ORDER BY 2 DESC;
 ```
-
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.8/2.png"></p>
 
+
 ```sql
---Obtenha o número de supermercados ligados a cada fornecedor;
+--QUERY 3: Obtenha o número de supermercados ligados a cada fornecedor;
 SELECT
   J.fk_pessoa "ID do fornecedor",
   P.nome "Nome do fornecedor",
@@ -859,11 +798,11 @@ FROM juridica J
   INNER JOIN pessoa P ON J.fk_pessoa = P.id
 WHERE fk_pessoa_juridica ISNULL GROUP BY J.fk_pessoa, P.nome ORDER BY 1 ASC;
 ```
-
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.8/3.png"></p>
 
+
 ```sql
---Obtenha o número de clientes registrados no sistema para cada supermercado;
+--QUERY 4: Obtenha o número de clientes registrados no sistema para cada supermercado;
 SELECT
   count(*) "Núm. clientes",
   P.nome "Nome supermercado",
@@ -873,14 +812,15 @@ FROM supermercado S
   INNER JOIN pessoa P ON S.fk_pessoa_juridica = P.id
   GROUP BY P.nome, HC.fk_supermercado ORDER BY 1 DESC, 2 ASC;
 ```
-
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.8/4.png"></p>
 
+
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
+>a) Uma junção que envolva Self Join
 
 ```sql
---Para cada fornecedor exiba os outros fornecedores que também fornecem para o mesmo supermercado;
---Para cada fornecedor (X1), exiba outro fornecedor(X2) que compartilhe o supermercado Y;
+/*QUERY 1: Para cada forn. exiba outros fornecedores que também fornecem para o mesmo superm.;
+ *Para cada fornecedor (X1), exiba outro fornecedor(X2) que compartilhe o supermercado Y;*/
 SELECT
   f1.fk_fornecedor "ID Fornecedor 1",
   f2.fk_fornecedor "ID Fornecedor 2",
@@ -889,8 +829,10 @@ FROM fornecimento f1, fornecimento f2
 WHERE f1.fk_fornecedor <> F2.fk_fornecedor AND f1.fk_supermercado = f2.fk_supermercado
 ORDER BY 1, 3;
 ```
-<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.9/a/1.png"></p>
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.9/a/1.png"></p><br>
 
+
+>b) Outras junções com views que o grupo considere como sendo de relevante importância para o trabalho
 ```sql
 --RELATÓRIO 1: Quais lotes mais próximos do vencimento (dada data corrente)?
 --Inclui informações como: Nome do produto, data de validade, dias restantes, identificador do lote.
@@ -903,10 +845,10 @@ CREATE MATERIALIZED VIEW rel_lote_prox_venc AS
   FROM produto p INNER JOIN lote l ON l.fk_produto = p.id
   WHERE l.validade >= CURRENT_DATE
   ORDER BY 2;
-  ```
+  ```  
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.9/b/1.png"></p>
   
-  <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.9/b/1.png"></p>
-  
+
 ```sql  
 --RELATÓRIO 2: Quais são os N produtos mais vendidos?
 --Inclui informações como: Código do produto, nome do produto, marca, categoria, número de vendas.
@@ -923,8 +865,9 @@ CREATE MATERIALIZED VIEW rel_prod_mais_vend AS
   WHERE h.timestamp >= '2018-05-01' AND h.timestamp <= '2018-06-01'
   GROUP BY p.nome, p.codigo, p.marca, p.tipo ORDER BY 5 DESC;
    ```
-   <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.9/b/2.png"></p>
-   
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.9/b/2.png"></p>
+
+
 ```sql
 --RELATÓRIO 3: Quais clientes que foram mais rentáveis para o supermercado?
 --Inclui informações Nome do cliente, valor total gasto, cpf.
@@ -939,10 +882,10 @@ CREATE MATERIALIZED VIEW rel_cli_mais_rent AS
     INNER JOIN compra c ON c.fk_hist_compra = hc.id
   WHERE hc.timestamp >= '2018-05-01' AND hc.timestamp <= '2018-06-01'
   GROUP BY p.nome, f.cpf ORDER BY 3 DESC;
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.9/b/3.png"></p>
 
-  ```
-  <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.9/b/3.png"></p>
-  
+
 ```sql
 --RELATÓRIO 4: Qual é a média de consumo por cliente?
 --Inclui informações como: Nome do cliente, média de consumo, cpf.
@@ -958,8 +901,8 @@ CREATE MATERIALIZED VIEW rel_cli_media_consumo AS
   WHERE hc.timestamp >= '2018-05-01' AND hc.timestamp <= '2018-06-01'
   GROUP BY p.nome, f.cpf ORDER BY 3 DESC;
 ```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.9/b/4.png"></p>
 
-  <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.9/b/4.png"></p>
 
 ```sql
 --RELATÓRIO 5: Quanto foi a rentabilidade das vendas em cada dia da semana?
@@ -980,9 +923,10 @@ CREATE MATERIALIZED VIEW rel_semana_vendas AS
     INNER JOIN compra c ON c.fk_hist_compra = hc.id
   WHERE hc.timestamp >= '2018-05-01' AND hc.timestamp <= '2018-06-01'
   GROUP BY 1 ORDER BY 2 DESC;
-  ```
-   <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.9/b/5.png"></p> 
-   
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.9/b/5.png"></p> 
+
+
 ```sql
 --RELATÓRIO 6: Qual é o tipo de produto mais comprado (número de unidades) em cada dia da semana?
 --Inclui informações como: Dia da semana, Categoria do produto, Unidades vendidas.
@@ -1016,7 +960,8 @@ CREATE MATERIALIZED VIEW rel_semana_prod_categ AS
     ) pre_tab2 ORDER BY 3 DESC;
 ```
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.9/b/6.png"></p>
-    
+
+
 ```sql
 --RELATÓRIO 7: Quais são as datas do ano mais lucrativas?
 --Inclui informações como: Data, Dia da semana, Ganho nessa data.
@@ -1036,8 +981,9 @@ CREATE MATERIALIZED VIEW rel_data_mais_lucr AS
   FROM hist_compra hc INNER JOIN compra c ON c.fk_hist_compra = hc.id
   WHERE hc.timestamp >= '2017-07-01' AND hc.timestamp <= '2018-07-01'
   GROUP BY 2, 3 ORDER BY 1 DESC;
-  ```
-  <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.9/b/7.png"></p>
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.9/b/7.png"></p>
+
 
 ```sql
 --RELATÓRIO 8: Qual é o número total de usos de cada meio de pagamento?
@@ -1051,9 +997,9 @@ CREATE MATERIALIZED VIEW rel_tipo_cartao_mais_usado AS
   WHERE hc.timestamp >= '2018-05-01' AND hc.timestamp <= '2018-06-01'
   GROUP BY c.tipo ORDER BY 2 DESC;
 ```
-
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.9/b/8.png"></p>
-  
+
+
 ```sql
 --RELATÓRIO 9: Qual o meio de pagamento mais rentável para o supermercado?
 --Inclui informações como: Meio, Ganhos.
@@ -1066,48 +1012,49 @@ CREATE MATERIALIZED VIEW rel_tipo_cartao_mais_lucr AS
     INNER JOIN compra com ON com.fk_hist_compra = hc.id
   WHERE hc.timestamp >= '2018-05-01' AND hc.timestamp <= '2018-06-01'
   GROUP BY c.tipo ORDER BY 2 DESC;
-  ```
-  <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.9/b/9.png"></p>
+```
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.9/b/9.png"></p>
+
 
 #### 9.10	SUBCONSULTAS (Mínimo 3)<br>
 ### 10	ATUALIZAÇÃO DA DOCUMENTAÇÃO DOS SLIDES PARA APRESENTAÇAO FINAL (Mínimo 6 e Máximo 10)<br>
 
 ### 11 Backup completo do banco de dados postgres 
-    a) deve ser realizado no formato "backup" 
-        (Em Dump Options #1 Habilitar opções Don't Save Owner e Privilege)
-    b) antes de postar o arquivo no git o mesmo deve ser testado/restaurado por outro grupo de alunos/dupla
-    c) informar aqui o grupo de alunos/dupla que realizou o teste.
+>a) deve ser realizado no formato "backup" (Em Dump Options #1 Habilitar opções Don't Save Owner e Privilege)<br>
+
+[arq_backup_EasyMarket](https://github.com/rfidmarket/trab01/blob/444ecfbd7895fcef019c3826ff98f8452b172dbd/arquivos/backup_easy_market.backup)
+
+>b) antes de postar o arquivo no git o mesmo deve ser testado/restaurado por outro grupo de alunos/dupla<br>
+>c) informar aqui o grupo de alunos/dupla que realizou o teste.<br>
+
+Grupo [estacIonA](https://github.com/CasaInteligenteBD1/trab01gv): Adreâgelo, Anne, Caike, Emanuel.<br>
 
 ### 12	TUTORIAL COMPLETO DE PASSOS PARA RESTAURACAO DO BANCO E EXECUCAO DE PROCEDIMENTOS ENVOLVIDOS NO TRABALHO PARA OBTENÇÃO DOS RESULTADOS<br>
-        a) Outros grupos deverão ser capazes de restaurar o banco 
-        b) executar todas as consultas presentes no trabalho
-        c) executar códigos que tenham sido construídos para o trabalho 
-        d) realizar qualquer procedimento executado pelo grupo que desenvolveu o trabalho
-        
+>a) Outros grupos deverão ser capazes de restaurar o banco<br>
+>b) executar todas as consultas presentes no trabalho<br>
+>c) executar códigos que tenham sido construídos para o trabalho<br>
+>d) realizar qualquer procedimento executado pelo grupo que desenvolveu o trabalho<br>
+
+[Tutorial](https://github.com/rfidmarket/trab01/blob/master/arquivos/secao_12_tutorial.MD)
+
 ### 13   DIFICULDADES ENCONTRADAS PELO GRUPO<br>
->## Marco de Entrega Final em: (25/06/2018)<br>
+*Nenhuma.*
+
+> Marco de Entrega Final em: (25/06/2018)<br>
         
-### 14  FORMATACAO NO GIT: https://help.github.com/articles/basic-writing-and-formatting-syntax/
-<comentario no git>
+### 14  FORMATACAO NO GIT:
+
+##### [Basic Formatting Syntax](https://help.github.com/articles/basic-writing-and-formatting-syntax/)
     
-##### About Formatting
-    https://help.github.com/articles/about-writing-and-formatting-on-github/
+##### [About Formatting](https://help.github.com/articles/about-writing-and-formatting-on-github/)
     
-##### Basic Formatting in Git
-    
-    https://help.github.com/articles/basic-writing-and-formatting-syntax/#referencing-issues-and-pull-requests
-    
-    
-##### Working with advanced formatting
-    https://help.github.com/articles/working-with-advanced-formatting/
-#### Mastering Markdown
-    https://guides.github.com/features/mastering-markdown/
+##### [Basic Formatting in Git](https://help.github.com/articles/basic-writing-and-formatting-syntax/#referencing-issues-and-pull-requests)
+
+##### [Working with advanced formatting](https://help.github.com/articles/working-with-advanced-formatting/)
+
+##### [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
 
 
-
-    
-
-    
 ### OBSERVAÇÕES IMPORTANTES
 
 #### Todos os arquivos que fazem parte do projeto (Imagens, pdfs, arquivos fonte, etc..), devem estar presentes no GIT. Os arquivos do projeto vigente não devem ser armazenados em quaisquer outras plataformas.
@@ -1118,12 +1065,8 @@ CREATE MATERIALIZED VIEW rel_tipo_cartao_mais_lucr AS
 #### Os usuários criados no GIT devem possuir o nome de identificação do aluno (não serão aceitos nomes como Eu123, meuprojeto, pro456, etc). Em caso de dúvida comunicar o professor.
 
 
-Link para BrModelo:<br>
-http://sis4.com/brModelo/brModelo/download.html
-<br>
-
+Link para BrModelo (Modelagem conceitual e lógica de um banco de dados):<br>
+[BRModelo](http://sis4.com/brModelo/brModelo/download.html)
 
 Link para curso de GIT<br>
-![https://www.youtube.com/curso_git](https://www.youtube.com/playlist?list=PLo7sFyCeiGUdIyEmHdfbuD2eR4XPDqnN2?raw=true "Title")
-
-
+[PlayList_Youtube](https://www.youtube.com/playlist?list=PLo7sFyCeiGUdIyEmHdfbuD2eR4XPDqnN2 "PlayList")
