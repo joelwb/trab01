@@ -443,7 +443,7 @@ FROM (
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.3/b/1.png"></p>
 
 ```sql
---QUERY 2: Exiba o nome dos clientes e o valor total gasto no supermercado desde que esse valor seja maior que 500;
+--QUERY 2: Exiba o nome dos clientes e o valor gasto no supermercado se esse valor for mais de R$500;
 SELECT nome AS "Nome (cliente)", total AS "Total comprado"
 FROM (
 	SELECT p.nome nome, SUM(c.preco_compra) total FROM pessoa p
@@ -477,7 +477,7 @@ FROM(
 <p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.3/c/1.png"></p>
 
 ```sql
---QUERY 2: Exiba o nome, data de nascimento e idade atual (em anos) dos 5 funcionários mais velhos do supermercado*/
+--QUERY 2: Exiba o nome, data de nasc. e idade (em anos) dos 5 funcionários mais velhos do supermercado*/
 SELECT
 	p.nome AS "Nome funcionário",
 	data_nasc AS "Data de nascimento",
@@ -804,7 +804,7 @@ WHERE fk_pessoa_juridica ISNULL GROUP BY J.fk_pessoa, P.nome ORDER BY 1 ASC;
 ```sql
 --QUERY 4: Obtenha o número de clientes registrados no sistema para cada supermercado;
 SELECT
-  count(*) "Núm. clientes",
+  COUNT(DISTINCT(HC.fk_cliente)) "Núm. clientes",
   P.nome "Nome supermercado",
   HC.fk_supermercado "ID supermercado"
 FROM supermercado S
@@ -1017,6 +1017,65 @@ CREATE MATERIALIZED VIEW rel_tipo_cartao_mais_lucr AS
 
 
 #### 9.10	SUBCONSULTAS (Mínimo 3)<br>
+
+```sql
+--QUERY 1: Mostre a porcentagem que cada produto do superm. 606 representa em estoque;
+SELECT
+  p.nome "Produto",
+  ROUND(p.estoque/TAB_EST.SOMA_EST::NUMERIC, 4)*100 "% do estoque",
+  p.estoque "Em estoque (UN)"
+FROM produto p,
+  (SELECT
+     SUM(p.estoque) soma_est
+   FROM produto p
+   WHERE p.fk_supermercado = 606
+  ) tab_est
+  WHERE p.fk_supermercado = 606
+GROUP BY p.nome, p.estoque, TAB_EST.SOMA_EST ORDER BY 2 DESC;
+```
+
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.10/1.png"></p>
+
+
+```sql
+--QUERY 2: Mostre quantos % cada supermercado vendeu frente a soma das vendas de todos superm.;
+SELECT
+  hc.fk_supermercado "ID Supermercado",
+  ROUND((SUM(c.preco_compra)/TAB_VENDAS.SOMA_VENDA)::NUMERIC, 5)*100 "% do Valor total de vendas",
+  ROUND(SUM(c.preco_compra)::NUMERIC, 2) "Valor das vendas(R$)"
+FROM hist_compra hc
+  INNER JOIN compra c ON hc.id = c.fk_hist_compra,
+  (SELECT SUM(c.preco_compra) soma_venda
+   FROM hist_compra hc
+     INNER JOIN compra c ON hc.id = c.fk_hist_compra
+  ) tab_vendas GROUP BY hc.fk_supermercado, TAB_VENDAS.SOMA_VENDA ORDER BY 2 DESC;
+```
+
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.10/2.png"></p>
+
+
+```sql
+--QUERY 3: Mostre quanto representa as compras de cada cliente frente ao total de vendas do superm. 606;
+SELECT
+  p.nome "Cliente",
+  hc.fk_cliente "ID",
+  ROUND((SUM(c.preco_compra) / TAB_VEND.TOTAL) :: NUMERIC, 5) * 100 "% do Total vendido",
+  ROUND(SUM(c.preco_compra) :: NUMERIC, 5) "Total comprado (R$)"
+FROM hist_compra hc
+  INNER JOIN compra c ON hc.id = c.fk_hist_compra
+  INNER JOIN pessoa p ON hc.fk_cliente = p.id,
+  (SELECT SUM(c.preco_compra) total
+   FROM hist_compra hc
+     INNER JOIN compra c ON hc.id = c.fk_hist_compra
+   WHERE hc.fk_supermercado = 606
+  ) tab_vend
+WHERE hc.fk_supermercado = 606
+GROUP BY p.nome, hc.fk_cliente, TAB_VEND.TOTAL ORDER BY 3 DESC;
+```
+
+<p align="center"><img src="https://github.com/rfidmarket/trab01/blob/master/images/secao_9.10/3.png"></p>
+
+
 ### 10	ATUALIZAÇÃO DA DOCUMENTAÇÃO DOS SLIDES PARA APRESENTAÇAO FINAL (Mínimo 6 e Máximo 10)<br>
 
 ### 11 Backup completo do banco de dados postgres 
